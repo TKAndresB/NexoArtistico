@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyectos - Nexo Artistico</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Estilos específicos para la página de proyectos */
+        .hero-proyectos {
+            background-color: #f0f0f0;
+            padding: 50px 0;
+            text-align: center;
+        }
+
+        .proyecto-activo {
+            border: 1px solid #ccc;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        .proyecto-activo h3 {
+            margin-top: 0;
+        }
+
+        .galeria-proyectos {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+
+        .galeria-proyectos img {
+            width: 200px;
+            height: 150px;
+            object-fit: cover;
+            margin: 10px;
+            border: 1px solid #ddd;
+        }
+
+        .calendario {
+            border: 1px solid #ccc;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        .formulario-propuesta {
+            border: 1px solid #ccc;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        .estadisticas {
+            border: 1px solid #ccc;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h2>🎨 Nexo Artistico</h2>
+            </div>
+            <nav>
+                <a href="index.html">Inicio</a>
+                <a href="index.html#sobre">Sobre Nosotros</a>
+                <a href="biblioteca.html">Biblioteca</a>
+                <a href="centro-mejora.html">Aprende</a>
+                <a href="proyectos.html" class="active">Proyectos</a>
+                <a href="index.html#contacto">Contacto</a>
+            </nav>
+            <a href="https://chat.whatsapp.com/Lwj85QzALMFBjCnYirEJ9K" target="_blank" class="whatsapp-btn">
+                📱 Únete por WhatsApp
+            </a>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>🚀 Proyectos de la Comunidad</h1>
+            <p>Descubre las actividades y retos en los que nuestra comunidad está trabajando actualmente.</p>
+        </div>
+    </section>
+
+    <!-- Active Projects -->
+    <section class="active-projects">
+        <div class="container">
+            <h2>Proyectos Activos</h2>
+            <div class="project-grid">
+                <div class="project-card">
+                    <div class="project-status active">🟢 Activo</div>
+                    <img src="https://placehold.co/400x200/7c3aed/ffffff?text=Mitología" alt="Reto Mensual: Mitología">
+                    <div class="project-content">
+                        <h3>Reto Mensual: Mitología</h3>
+                        <p>Explora criaturas y personajes mitológicos a través de tu arte. Participa y comparte tu interpretación.</p>
+                        <div class="project-deadline">
+                            📅 Fecha límite: 30 de Mayo, 2025
+                        </div>
+                        <a href="https://chat.whatsapp.com/Lwj85QzALMFBjCnYirEJ9K" target="_blank" class="btn primary">
+                            Participar
+                        </a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-status progress">🔵 En progreso</div>
+                    <img src="https://placehold.co/400x200/3b82f6/ffffff?text=Libro+Colaborativo" alt="Libro Colaborativo">
+                    <div class="project-content">
+                        <h3>Libro Colaborativo</h3>
+                        <p>Estamos creando un libro de ilustraciones con aportes de toda la comunidad. ¡Únete y forma parte de esta obra colectiva!</p>
+                        <div class="project-deadline">
+                            📅 Fecha límite: 15 de Julio, 2025
+                        </div>
+                        <a href="https://chat.whatsapp.com/Lwj85QzALMFBjCnYirEJ9K" target="_blank" class="btn primary">
+                            Participar
+                        </a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-status upcoming">🟡 Próximamente</div>
+                    <img src="https://placehold.co/400x200/f59e0b/ffffff?text=Exposición+Virtual" alt="Exposición Virtual">
+                    <div class="project-content">
+                        <h3>Exposición Virtual</h3>
+                        <p>Prepárate para nuestra próxima exposición virtual donde mostraremos el talento de nuestra comunidad al mundo.</p>
+                        <div class="project-deadline">
+                            📅 Fecha límite: Agosto 2025
+                        </div>
+                        <a href="https://chat.whatsapp.com/Lwj85QzALMFBjCnYirEJ9K" target="_blank" class="btn primary">
+                            Participar
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Past Projects -->
+    <section class="past-projects">
+        <div class="container">
+            <h2>Proyectos Anteriores</h2>
+            <div class="past-project-grid">
+                <div class="past-project-card">
+                    <img src="https://placehold.co/300x150/6b7280/ffffff?text=Paisajes+Urbanos" alt="Reto: Paisajes Urbanos">
+                    <div class="past-project-content">
+                        <h4>Reto: Paisajes Urbanos</h4>
+                        <p>Abril 2025</p>
+                    </div>
+                </div>
+                <div class="past-project-card">
+                    <img src="https://placehold.co/300x150/6b7280/ffffff?text=Taller+Acuarela" alt="Taller de Acuarela">
+                    <div class="past-project-content">
+                        <h4>Taller de Acuarela</h4>
+                        <p>Marzo 2025</p>
+                    </div>
+                </div>
+                <div class="past-project-card">
+                    <img src="https://placehold.co/300x150/6b7280/ffffff?text=Reto+Retratos" alt="Reto: Retratos">
+                    <div class="past-project-content">
+                        <h4>Reto: Retratos</h4>
+                        <p>Febrero 2025</p>
+                    </div>
+                </div>
+                <div class="past-project-card">
+                    <img src="https://placehold.co/300x150/6b7280/ffffff?text=Intercambio+Arte" alt="Intercambio de Arte">
+                    <div class="past-project-content">
+                        <h4>Intercambio de Arte</h4>
+                        <p>Enero 2025</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Proposal -->
+    <section class="project-proposal">
+        <div class="container">
+            <h2>Propón un Nuevo Proyecto</h2>
+            <p>¿Tienes una idea para un proyecto colaborativo? ¡Compártela con nosotros!</p>
+            <form class="proposal-form">
+                <div class="form-row">
+                    <input type="text" placeholder="Nombre del proyecto" required>
+                    <input type="text" placeholder="Tu nombre" required>
+                </div>
+                <textarea placeholder="Describe tu idea de proyecto..." rows="4" required></textarea>
+                <button type="submit" class="btn primary">Enviar Propuesta</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="cta">
+        <div class="container">
+            <h2>¡Únete a nuestros proyectos!</h2>
+            <p>Forma parte de nuestra comunidad creativa y participa en proyectos colaborativos únicos.</p>
+            <a href="https://chat.whatsapp.com/Lwj85QzALMFBjCnYirEJ9K" target="_blank" class="btn primary">
+                📱 Únete a la Comunidad
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h3>🎨 Nexo Artistico</h3>
+                </div>
+                <nav class="footer-nav">
+                    <a href="index.html">Inicio</a>
+                    <a href="index.html#sobre">Sobre Nosotros</a>
+                    <a href="biblioteca.html">Biblioteca</a>
+                    <a href="centro-mejora.html">Aprende</a>
+                    <a href="proyectos.html">Proyectos</a>
+                    <a href="index.html#contacto">Contacto</a>
+                </nav>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Nexo Artistico. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biblioteca - Nexo Artistico</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h2>🎨 Nexo Artistico</h2>
+            </div>
+            <nav>
+                <a href="index.html">Inicio</a>
+                <a href="index.html#sobre">Sobre Nosotros</a>
+                <a href="biblioteca.html" class="active">Biblioteca</a>
+                <a href="centro-mejora.html">Aprende</a>
+                <a href="proyectos.html">Proyectos</a>
+                <a href="index.html#contacto">Contacto</a>
+            </nav>
+            <a href="https://chat.whatsapp.com/Lwj85QzALMFBjCnYirEJ9K" target="_blank" class="whatsapp-btn">
+                📱 Únete por WhatsApp
+            </a>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>📖 Biblioteca de Arte</h1>
+            <p>Accede a nuestra colección curada de libros digitales y recursos para potenciar tu desarrollo artístico.</p>
+        </div>
+    </section>
+
+    <!-- Categories -->
+    <section class="library-categories">
+        <div class="container">
+            <div class="tabs">
+                <button class="tab-btn active" onclick="showCategory('teoria')">Teoría del Arte</button>
+                <button class="tab-btn" onclick="showCategory('anatomia')">Anatomía</button>
+                <button class="tab-btn" onclick="showCategory('color')">Teoría del Color</button>
+                <button class="tab-btn" onclick="showCategory('composicion')">Composición</button>
+            </div>
+
+            <!-- Teoría del Arte -->
+            <div id="teoria" class="category-content active">
+                <div class="resource-grid">
+                    <div class="resource-card">
+                        <div class="resource-icon">📚</div>
+                        <h3>Fundamentos del Arte</h3>
+                        <p>Una introducción completa a los principios básicos del arte visual.</p>
+                        <a href="#" class="btn secondary">Ver recurso</a>
+                    </div>
+                    <div class="resource-card">
+                        <div class="resource-icon">📚</div>
+                        <h3>Historia del Arte Moderno</h3>
+                        <p>Recorrido por los movimientos artísticos más influyentes del siglo XX.</p>
+                        <a href="#" class="btn secondary">Ver recurso</a>
+                    </div>
+                    <div class="resource-card">
+                        <div class="resource-icon">📚</div>
+                        <h3>Elementos del Diseño</h3>
+                        <p>Guía esencial sobre los elementos fundamentales del diseño visual.</p>
+                        <a href="#" class="btn secondary">Ver recurso</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Anatomía -->
+            <div id="anatomia" class="category-content">
+                <div class="resource-grid">
+                    <div class="resource-card">
+                        <div class="resource-icon">🫀</div>
+                        <h3>Anatomía Humana para Artistas</h3>
+                        <p>Guía completa de la estructura del cuerpo humano para dibujo y pintura.</p>
+                        <a href="#" class="btn secondary">Ver recurso</a>
+                    </div>
+                    <div class="resource-card">
+                        <div class="resource-icon">😊</div>
+                        <h3>Expresiones Faciales</h3>
+                        <p>Cómo capturar emociones a través de las expresiones del rostro.</p>
+                        <a href="#" class="btn secondary">Ver recurso</a>
+                    </div>
+                    <div class="resource-card">
+                        <div class="resource-icon">🏃</div>
+                        <h3>Proporciones y Movimiento</h3>
+                        <p>Técnicas para representar figuras dinámicas y en movimiento.</p>
+                        <a href="#" class="btn secondary">Ver recurso</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Teoría del Color -->
+            <div id="color" class="category-content">
+                <div class="resource-grid">
+                    <div class="resource-card">
+                        <div class="resource-icon">🎨</div>
+                        <h3>Psicología del Color</h3>
+                        <p>Cómo los colores afectan las emociones y percepciones en el arte.</p>
+                        <a href="#" class="btn secondary">Ver recurso</a>
+                    </div>
+                    <div class="resource-card">
+                        <div class="resource-icon">🌈</div>
+                        <h3>Armonía Cromática</h3>
+                        <p>Principios para crear combinaciones de colores efectivas y armoniosas.</p>
+                        <a href="#" class="btn secondary">Ver recurso</a>
+                    </div>
+                    <div class="resource-card">
+                        <div class="resource-icon">🎭</div>
+                        <h3>Técnicas de Mezcla de Color</h3>
+                        <p>Métodos prácticos para mezclar colores en diferentes medios.</p>
+                        <a href="#" class="btn secondary">Ver recurso</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Composición -->
+            <div id="composicion" class="category-content">
+                <div class="resource-grid">
+                    <div class="resource-card">
+                        <div class="resource-icon">🖼️</div>
+                        <h3>Principios de Composición</h3>
+                        <p>Reglas fundamentales para crear composiciones visuales efectivas.</p>
+                        <a href="#" class="btn secondary">Ver recurso</a>
+                    </div>
+                    <div class="resource-card">
+                        <div class="resource-icon">📐</div>
+                        <h3>Perspectiva y Profundidad</h3>
+                        <p>Técnicas para crear ilusión de espacio tridimensional en superficies planas.</p>
+                        <a href="#" class="btn secondary">Ver recurso</a>
+                    </div>
+                    <div class="resource-card">
+                        <div class="resource-icon">📖</div>
+                        <h3>Narrativa Visual</h3>
+                        <p>Cómo contar historias a través de la composición y elementos visuales.</p>
+                        <a href="#" class="btn secondary">Ver recurso</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="cta">
+        <div class="container">
+            <h2>¿Buscas algo específico?</h2>
+            <p>Explora nuestra biblioteca completa o únete a nuestra comunidad para acceder a más recursos.</p>
+            <a href="https://chat.whatsapp.com/Lwj85QzALMFBjCnYirEJ9K" target="_blank" class="btn primary">
+                📱 Únete a la Comunidad
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h3>🎨 Nexo Artistico</h3>
+                </div>
+                <nav class="footer-nav">
+                    <a href="index.html">Inicio</a>
+                    <a href="index.html#sobre">Sobre Nosotros</a>
+                    <a href="biblioteca.html">Biblioteca</a>
+                    <a href="centro-mejora.html">Aprende</a>
+                    <a href="proyectos.html">Proyectos</a>
+                    <a href="index.html#contacto">Contacto</a>
+                </nav>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Nexo Artistico. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
