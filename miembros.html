@@ -1,0 +1,706 @@
+<!DOCTYPE html>
+<html lang="es" class="light-theme">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Miembros - Nexo Artistico</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/dark-mode.css">
+    <link rel="stylesheet" href="css/miembros.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <i class="fas fa-palette"></i>
+                <span>Nexo Artistico</span>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="index.html#about">Nosotros</a></li>
+                    <li><a href="biblioteca.html">Biblioteca</a></li>
+                    <li><a href="centro-mejora.html">Centro de Mejora</a></li>
+                    <li><a href="miembros.html" class="active">Miembros</a></li>
+                    <li><a href="index.html#contact">Comunidad</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <button id="theme-toggle" class="theme-toggle" aria-label="Toggle Dark Mode">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <div class="header-btn">
+                    <a href="https://chat.whatsapp.com/Lwj85QzALMFBjCnYirEJ9K" target="_blank">
+                        <i class="fab fa-whatsapp"></i>
+                        Únete por WhatsApp
+                    </a>
+                </div>
+            </div>
+            <div class="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu">
+        <div class="mobile-menu-close">
+            <i class="fas fa-times"></i>
+        </div>
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="index.html#about">Nosotros</a></li>
+            <li><a href="biblioteca.html">Biblioteca</a></li>
+            <li><a href="centro-mejora.html">Centro de Mejora</a></li>
+            <li><a href="miembros.html">Miembros</a></li>
+            <li><a href="index.html#contact">Comunidad</a></li>
+        </ul>
+        <div class="mobile-menu-actions">
+            <button id="mobile-theme-toggle" class="theme-toggle" aria-label="Toggle Dark Mode">
+                <i class="fas fa-moon"></i>
+            </button>
+            <div class="mobile-menu-btn">
+                <a href="https://chat.whatsapp.com/Lwj85QzALMFBjCnYirEJ9K" target="_blank">
+                    <i class="fab fa-whatsapp"></i>
+                    Únete por WhatsApp
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Nuestros <span class="gradient-text">Miembros</span></h1>
+            <p>Conoce a los artistas que forman parte de nuestra comunidad creativa.</p>
+        </div>
+    </section>
+
+    <!-- Members Search and Filter -->
+    <section class="members-controls">
+        <div class="container">
+            <div class="search-filter">
+                <div class="search-box">
+                    <i class="fas fa-search search-icon"></i>
+                    <input type="text" id="member-search" placeholder="Buscar miembro...">
+                </div>
+                <div class="filter-options">
+                    <select id="role-filter">
+                        <option value="all">Todos los roles</option>
+                        <option value="admin">Administradores</option>
+                        <option value="member">Miembros</option>
+                    </select>
+                    <select id="specialty-filter">
+                        <option value="all">Todas las especialidades</option>
+                        <option value="digital">Arte Digital</option>
+                        <option value="traditional">Arte Tradicional</option>
+                        <option value="concept">Concept Art</option>
+                        <option value="illustration">Ilustración</option>
+                        <option value="character">Diseño de Personajes</option>
+                        <option value="animation">Animación</option>
+                    </select>
+                </div>
+            </div>
+            <div class="members-stats">
+                <div class="stat">
+                    <span class="stat-number">40+</span>
+                    <span class="stat-label">Miembros</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">6</span>
+                    <span class="stat-label">Administradores</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">500+</span>
+                    <span class="stat-label">Obras Compartidas</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Founder Section -->
+    <section class="founder-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Fundador</h2>
+                <div class="divider"></div>
+            </div>
+            
+            <div class="founder-card" data-member-id="tkandresb">
+                <div class="founder-badge">
+                    <i class="fas fa-crown"></i>
+                    <span>Fundador & Admin Principal</span>
+                </div>
+                <div class="founder-content">
+                    <div class="founder-avatar">
+                        <img src="https://placehold.co/300x300" alt="TkAndresB">
+                    </div>
+                    <div class="founder-info">
+                        <h3>TkAndresB</h3>
+                        <p class="founder-bio">Artista Tradicional especializado en Manga, adicto a Tokyo Ghoul y el detallismo. Fundador del actual Nexo Artistico con la visión de crear un espacio donde los artistas puedan convivir y mejorar juntos.</p>
+                        <div class="founder-details">
+                            <div class="detail">
+                                <i class="fas fa-palette"></i>
+                                <span>Especialidad: Estilo Manga</span>
+                            </div>
+                            <div class="detail">
+                                <i class="fas fa-calendar-alt"></i>
+                                <span>Miembro desde: 2023</span>
+                            </div>
+                            <div class="detail">
+                                <i class="fas fa-trophy"></i>
+                                <span>Proyectos liderados: 5+</span>
+                            </div>
+                        </div>
+                        <div class="founder-social">
+                            <a href="#" class="social-icon tiktok">
+                        <i class="fab fa-tiktok"></i>
+                            </a>
+                    <a href="#" class="social-icon instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="#" class="social-icon youtube">
+                        <i class="fab fa-youtube"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="view-works">
+                    <button class="btn-view-works">
+                        <i class="fas fa-images"></i>
+                        Ver Obras
+                    </button>
+                </div>
+                <!-- Obras del miembro (ocultas por defecto) -->
+                <div class="member-works">
+                    <div class="works-grid">
+                        <div class="work-item">
+                            <img src="https://placehold.co/600x400" alt="Obra 1">
+                            <div class="work-overlay">
+                                <h4>Título de la Obra</h4>
+                                <p>Técnica digital, 2025</p>
+                            </div>
+                        </div>
+                        <div class="work-item">
+                            <img src="https://placehold.co/600x400" alt="Obra 2">
+                            <div class="work-overlay">
+                                <h4>Título de la Obra</h4>
+                                <p>Técnica digital, 2025</p>
+                            </div>
+                        </div>
+                        <div class="work-item">
+                            <img src="https://placehold.co/600x400" alt="Obra 3">
+                            <div class="work-overlay">
+                                <h4>Título de la Obra</h4>
+                                <p>Técnica tradicional, 2024</p>
+                            </div>
+                        </div>
+                        <div class="work-item">
+                            <img src="https://placehold.co/600x400" alt="Obra 4">
+                            <div class="work-overlay">
+                                <h4>Título de la Obra</h4>
+                                <p>Técnica tradicional, 2024</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Admins Section -->
+    <section class="admins-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Administradores</h2>
+                <div class="divider"></div>
+            </div>
+            
+            <div class="members-grid">
+                <!-- Admin 1 -->
+                <div class="member-card" data-member-id="godjo1o" data-role="admin" data-specialty="traditional">
+                    <div class="member-badge admin">
+                        <i class="fas fa-star"></i>
+                        <span>Admin</span>
+                    </div>
+                    <div class="member-avatar">
+                        <img src="https://placehold.co/300x300" alt="godjo1o">
+                    </div>
+                    <div class="member-info">
+                        <h3>godjo1o</h3>
+                        <p class="member-specialty">Técnicas Mixtas</p>
+                        <p class="member-since">Miembro desde 2024</p>
+                    </div>
+                    <div class="view-works">
+                        <button class="btn-view-works">
+                            <i class="fas fa-images"></i>
+                            Ver Obras
+                        </button>
+                    </div>
+                    <!-- Obras del miembro (ocultas por defecto) -->
+                    <div class="member-works">
+                        <div class="works-grid">
+                            <div class="work-item">
+                                <img src="https://placehold.co/600x400" alt="Obra 1">
+                                <div class="work-overlay">
+                                    <h4>Título de la Obra</h4>
+                                    <p>Técnica mixta, 2025</p>
+                                </div>
+                            </div>
+                            <div class="work-item">
+                                <img src="https://placehold.co/600x400" alt="Obra 2">
+                                <div class="work-overlay">
+                                    <h4>Título de la Obra</h4>
+                                    <p>Técnica mixta, 2024</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Admin 2 -->
+                <div class="member-card" data-member-id="yoshio" data-role="admin" data-specialty="concept">
+                    <div class="member-badge admin">
+                        <i class="fas fa-star"></i>
+                        <span>Admin</span>
+                    </div>
+                    <div class="member-avatar">
+                        <img src="https://placehold.co/300x300" alt="Yoshio">
+                    </div>
+                    <div class="member-info">
+                        <h3>Yoshio</h3>
+                        <p class="member-specialty">Concept Art</p>
+                        <p class="member-since">Miembro desde 2024</p>
+                    </div>
+                    <div class="view-works">
+                        <button class="btn-view-works">
+                            <i class="fas fa-images"></i>
+                            Ver Obras
+                        </button>
+                    </div>
+                    <!-- Obras del miembro (ocultas por defecto) -->
+                    <div class="member-works">
+                        <div class="works-grid">
+                            <div class="work-item">
+                                <img src="https://placehold.co/600x400" alt="Obra 1">
+                                <div class="work-overlay">
+                                    <h4>Título de la Obra</h4>
+                                    <p>Concept art, 2025</p>
+                                </div>
+                            </div>
+                            <div class="work-item">
+                                <img src="https://placehold.co/600x400" alt="Obra 2">
+                                <div class="work-overlay">
+                                    <h4>Título de la Obra</h4>
+                                    <p>Concept art, 2024</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Admin 3 -->
+                <div class="member-card" data-member-id="duvan" data-role="admin" data-specialty="digital">
+                    <div class="member-badge admin">
+                        <i class="fas fa-star"></i>
+                        <span>Admin</span>
+                    </div>
+                    <div class="member-avatar">
+                        <img src="https://placehold.co/300x300" alt="Duvan">
+                    </div>
+                    <div class="member-info">
+                        <h3>Duvan</h3>
+                        <p class="member-specialty">Arte Tradicional</p>
+                        <p class="member-since">Miembro desde 2024</p>
+                    </div>
+                    <div class="view-works">
+                        <button class="btn-view-works">
+                            <i class="fas fa-images"></i>
+                            Ver Obras
+                        </button>
+                    </div>
+                    <!-- Obras del miembro (ocultas por defecto) -->
+                    <div class="member-works">
+                        <div class="works-grid">
+                            <div class="work-item">
+                                <img src="https://placehold.co/600x400" alt="Obra 1">
+                                <div class="work-overlay">
+                                    <h4>Título de la Obra</h4>
+                                    <p>Arte digital, 2025</p>
+                                </div>
+                            </div>
+                            <div class="work-item">
+                                <img src="https://placehold.co/600x400" alt="Obra 2">
+                                <div class="work-overlay">
+                                    <h4>Título de la Obra</h4>
+                                    <p>Arte digital, 2024</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Members Section -->
+    <section class="members-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Miembros</h2>
+                <div class="divider"></div>
+            </div>
+            
+            <div class="members-grid">
+                <!-- Miembro 1 -->
+                <div class="member-card" data-member-id="victor" data-role="member" data-specialty="illustration">
+                    <div class="member-badge member">
+                        <i class="fas fa-user"></i>
+                        <span>Miembro</span>
+                    </div>
+                    <div class="member-avatar">
+                        <img src="https://placehold.co/300x300" alt="Victor">
+                    </div>
+                    <div class="member-info">
+                        <h3>Victor</h3>
+                        <p class="member-specialty">Ilustración</p>
+                        <p class="member-since">Miembro desde 2023</p>
+                    </div>
+                    <div class="view-works">
+                        <button class="btn-view-works">
+                            <i class="fas fa-images"></i>
+                            Ver Obras
+                        </button>
+                    </div>
+                    <!-- Obras del miembro (ocultas por defecto) -->
+                    <div class="member-works">
+                        <div class="works-grid">
+                            <div class="work-item">
+                                <img src="https://placehold.co/600x400" alt="Obra 1">
+                                <div class="work-overlay">
+                                    <h4>Título de la Obra</h4>
+                                    <p>Ilustración, 2024</p>
+                                </div>
+                            </div>
+                            <div class="work-item">
+                                <img src="https://placehold.co/600x400" alt="Obra 2">
+                                <div class="work-overlay">
+                                    <h4>Título de la Obra</h4>
+                                    <p>Ilustración, 2023</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Miembro 2 -->
+                <div class="member-card" data-member-id="jesus" data-role="member" data-specialty="character">
+                    <div class="member-badge member">
+                        <i class="fas fa-user"></i>
+                        <span>Miembro</span>
+                    </div>
+                    <div class="member-avatar">
+                        <img src="https://placehold.co/300x300" alt="Jesus">
+                    </div>
+                    <div class="member-info">
+                        <h3>Jesus</h3>
+                        <p class="member-specialty">Diseño de Personajes</p>
+                        <p class="member-since">Miembro desde 2023</p>
+                    </div>
+                    <div class="view-works">
+                        <button class="btn-view-works">
+                            <i class="fas fa-images"></i>
+                            Ver Obras
+                        </button>
+                    </div>
+                    <!-- Obras del miembro (ocultas por defecto) -->
+                    <div class="member-works">
+                        <div class="works-grid">
+                            <div class="work-item">
+                                <img src="https://placehold.co/600x400" alt="Obra 1">
+                                <div class="work-overlay">
+                                    <h4>Título de la Obra</h4>
+                                    <p>Diseño de personaje, 2024</p>
+                                </div>
+                            </div>
+                            <div class="work-item">
+                                <img src="https://placehold.co/600x400" alt="Obra 2">
+                                <div class="work-overlay">
+                                    <h4>Título de la Obra</h4>
+                                    <p>Diseño de personaje, 2023</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Miembro 3 -->
+                <div class="member-card" data-member-id="german" data-role="member" data-specialty="traditional">
+                    <div class="member-badge member">
+                        <i class="fas fa-user"></i>
+                        <span>Miembro</span>
+                    </div>
+                    <div class="member-avatar">
+                        <img src="https://placehold.co/300x300" alt="German">
+                    </div>
+                    <div class="member-info">
+                        <h3>German</h3>
+                        <p class="member-specialty">Arte Tradicional</p>
+                        <p class="member-since">Miembro desde 2023</p>
+                    </div>
+                    <div class="view-works">
+                        <button class="btn-view-works">
+                            <i class="fas fa-images"></i>
+                            Ver Obras
+                        </button>
+                    </div>
+                    <!-- Obras del miembro (ocultas por defecto) -->
+                    <div class="member-works">
+                        <div class="works-grid">
+                            <div class="work-item">
+                                <img src="https://placehold.co/600x400" alt="Obra 1">
+                                <div class="work-overlay">
+                                    <h4>Título de la Obra</h4>
+                                    <p>Arte tradicional, 2024</p>
+                                </div>
+                            </div>
+                            <div class="work-item">
+                                <img src="https://placehold.co/600x400" alt="Obra 2">
+                                <div class="work-overlay">
+                                    <h4>Título de la Obra</h4>
+                                    <p>Arte tradicional, 2023</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Miembro 4 -->
+                <div class="member-card" data-member-id="emma" data-role="member" data-specialty="animation">
+                    <div class="member-badge member">
+                        <i class="fas fa-user"></i>
+                        <span>Miembro</span>
+                    </div>
+                    <div class="member-avatar">
+                        <img src="https://placehold.co/300x300" alt="Emma">
+                    </div>
+                    <div class="member-info">
+                        <h3>Emma</h3>
+                        <p class="member-specialty">Animación</p>
+                        <p class="member-since">Miembro desde 2024</p>
+                    </div>
+                    <div class="view-works">
+                        <button class="btn-view-works">
+                            <i class="fas fa-images"></i>
+                            Ver Obras
+                        </button>
+                    </div>
+                    <!-- Obras del miembro (ocultas por defecto) -->
+                    <div class="member-works">
+                        <div class="works-grid">
+                            <div class="work-item">
+                                <img src="https://placehold.co/600x400" alt="Obra 1">
+                                <div class="work-overlay">
+                                    <h4>Título de la Obra</h4>
+                                    <p>Animación, 2024</p>
+                                </div>
+                            </div>
+                            <div class="work-item">
+                                <img src="https://placehold.co/600x400" alt="Obra 2">
+                                <div class="work-overlay">
+                                    <h4>Título de la Obra</h4>
+                                    <p>Animación, 2024</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Miembro 5 -->
+                <div class="member-card" data-member-id="carlos" data-role="member" data-specialty="digital">
+                    <div class="member-badge member">
+                        <i class="fas fa-user"></i>
+                        <span>Miembro</span>
+                    </div>
+                    <div class="member-avatar">
+                        <img src="https://placehold.co/300x300" alt="Carlos">
+                    </div>
+                    <div class="member-info">
+                        <h3>Carlos</h3>
+                        <p class="member-specialty">Arte Digital</p>
+                        <p class="member-since">Miembro desde 2023</p>
+                    </div>
+                    <div class="view-works">
+                        <button class="btn-view-works">
+                            <i class="fas fa-images"></i>
+                            Ver Obras
+                        </button>
+                    </div>
+                    <!-- Obras del miembro (ocultas por defecto) -->
+                    <div class="member-works">
+                        <div class="works-grid">
+                            <div class="work-item">
+                                <img src="https://placehold.co/600x400" alt="Obra 1">
+                                <div class="work-overlay">
+                                    <h4>Título de la Obra</h4>
+                                    <p>Arte digital, 2024</p>
+                                </div>
+                            </div>
+                            <div class="work-item">
+                                <img src="https://placehold.co/600x400" alt="Obra 2">
+                                <div class="work-overlay">
+                                    <h4>Título de la Obra</h4>
+                                    <p>Arte digital, 2023</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Miembro 6 -->
+                <div class="member-card" data-member-id="lucia" data-role="member" data-specialty="illustration">
+                    <div class="member-badge member">
+                        <i class="fas fa-user"></i>
+                        <span>Miembro</span>
+                    </div>
+                    <div class="member-avatar">
+                        <img src="https://placehold.co/300x300" alt="Lucia">
+                    </div>
+                    <div class="member-info">
+                        <h3>Lucia</h3>
+                        <p class="member-specialty">Ilustración</p>
+                        <p class="member-since">Miembro desde 2024</p>
+                    </div>
+                    <div class="view-works">
+                        <button class="btn-view-works">
+                            <i class="fas fa-images"></i>
+                            Ver Obras
+                        </button>
+                    </div>
+                    <!-- Obras del miembro (ocultas por defecto) -->
+                    <div class="member-works">
+                        <div class="works-grid">
+                            <div class="work-item">
+                                <img src="https://placehold.co/600x400" alt="Obra 1">
+                                <div class="work-overlay">
+                                    <h4>Título de la Obra</h4>
+                                    <p>Ilustración, 2024</p>
+                                </div>
+                            </div>
+                            <div class="work-item">
+                                <img src="https://placehold.co/600x400" alt="Obra 2">
+                                <div class="work-overlay">
+                                    <h4>Título de la Obra</h4>
+                                    <p>Ilustración, 2024</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Plantilla para añadir nuevos miembros -->
+                <!-- 
+                <div class="member-card" data-member-id="ID_UNICO" data-role="member" data-specialty="ESPECIALIDAD">
+                    <div class="member-badge member">
+                        <i class="fas fa-user"></i>
+                        <span>Miembro</span>
+                    </div>
+                    <div class="member-avatar">
+                        <img src="RUTA_IMAGEN" alt="NOMBRE">
+                    </div>
+                    <div class="member-info">
+                        <h3>NOMBRE</h3>
+                        <p class="member-specialty">ESPECIALIDAD</p>
+                        <p class="member-since">Miembro desde AÑO</p>
+                    </div>
+                    <div class="view-works">
+                        <button class="btn-view-works">
+                            <i class="fas fa-images"></i>
+                            Ver Obras
+                        </button>
+                    </div>
+                    <div class="member-works">
+                        <div class="works-grid">
+                            <div class="work-item">
+                                <img src="RUTA_OBRA_1" alt="Obra 1">
+                                <div class="work-overlay">
+                                    <h4>TITULO_OBRA_1</h4>
+                                    <p>DESCRIPCION_OBRA_1</p>
+                                </div>
+                            </div>
+                            <div class="work-item">
+                                <img src="RUTA_OBRA_2" alt="Obra 2">
+                                <div class="work-overlay">
+                                    <h4>TITULO_OBRA_2</h4>
+                                    <p>DESCRIPCION_OBRA_2</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                -->
+            </div>
+            
+            <!-- Paginación -->
+            <div class="pagination">
+                <button class="pagination-btn active">1</button>
+                <button class="pagination-btn">2</button>
+                <button class="pagination-btn">3</button>
+                <button class="pagination-btn">4</button>
+                <button class="pagination-btn next">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Join Section -->
+    <section class="join-section">
+        <div class="container">
+            <div class="join-card">
+                <div class="join-content">
+                    <h2>¿Quieres formar parte de nuestra comunidad?</h2>
+                    <p>Únete a Nexo Artistico y comparte tu arte con más de 40 artistas apasionados.</p>
+                    <a href="https://chat.whatsapp.com/Lwj85QzALMFBjCnYirEJ9K" target="_blank" class="btn btn-primary">
+                        <i class="fab fa-whatsapp"></i>
+                        Unirse al Grupo
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <i class="fas fa-palette"></i>
+                    <span>Nexo Artistico</span>
+                </div>
+                <div class="social-icons">
+                    <a href="#" class="social-icon tiktok">
+                        <i class="fab fa-tiktok"></i>
+                    </a>
+                    <a href="#" class="social-icon instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="#" class="social-icon youtube">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; <span id="current-year"></span> Nexo Artistico. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script src="js/dark-mode.js"></script>
+    <script src="js/miembros.js"></script>
+</body>
+</html>
