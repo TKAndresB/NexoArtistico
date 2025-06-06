@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="es" class="light-theme">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biblioteca Digital - Nexo Artistico</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/dark-mode.css">
+    <link rel="stylesheet" href="css/biblioteca-avanzada.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <i class="fas fa-palette"></i>
+                <span>Nexo Artistico</span>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="index.html#about">Nosotros</a></li>
+                    <li><a href="biblioteca.html" class="active">Biblioteca</a></li>
+                    <li><a href="centro-mejora.html">Centro de Mejora</a></li>
+                    <li><a href="miembros.html">Miembros</a></li>
+                    <li><a href="index.html#contact">Comunidad</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <button id="theme-toggle" class="theme-toggle" aria-label="Toggle Dark Mode">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <div class="header-btn">
+                    <a href="https://chat.whatsapp.com/Lwj85QzALMFBjCnYirEJ9K" target="_blank">
+                        <i class="fab fa-whatsapp"></i>
+                        Únete por WhatsApp
+                    </a>
+                </div>
+            </div>
+            <div class="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu">
+        <div class="mobile-menu-close">
+            <i class="fas fa-times"></i>
+        </div>
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="index.html#about">Nosotros</a></li>
+            <li><a href="biblioteca.html">Biblioteca</a></li>
+            <li><a href="centro-mejora.html">Centro de Mejora</a></li>
+            <li><a href="miembros.html">Miembros</a></li>
+            <li><a href="index.html#contact">Comunidad</a></li>
+        </ul>
+        <div class="mobile-menu-actions">
+            <button id="mobile-theme-toggle" class="theme-toggle" aria-label="Toggle Dark Mode">
+                <i class="fas fa-moon"></i>
+            </button>
+            <div class="mobile-menu-btn">
+                <a href="https://chat.whatsapp.com/Lwj85QzALMFBjCnYirEJ9K" target="_blank">
+                    <i class="fab fa-whatsapp"></i>
+                    Únete por WhatsApp
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <div class="header-content">
+                <div class="header-text">
+                    <h1>Biblioteca <span class="gradient-text">Digital</span></h1>
+                    <p>Descubre nuestra colección curada de recursos especializados en arte y diseño.</p>
+                </div>
+                <div class="header-stats">
+                    <div class="stat-item">
+                        <span class="stat-number" id="total-books">8</span>
+                        <span class="stat-label">Libros</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number" id="total-categories">8</span>
+                        <span class="stat-label">Categorías</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Library Dashboard -->
+    <section class="library-dashboard">
+        <div class="container">
+            <!-- Search and Filters -->
+            <div class="search-filters-container">
+                <div class="search-section">
+                    <div class="search-box-advanced">
+                        <i class="fas fa-search search-icon"></i>
+                        <input type="text" id="search-input" placeholder="Buscar por título, autor, descripción...">
+                        <button class="search-clear" id="search-clear" style="display: none;">
+                            <i class="fas fa-times"></i>
+                        </button>
+                        <button class="search-filters-toggle" id="search-filters-toggle">
+                            <i class="fas fa-sliders-h"></i>
+                        </button>
+                    </div>
+                    
+                    <!-- Advanced Filters Panel -->
+                    <div class="advanced-filters" id="advanced-filters">
+                        <div class="filters-grid">
+                            <div class="filter-group">
+                                <label>Categoría</label>
+                                <select id="category-filter">
+                                    <option value="all">Todas las categorías</option>
+                                    <option value="anatomia">Anatomía</option>
+                                    <option value="color">Teoría del Color</option>
+                                    <option value="composicion">Composición</option>
+                                    <option value="digital">Arte Digital</option>
+                                    <option value="perspectiva">Perspectiva</option>
+                                    <option value="tradicional">Arte Tradicional</option>
+                                    <option value="manga">Manga/Anime</option>
+                                    <option value="fotografia">Fotografía</option>
+                                </select>
+                            </div>
+                            <div class="filter-group">
+                                <label>Nivel</label>
+                                <select id="level-filter">
+                                    <option value="all">Todos los niveles</option>
+                                    <option value="beginner">Principiante</option>
+                                    <option value="intermediate">Intermedio</option>
+                                    <option value="advanced">Avanzado</option>
+                                </select>
+                            </div>
+                            <div class="filter-group">
+                                <label>Idioma</label>
+                                <select id="language-filter">
+                                    <option value="all">Todos los idiomas</option>
+                                    <option value="es">Español</option>
+                                    <option value="en">Inglés</option>
+                                    <option value="fr">Francés</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="filters-actions">
+                            <button class="btn btn-outline" id="clear-filters">
+                                <i class="fas fa-eraser"></i>
+                                Limpiar Filtros
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- View Controls -->
+                <div class="view-controls">
+                    <div class="sort-controls">
+                        <label>Ordenar por:</label>
+                        <select id="sort-select">
+                            <option value="title-asc">Título A-Z</option>
+                            <option value="title-desc">Título Z-A</option>
+                            <option value="author-asc">Autor A-Z</option>
+                            <option value="category-asc">Categoría</option>
+                        </select>
+                    </div>
+                    <div class="view-toggle">
+                        <button class="view-btn active" data-view="grid" title="Vista en cuadrícula">
+                            <i class="fas fa-th"></i>
+                        </button>
+                        <button class="view-btn" data-view="list" title="Vista en lista">
+                            <i class="fas fa-list"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Results Info -->
+            <div class="results-info">
+                <div class="results-count">
+                    <span id="results-text">Mostrando todos los libros</span>
+                </div>
+            </div>
+
+            <!-- Books Container -->
+            <div class="books-container">
+                <!-- Books Grid -->
+                <div class="books-grid" id="books-grid">
+                    <!-- Libro 1: Anatomía Humana para Artistas -->
+                    <div class="book-card" data-category="anatomia" data-level="intermediate" data-language="es">
+                        <div class="book-cover-container">
+                            <img src="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=400&h=600&fit=crop" alt="Anatomía Humana para Artistas" class="book-cover">
+                            <div class="book-status-badges">
+                                <span class="status-badge new">Nuevo</span>
+                            </div>
+                        </div>
+                        
+                        <div class="book-info">
+                            <div class="book-meta">
+                                <span class="book-category">Anatomía</span>
+                                <div class="book-rating">
+                                    <span class="stars">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </span>
+                                    <span class="rating-text">4.8</span>
+                                </div>
+                            </div>
+                            
+                            <h3 class="book-title">Anatomía Humana para Artistas</h3>
+                            <p class="book-author">Andrew Loomis</p>
+                            <p class="book-description">Este libro es esencial para cualquier artista que desee dominar la representación realista de la figura humana.</p>
+                            
+                            <div class="book-tags">
+                                <span class="book-tag">anatomía</span>
+                                <span class="book-tag">figura humana</span>
+                                <span class="book-tag">proporciones</span>
+                            </div>
+                            
+                            <div class="book-stats">
+                                <span><i class="fas fa-file-alt"></i> 320 páginas</span>
+                                <span><i class="fas fa-language"></i> Español</span>
+                            </div>
+                            
+                            <div class="book-actions">
+                                <a href="https://drive.google.com/file/d/ejemplo1/view" target="_blank" class="btn btn-primary">
+                                    <i class="fas fa-download"></i>
+                                    Descargar PDF
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Libro 2: Teoría del Color para Artistas -->
+                    <div class="book-card" data-category="color" data-level="beginner" data-language="es">
+                        <div class="book-cover-container">
+                            <img src="https://images.unsplash.com/photo-1541961017774-22349e4a1262?w=400&h=600&fit=crop" alt="Teoría del Color para Artistas" class="book-cover">
+                            <div class="book-status-badges">
+                                <span class="status-badge popular">Popular</span>
+                            </div>
+                        </div>
+                        
+                        <div class="book-info">
+                            <div class="book-meta">
+                                <span class="book-category">Teoría del Color</span>
+                                <div class="book-rating">
+                                    <span class="stars">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star-half-alt"></i>
+                                    </span>
+                                    <span class="rating-text">4.6</span>
+                                </div>
+                            </div>
+                            
+                            <h3 class="book-title">Teoría del Color para Artistas</h3>
+                            <p class="book-author">Johannes Itten</p>
+                            <p class="book-description">Una guía completa sobre los principios fundamentales del color, armonías cromáticas y psicología del color.</p>
+                            
+                            <div class="book-tags">
+                                <span class="book-tag">color</span>
+                                <span class="book-tag">teoría</span>
+                                <span class="book-tag">armonías</span>
+                            </div>
+                            
+                            <div class="book-stats">
+                                <span><i class="fas fa-file-alt"></i> 280 páginas</span>
+                                <span><i class="fas fa-language"></i> Español</span>
+                            </div>
+                            
+                            <div class="book-actions">
+                                <a href="https://drive.google.com/file/d/ejemplo2/view" target="_blank" class="btn btn-primary">
+                                    <i class="fas fa-download"></i>
+                                    Descargar PDF
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Libro 3: Composición Visual Avanzada -->
+                    <div class="book-card" data-category="composicion" data-level="advanced" data-language="es">
+                        <div class="book-cover-container">
+                            <img src="https://images.unsplash.com/photo-1513475382585-d06e58bcb0e0?w=400&h=600&fit=crop" alt="Composición Visual Avanzada" class="book-cover">
+                            <div class="book-status-badges">
+                                <span class="status-badge featured">Destacado</span>
+                            </div>
+                        </div>
+                        
+                        <div class="book-info">
+                            <div class="book-meta">
+                                <span class="book-category">Composición</span>
+                                <div class="book-rating">
+                                    <span class="stars">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star-half-alt"></i>
+                                    </span>
+                                    <span class="rating-text">4.7</span>
+                                </div>
+                            </div>
+                            
+                            <h3 class="book-title">Composición Visual Avanzada</h3>
+                            <p class="book-author">Richard Williams</p>
+                            <p class="book-description">Aprende a crear composiciones dinámicas y efectivas utilizando reglas como la regla de los tercios.</p>
+                            
+                            <div class="book-tags">
+                                <span class="book-tag">composición</span>
+                                <span class="book-tag">diseño</span>
+                                <span class="book-tag">regla de tercios</span>
+                            </div>
+                            
+                            <div class="book-stats">
+                                <span><i class="fas fa-file-alt"></i> 350 páginas</span>
+                                <span><i class="fas fa-language"></i> Español</span>
+                            </div>
+                            
+                            <div class="book-actions">
+                                <a href="https://drive.google.com/file/d/ejemplo3/view" target="_blank" class="btn btn-primary">
+                                    <i class="fas fa-download"></i>
+                                    Descargar PDF
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Libro 4: Procreate Master Class -->
+                    <div class="book-card" data-category="digital" data-level="intermediate" data-language="es">
+                        <div class="book-cover-container">
+                            <img src="https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=400&h=600&fit=crop" alt="Procreate Master Class" class="book-cover">
+                            <div class="book-status-badges">
+                                <span class="status-badge popular">Popular</span>
+                            </div>
+                        </div>
+                        
+                        <div class="book-info">
+                            <div class="book-meta">
+                                <span class="book-category">Arte Digital</span>
+                                <div class="book-rating">
+                                    <span class="stars">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </span>
+                                    <span class="rating-text">4.9</span>
+                                </div>
+                            </div>
+                            
+                            <h3 class="book-title">Procreate Master Class</h3>
+                            <p class="book-author">Sarah Johnson</p>
+                            <p class="book-description">Aprende desde las herramientas básicas hasta técnicas avanzadas de ilustración digital en Procreate.</p>
+                            
+                            <div class="book-tags">
+                                <span class="book-tag">procreate</span>
+                                <span class="book-tag">digital</span>
+                                <span class="book-tag">ipad</span>
+                            </div>
+                            
+                            <div class="book-stats">
+                                <span><i class="fas fa-file-alt"></i> 420 páginas</span>
+                                <span><i class="fas fa-language"></i> Español</span>
+                            </div>
+                            
+                            <div class="book-actions">
+                                <a href="https://drive.google.com/file/d/ejemplo4/view" target="_blank" class="btn btn-primary">
+                                    <i class="fas fa-download"></i>
+                                    Descargar PDF
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Libro 5: Perspectiva Práctica -->
+                    <div class="book-card" data-category="perspectiva" data-level="intermediate" data-language="es">
+                        <div class="book-cover-container">
+                            <img src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=400&h=600&fit=crop" alt="Perspectiva Práctica" class="book-cover">
+                            <div class="book-status-badges">
+                                <span class="status-badge new">Nuevo</span>
+                            </div>
+                        </div>
+                        
+                        <div class="book-info">
+                            <div class="book-meta">
+                                <span class="book-category">Perspectiva</span>
+                                <div class="book-rating">
+                                    <span class="stars">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star-half-alt"></i>
+                                    </span>
+                                    <span class="rating-text">4.5</span>
+                                </div>
+                            </div>
+                            
+                            <h3 class="book-title">Perspectiva Práctica</h3>
+                            <p class="book-author">David Chelsea</p>
+                            <p class="book-description">Cubre desde los conceptos básicos de la perspectiva de un punto hasta técnicas avanzadas.</p>
+                            
+                            <div class="book-tags">
+                                <span class="book-tag">perspectiva</span>
+                                <span class="book-tag">punto de fuga</span>
+                                <span class="book-tag">técnicas</span>
+                            </div>
+                            
+                            <div class="book-stats">
+                                <span><i class="fas fa-file-alt"></i> 290 páginas</span>
+                                <span><i class="fas fa-language"></i> Español</span>
+                            </div>
+                            
+                            <div class="book-actions">
+                                <a href="https://drive.google.com/file/d/ejemplo5/view" target="_blank" class="btn btn-primary">
+                                    <i class="fas fa-download"></i>
+                                    Descargar PDF
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Libro 6: Técnicas de Acuarela -->
+                    <div class="book-card" data-category="tradicional" data-level="beginner" data-language="es">
+                        <div class="book-cover-container">
+                            <img src="https://images.unsplash.com/photo-1578662015905-0a306a2b0e3e?w=400&h=600&fit=crop" alt="Técnicas de Acuarela" class="book-cover">
+                            <div class="book-status-badges">
+                                <span class="status-badge featured">Destacado</span>
+                            </div>
+                        </div>
+                        
+                        <div class="book-info">
+                            <div class="book-meta">
+                                <span class="book-category">Arte Tradicional</span>
+                                <div class="book-rating">
+                                    <span class="stars">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="far fa-star"></i>
+                                    </span>
+                                    <span class="rating-text">4.4</span>
+                                </div>
+                            </div>
+                            
+                            <h3 class="book-title">Técnicas de Acuarela</h3>
+                            <p class="book-author">Joseph Zbukvic</p>
+                            <p class="book-description">Aprende sobre materiales, mezcla de colores y técnicas húmedo sobre húmedo y seco.</p>
+                            
+                            <div class="book-tags">
+                                <span class="book-tag">acuarela</span>
+                                <span class="book-tag">tradicional</span>
+                                <span class="book-tag">técnicas</span>
+                            </div>
+                            
+                            <div class="book-stats">
+                                <span><i class="fas fa-file-alt"></i> 380 páginas</span>
+                                <span><i class="fas fa-language"></i> Español</span>
+                            </div>
+                            
+                            <div class="book-actions">
+                                <a href="https://drive.google.com/file/d/ejemplo6/view" target="_blank" class="btn btn-primary">
+                                    <i class="fas fa-download"></i>
+                                    Descargar PDF
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Libro 7: Dibujo Manga Completo -->
+                    <div class="book-card" data-category="manga" data-level="beginner" data-language="es">
+                        <div class="book-cover-container">
+                            <img src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=400&h=600&fit=crop" alt="Dibujo Manga Completo" class="book-cover">
+                            <div class="book-status-badges">
+                                <span class="status-badge popular">Popular</span>
+                            </div>
+                        </div>
+                        
+                        <div class="book-info">
+                            <div class="book-meta">
+                                <span class="book-category">Manga/Anime</span>
+                                <div class="book-rating">
+                                    <span class="stars">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </span>
+                                    <span class="rating-text">4.8</span>
+                                </div>
+                            </div>
+                            
+                            <h3 class="book-title">Dibujo Manga Completo</h3>
+                            <p class="book-author">Takeshi Yamamoto</p>
+                            <p class="book-description">Guía completa para aprender a dibujar manga desde cero. Incluye anatomía estilo manga y expresiones.</p>
+                            
+                            <div class="book-tags">
+                                <span class="book-tag">manga</span>
+                                <span class="book-tag">anime</span>
+                                <span class="book-tag">personajes</span>
+                            </div>
+                            
+                            <div class="book-stats">
+                                <span><i class="fas fa-file-alt"></i> 450 páginas</span>
+                                <span><i class="fas fa-language"></i> Español</span>
+                            </div>
+                            
+                            <div class="book-actions">
+                                <a href="https://drive.google.com/file/d/ejemplo7/view" target="_blank" class="btn btn-primary">
+                                    <i class="fas fa-download"></i>
+                                    Descargar PDF
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Libro 8: Fotografía Artística -->
+                    <div class="book-card" data-category="fotografia" data-level="intermediate" data-language="es">
+                        <div class="book-cover-container">
+                            <img src="https://images.unsplash.com/photo-1513475382585-d06e58bcb0e0?w=400&h=600&fit=crop" alt="Fotografía Artística" class="book-cover">
+                            <div class="book-status-badges">
+                                <span class="status-badge new">Nuevo</span>
+                            </div>
+                        </div>
+                        
+                        <div class="book-info">
+                            <div class="book-meta">
+                                <span class="book-category">Fotografía</span>
+                                <div class="book-rating">
+                                    <span class="stars">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star-half-alt"></i>
+                                    </span>
+                                    <span class="rating-text">4.6</span>
+                                </div>
+                            </div>
+                            
+                            <h3 class="book-title">Fotografía Artística</h3>
+                            <p class="book-author">Elena Rodriguez</p>
+                            <p class="book-description">Explora la fotografía como forma de arte. Aprende composición, iluminación y edición.</p>
+                            
+                            <div class="book-tags">
+                                <span class="book-tag">fotografía</span>
+                                <span class="book-tag">composición</span>
+                                <span class="book-tag">iluminación</span>
+                            </div>
+                            
+                            <div class="book-stats">
+                                <span><i class="fas fa-file-alt"></i> 320 páginas</span>
+                                <span><i class="fas fa-language"></i> Español</span>
+                            </div>
+                            
+                            <div class="book-actions">
+                                <a href="https://drive.google.com/file/d/ejemplo8/view" target="_blank" class="btn btn-primary">
+                                    <i class="fas fa-download"></i>
+                                    Descargar PDF
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- No Results State -->
+                <div class="no-results" id="no-results" style="display: none;">
+                    <div class="no-results-icon">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <h3>No se encontraron resultados</h3>
+                    <p>Intenta ajustar los filtros o términos de búsqueda</p>
+                    <button class="btn btn-primary" id="reset-search">
+                        <i class="fas fa-refresh"></i>
+                        Reiniciar Búsqueda
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <i class="fas fa-palette"></i>
+                    <span>Nexo Artistico</span>
+                </div>
+                <div class="social-icons">
+                    <a href="#" class="social-icon tiktok">
+                        <i class="fab fa-tiktok"></i>
+                    </a>
+                    <a href="#" class="social-icon instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="#" class="social-icon youtube">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; <span id="current-year"></span> Nexo Artistico. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script src="js/dark-mode.js"></script>
+    <script src="js/biblioteca-simple.js"></script>
+</body>
+</html>
