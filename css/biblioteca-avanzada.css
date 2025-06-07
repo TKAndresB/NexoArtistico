@@ -229,28 +229,29 @@ header {
   transform: translateY(-50%) scale(1.05);
 }
 
+/* Opciones de filtro */
 .filter-options {
   display: flex;
   gap: 1rem;
-  align-items: center;
   flex-wrap: wrap;
+  align-items: center;
 }
 
 .filter-options select {
   padding: 0.5rem 0.75rem;
-  border: 2px solid var(--border-color);
-  border-radius: 8px;
-  background: var(--card-bg);
-  color: var(--text-color);
+  border: 2px solid var(--learning-border);
+  border-radius: var(--learning-radius);
+  background: var(--learning-card-bg);
+  color: var(--learning-text);
   font-size: 0.85rem;
   cursor: pointer;
   transition: all 0.3s ease;
-  min-width: 150px;
+  min-width: 130px;
 }
 
 .filter-options select:focus {
   outline: none;
-  border-color: var(--primary-color);
+  border-color: var(--learning-primary);
   box-shadow: 0 0 0 3px rgba(124, 58, 237, 0.1);
 }
 
