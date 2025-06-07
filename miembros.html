@@ -1,0 +1,1242 @@
+<!DOCTYPE html>
+<html lang="es" class="light-theme">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Miembros - Nexo Artistico</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/dark-mode.css">
+    <link rel="stylesheet" href="css/miembros.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <i class="fas fa-palette"></i>
+                <span>Nexo Artistico</span>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="index.html#about">Nosotros</a></li>
+                    <li><a href="biblioteca.html">Biblioteca</a></li>
+                    <li><a href="centro-mejora.html">Centro de Mejora</a></li>
+                    <li><a href="miembros.html" class="active">Miembros</a></li>
+                    <li><a href="index.html#contact">Comunidad</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <button id="theme-toggle" class="theme-toggle" aria-label="Toggle Dark Mode">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <div class="header-btn">
+                    <a href="https://chat.whatsapp.com/Lwj85QzALMFBjCnYirEJ9K" target="_blank">
+                        <i class="fab fa-whatsapp"></i>
+                        Únete por WhatsApp
+                    </a>
+                </div>
+            </div>
+            <div class="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu">
+        <div class="mobile-menu-close">
+            <i class="fas fa-times"></i>
+        </div>
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="index.html#about">Nosotros</a></li>
+            <li><a href="biblioteca.html">Biblioteca</a></li>
+            <li><a href="centro-mejora.html">Centro de Mejora</a></li>
+            <li><a href="miembros.html">Miembros</a></li>
+            <li><a href="index.html#contact">Comunidad</a></li>
+        </ul>
+        <div class="mobile-menu-actions">
+            <button id="mobile-theme-toggle" class="theme-toggle" aria-label="Toggle Dark Mode">
+                <i class="fas fa-moon"></i>
+            </button>
+            <div class="mobile-menu-btn">
+                <a href="https://chat.whatsapp.com/Lwj85QzALMFBjCnYirEJ9K" target="_blank">
+                    <i class="fab fa-whatsapp"></i>
+                    Únete por WhatsApp
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Page Header - Compact -->
+    <section class="page-header-compact">
+        <div class="container">
+            <h1>Nuestros <span class="gradient-text">Miembros</span></h1>
+            <p>Conoce a los artistas que forman parte de nuestra comunidad creativa.</p>
+        </div>
+    </section>
+
+    <!-- Members Search and Filter -->
+    <section class="members-controls">
+        <div class="container">
+            <div class="search-filter">
+                <div class="search-box">
+                    <i class="fas fa-search search-icon"></i>
+                    <input type="text" id="member-search" placeholder="Buscar miembro...">
+                </div>
+                <div class="filter-options">
+                    <select id="role-filter">
+                        <option value="all">Todos los roles</option>
+                        <option value="admin">Administradores</option>
+                        <option value="member">Miembros</option>
+                    </select>
+                    <select id="specialty-filter">
+                        <option value="all">Todas las especialidades</option>
+                        <option value="digital">Arte Digital</option>
+                        <option value="traditional">Arte Tradicional</option>
+                        <option value="concept">Concept Art</option>
+                        <option value="illustration">Ilustración</option>
+                        <option value="character">Diseño de Personajes</option>
+                        <option value="animation">Animación</option>
+                    </select>
+                </div>
+            </div>
+            <div class="members-stats">
+                <div class="stat">
+                    <span class="stat-number" id="total-members">10</span>
+                    <span class="stat-label">Miembros Totales</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number" id="total-admins">4</span>
+                    <span class="stat-label">Administradores</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number" id="total-works">24</span>
+                    <span class="stat-label">Obras Compartidas</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Founder Section -->
+    <section class="founder-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Fundador</h2>
+            </div>
+            
+            <div class="founder-card" data-member-id="tkandresb" data-role="founder" data-specialty="traditional">
+                <div class="founder-badge">
+                    <i class="fas fa-crown"></i>
+                    <span>Fundador & Admin Principal</span>
+                </div>
+                <div class="founder-content">
+                    <div class="founder-avatar">
+                        <img src="img/pfp/admins/TkAndresB/pfp.jpg" alt="TkAndresB">
+                    </div>
+                    <div class="founder-info">
+                        <h3>TkAndresB</h3>
+                        <p class="founder-bio">Artista Tradicional especializado en Manga, adicto a Tokyo Ghoul y el detallismo. Fundador del actual Nexo Artistico con la visión de crear un espacio donde los artistas puedan convivir y mejorar juntos.</p>
+                        <div class="founder-details">
+                            <div class="detail">
+                                <i class="fas fa-palette"></i>
+                                <span>Especialidad: Estilo Manga</span>
+                            </div>
+                            <div class="detail">
+                                <i class="fas fa-calendar-alt"></i>
+                                <span>Miembro desde: 2023</span>
+                            </div>
+                            <div class="detail">
+                                <i class="fas fa-trophy"></i>
+                                <span>Proyectos liderados: 5+</span>
+                            </div>
+                        </div>
+                            <div class="founder-social">
+                            <a href="#" class="social-icon tiktok">
+                        <i class="fab fa-tiktok"></i>
+                            </a>
+                    <a href="#" class="social-icon instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="#" class="social-icon youtube">
+                        <i class="fab fa-youtube"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="view-works">
+                    <button class="btn-view-works">
+                        <i class="fas fa-images"></i>
+                        Ver Obras (4)
+                    </button>
+                </div>
+                <!-- Obras del fundador -->
+                <div class="member-works">
+                    <div class="works-header">
+                        <div class="works-title">
+                            <i class="fas fa-images"></i>
+                            Obras de TkAndresB
+                        </div>
+                        <div class="works-count">4 obras</div>
+                    </div>
+                    <div class="works-grid">
+                        <!-- Obra 1 -->
+                        <div class="work-item">
+                            <div class="work-image">
+                                <img src="img/pfp/admins/TkAndresB/Kaneki.jfif" alt="Retrato Manga">
+                            </div>
+                            <div class="work-info">
+                                <h4 class="work-title">Kaneki</h4>
+                                <p class="work-technique"> tinta</p>
+                            </div>
+                        </div>
+                        <!-- Obra 2 -->
+                        <div class="work-item">
+                            <div class="work-image">
+                                <img src="img/pfp/admins/TkAndresB/Sk.jfif" alt="Panel Berserk">
+                            </div>
+                            <div class="work-info">
+                                <h4 class="work-title">Skull Knigth</h4>
+                                <p class="work-technique">Detallismo a lineas</p>
+                            </div>
+                        </div>
+                        <!-- Obra 3 -->
+                        <div class="work-item">
+                            <div class="work-image">
+                                <img src="img/pfp/admins/TkAndresB/Arima.jfif" alt="Retrato de Perfil Manga">
+                            </div>
+                            <div class="work-info">
+                                <h4 class="work-title">Arima</h4>
+                                <p class="work-technique"> Tinta</p>
+                            </div>
+                        </div>
+                        <!-- Obra 4 -->
+                        <div class="work-item">
+                            <div class="work-image">
+                                <img src="img/pfp/admins/TkAndresB/Goku.jfif" alt="Goku MUI">
+                            </div>
+                            <div class="work-info">
+                                <h4 class="work-title">Goku MUI</h4>
+                                <p class="work-technique">Tinta</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Admins Section -->
+<section class="admins-section">
+    <div class="container">
+        <div class="section-title">
+            <h2>Administradores</h2>
+        </div>
+        
+        <div class="members-grid">
+
+
+    <!-- Admin 1: Godjo -->
+    <div class="member-card" data-member-id="godjo" data-role="admin" data-specialty="traditional">
+        <div class="member-badge admin">
+            <i class="fas fa-star"></i>
+            <span>Admin</span>
+        </div>
+        <div class="member-main-content">
+            <div class="member-avatar">
+                <img src="img/pfp/admins/Godjo/pfp.jfif" alt="Godjo">
+            </div>
+            <div class="member-info">
+                <h3>Godjo</h3>
+                <p class="member-specialty">Arte Tradicional</p>
+                <p class="member-since">Miembro desde 2024</p>
+                <div class="member-social">
+                    <a href="#" class="member-social-link instagram" title="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="#" class="member-social-link twitter" title="Twitter">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="#" class="member-social-link artstation" title="ArtStation">
+                        <i class="fab fa-artstation"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="view-works">
+            <button class="btn-view-works">
+                <i class="fas fa-images"></i>
+                Ver Obras (2)
+            </button>
+        </div>
+        <!-- Obras de Godjo -->
+        <div class="member-works">
+            <div class="works-header">
+                <div class="works-title">
+                    <i class="fas fa-images"></i>
+                    Obras de Godjo
+                </div>
+                <div class="works-count">3 obras</div>
+            </div>
+            <div class="works-grid">
+                <div class="work-item">
+                    <div class="work-image">
+                        <img src="img/pfp/admins/Godjo/obra1.jfif" alt="">
+                    </div>
+                    <div class="work-info">
+                        <h4 class="work-title"></h4>
+                        <p class="work-technique"></p>
+                    </div>
+                </div>
+                <div class="work-item">
+                    <div class="work-image">
+                        <img src="img/pfp/admins/Godjo/obra2.jfif" alt="Paisaje Urbano">
+                    </div>
+                    <div class="work-info">
+                        <h4 class="work-title">Paisaje Urbano</h4>
+                        <p class="work-technique">Acuarela</p>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+
+    <!-- Admin 2: Kvothe -->
+    <div class="member-card" data-member-id="kvothe" data-role="admin" data-specialty="traditional">
+        <div class="member-badge admin">
+            <i class="fas fa-star"></i>
+            <span>Admin</span>
+        </div>
+        <div class="member-main-content">
+            <div class="member-avatar">
+                <img src="img/pfp/admins/Kvothe/pfp.jfif" alt="Kvothe">
+            </div>
+            <div class="member-info">
+                <h3>Kvothe</h3>
+                <p class="member-specialty">Boligrafo</p>
+                <p class="member-since">Miembro desde 2024</p>
+                <div class="member-social">
+                    <a href="#" class="member-social-link instagram" title="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="#" class="member-social-link deviantart" title="DeviantArt">
+                        <i class="fab fa-deviantart"></i>
+                    </a>
+                    <a href="#" class="member-social-link behance" title="Behance">
+                        <i class="fab fa-behance"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="view-works">
+            <button class="btn-view-works">
+                <i class="fas fa-images"></i>
+                Ver Obras (2)
+            </button>
+        </div>
+        <!-- Obras de Kvothe -->
+        <div class="member-works">
+            <div class="works-header">
+                <div class="works-title">
+                    <i class="fas fa-images"></i>
+                    Obras de Kvothe
+                </div>
+                <div class="works-count">2 obras</div>
+            </div>
+            <div class="works-grid">
+                <div class="work-item">
+                    <div class="work-image">
+                        <img src="img/pfp/admins/Kvothe/obra1.jfif" alt="Hajime no Ippo">
+                    </div>
+                    <div class="work-info">
+                        <h4 class="work-title">Hajime no Ippo</h4>
+                        <p class="work-technique">Lapicero</p>
+                    </div>
+                </div>
+                <div class="work-item">
+                    <div class="work-image">
+                        <img src="img/pfp/admins/Kvothe/obra2.jfif" alt="Berserk">
+                    </div>
+                    <div class="work-info">
+                        <h4 class="work-title">Berserk</h4>
+                        <p class="work-technique">Boligrafo</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Admin 4: Yoshio -->
+    <div class="member-card" data-member-id="yoshio" data-role="admin" data-specialty="digital">
+        <div class="member-badge admin">
+            <i class="fas fa-star"></i>
+            <span>Admin</span>
+        </div>
+        <div class="member-main-content">
+            <div class="member-avatar">
+                <img src="img/pfp/admins/Yoshio/pfp.jfif" alt="Yoshio">
+            </div>
+            <div class="member-info">
+                <h3>Yoshio</h3>
+                <p class="member-specialty">Creacion de oc's</p>
+                <p class="member-since">Miembro desde 2023</p>
+                <div class="member-social">
+                    <a href="#" class="member-social-link instagram" title="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="#" class="member-social-link artstation" title="ArtStation">
+                        <i class="fab fa-artstation"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="view-works">
+            <button class="btn-view-works">
+                <i class="fas fa-images"></i>
+                Ver Obras (4)
+            </button>
+        </div>
+        <!-- Obras de Yoshio -->
+        <div class="member-works">
+            <div class="works-header">
+                <div class="works-title">
+                    <i class="fas fa-images"></i>
+                    Obras de Yoshio
+                </div>
+                <div class="works-count">4 obras</div>
+            </div>
+            <div class="works-grid">
+                <div class="work-item">
+                    <div class="work-image">
+                        <img src="img/obras/admins/Yoshio/Cyberpunk.jpg" alt="Cyberpunk">
+                    </div>
+                    <div class="work-info">
+                        <h4 class="work-title">Cyberpunk</h4>
+                        <p class="work-technique">Digital</p>
+                    </div>
+                </div>
+                <div class="work-item">
+                    <div class="work-image">
+                        <img src="img/obras/admins/Yoshio/Samurai.jpg" alt="Samurai">
+                    </div>
+                    <div class="work-info">
+                        <h4 class="work-title">Samurai</h4>
+                        <p class="work-technique">Digital</p>
+                    </div>
+                </div>
+                <div class="work-item">
+                    <div class="work-image">
+                        <img src="img/obras/admins/Yoshio/SpaceShip.jpg" alt="SpaceShip">
+                    </div>
+                    <div class="work-info">
+                        <h4 class="work-title">SpaceShip</h4>
+                        <p class="work-technique">Digital</p>
+                    </div>
+                </div>
+                <div class="work-item">
+                    <div class="work-image">
+                        <img src="img/obras/admins/Yoshio/Synthwave.jpg" alt="Synthwave">
+                    </div>
+                    <div class="work-info">
+                        <h4 class="work-title">Synthwave</h4>
+                        <p class="work-technique">Digital</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Admin 5: Adrian  -->
+    <div class="member-card" data-member-id="adrian" data-role="admin" data-specialty="traditional">
+        <div class="member-badge admin">
+            <i class="fas fa-star"></i>
+            <span>Admin</span>
+        </div>
+        <div class="member-main-content">
+            <div class="member-avatar">
+                <img src="img/pfp/admins/Adrian/pfp.jfif" alt="Adrian">
+            </div>
+            <div class="member-info">
+                <h3>Adrian</h3>
+                <p class="member-specialty">Arte Tradicional</p>
+                <p class="member-since">Miembro desde 2023</p>
+                <div class="member-social">
+                    <a href="#" class="member-social-link instagram" title="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="#" class="member-social-link facebook" title="Facebook">
+                        <i class="fab fa-facebook"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="view-works">
+            <button class="btn-view-works">
+                <i class="fas fa-images"></i>
+                Ver Obras (3)
+            </button>
+        </div>
+        <!-- Obras de Adrian -->
+        <div class="member-works">
+            <div class="works-header">
+                <div class="works-title">
+                    <i class="fas fa-images"></i>
+                    Obras de Adrian
+                </div>
+                <div class="works-count">3 obras</div>
+            </div>
+            <div class="works-grid">
+                <div class="work-item">
+                    <div class="work-image">
+                        <img src="img/obras/admins/Adrian/DragonBall.jpg" alt="DragonBall">
+                    </div>
+                    <div class="work-info">
+                        <h4 class="work-title">DragonBall</h4>
+                        <p class="work-technique">Lapiz</p>
+                    </div>
+                </div>
+                <div class="work-item">
+                    <div class="work-image">
+                        <img src="img/obras/admins/Adrian/GokuSSJ3.jpg" alt="GokuSSJ3">
+                    </div>
+                    <div class="work-info">
+                        <h4 class="work-title">GokuSSJ3</h4>
+                        <p class="work-technique">Lapiz</p>
+                    </div>
+                </div>
+                <div class="work-item">
+                    <div class="work-image">
+                        <img src="img/obras/admins/Adrian/GokuSSJ4.jpg" alt="GokuSSJ4">
+                    </div>
+                    <div class="work-info">
+                        <h4 class="work-title">GokuSSJ4</h4>
+                        <p class="work-technique">Lapiz</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Admin 6: Alan -->
+    <div class="member-card" data-member-id="alan" data-role="admin" data-specialty="trditional">
+        <div class="member-badge admin">
+            <i class="fas fa-star"></i>
+            <span>Admin</span>
+        </div>
+        <div class="member-main-content">
+            <div class="member-avatar">
+                <img src="img/pfp/admins/Alan/pfp.jfif" alt="Alan">
+            </div>
+            <div class="member-info">
+                <h3>Alan</h3>
+                <p class="member-specialty">Arte Tradicional</p>
+                <p class="member-since">Miembro desde 2023</p>
+                <div class="member-social">
+                    <a href="#" class="member-social-link instagram" title="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="#" class="member-social-link twitter" title="Twitter">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="view-works">
+            <button class="btn-view-works">
+                <i class="fas fa-images"></i>
+                Ver Obras (3)
+            </button>
+        </div>
+        <!-- Obras de Alan -->
+        <div class="member-works">
+            <div class="works-header">
+                <div class="works-title">
+                    <i class="fas fa-images"></i>
+                    Obras de Alan
+                </div>
+                <div class="works-count">3 obras</div>
+            </div>
+            <div class="works-grid">
+                <div class="work-item">
+                    <div class="work-image">
+                        <img src="img/obras/admins/Alan/Astronaut.jpg" alt="Astronaut">
+                    </div>
+                    <div class="work-info">
+                        <h4 class="work-title">Astronaut</h4>
+                        <p class="work-technique">Digital</p>
+                    </div>
+                </div>
+                <div class="work-item">
+                    <div class="work-image">
+                        <img src="img/obras/admins/Alan/CyberpunkGirl.jpg" alt="CyberpunkGirl">
+                    </div>
+                    <div class="work-info">
+                        <h4 class="work-title">CyberpunkGirl</h4>
+                        <p class="work-technique">Digital</p>
+                    </div>
+                </div>
+                <div class="work-item">
+                    <div class="work-image">
+                        <img src="img/obras/admins/Alan/GirlWithCat.jpg" alt="GirlWithCat">
+                    </div>
+                    <div class="work-info">
+                        <h4 class="work-title">GirlWithCat</h4>
+                        <p class="work-technique">Digital</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Admin 7: Fr -->
+    <div class="member-card" data-member-id="fr" data-role="admin" data-specialty="traditional">
+        <div class="member-badge admin">
+            <i class="fas fa-star"></i>
+            <span>Admin</span>
+        </div>
+        <div class="member-main-content">
+            <div class="member-avatar">
+                <img src="img/pfp/admins/Fr/pfp.jfif" alt="Fr">
+            </div>
+            <div class="member-info">
+                <h3>Fr</h3>
+                <p class="member-specialty">Arte Tradicional</p>
+                <p class="member-since">Miembro desde 2023</p>
+                <div class="member-social">
+                    <a href="#" class="member-social-link instagram" title="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="#" class="member-social-link twitter" title="Twitter">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="view-works">
+            <button class="btn-view-works">
+                <i class="fas fa-images"></i>
+                Ver Obras (3)
+            </button>
+        </div>
+        <!-- Obras de Fr -->
+        <div class="member-works">
+            <div class="works-header">
+                <div class="works-title">
+                    <i class="fas fa-images"></i>
+                    Obras de Fr
+                </div>
+                <div class="works-count">2 obras</div>
+            </div>
+            <div class="works-grid">
+                <div class="work-item">
+                    <div class="work-image">
+                        <img src="img/pfp/admins/Fr/obra1.jfif" alt="Todoroki">
+                    </div>
+                    <div class="work-info">
+                        <h4 class="work-title">Todoroki</h4>
+                        <p class="work-technique">Coloreado Anime</p>
+                    </div>
+                </div>
+                <div class="work-item">
+                    <div class="work-image">
+                        <img src="img/pfp/admins/Fr/obra2.jfif" alt="Rengoku">
+                    </div>
+                    <div class="work-info">
+                        <h4 class="work-title">Rengoku</h4>
+                        <p class="work-technique">Manga</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Admin 8: Duvan -->
+    <div class="member-card" data-member-id="duvan" data-role="admin" data-specialty="traditional">
+        <div class="member-badge admin">
+            <i class="fas fa-star"></i>
+            <span>Admin</span>
+        </div>
+        <div class="member-main-content">
+            <div class="member-avatar">
+                <img src="img/pfp/admins/Duvan/pfp.jfif" alt="Duvan">
+            </div>
+            <div class="member-info">
+                <h3>Duvan</h3>
+                <p class="member-specialty">Arte en Lienzo</p>
+                <p class="member-since">Miembro desde 2023</p>
+                <div class="member-social">
+                    <a href="#" class="member-social-link instagram" title="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="#" class="member-social-link artstation" title="ArtStation">
+                        <i class="fab fa-artstation"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="view-works">
+            <button class="btn-view-works">
+                <i class="fas fa-images"></i>
+                Ver Obras (3)
+            </button>
+        </div>
+        <!-- Obras de Duvan -->
+        <div class="member-works">
+            <div class="works-header">
+                <div class="works-title">
+                    <i class="fas fa-images"></i>
+                    Obras de Duvan
+                </div>
+                <div class="works-count">3 obras</div>
+            </div>
+            <div class="works-grid">
+                <div class="work-item">
+                    <div class="work-image">
+                        <img src="img/obras/admins/Duvan/MechaGirl.jpg" alt="MechaGirl">
+                    </div>
+                    <div class="work-info">
+                        <h4 class="work-title">MechaGirl</h4>
+                        <p class="work-technique">Digital</p>
+                    </div>
+                </div>
+                <div class="work-item">
+                    <div class="work-image">
+                        <img src="img/obras/admins/Duvan/Mercenary.jpg" alt="Mercenary">
+                    </div>
+                    <div class="work-info">
+                        <h4 class="work-title">Mercenary</h4>
+                        <p class="work-technique">Digital</p>
+                    </div>
+                </div>
+                <div class="work-item">
+                    <div class="work-image">
+                        <img src="img/obras/admins/Duvan/SciFiGirl.jpg" alt="SciFiGirl">
+                    </div>
+                    <div class="work-info">
+                        <h4 class="work-title">SciFiGirl</h4>
+                        <p class="work-technique">Digital</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Admin 9: Skillet -->
+    <div class="member-card" data-member-id="skillet" data-role="admin" data-specialty="traditional">
+        <div class="member-badge admin">
+            <i class="fas fa-star"></i>
+            <span>Admin</span>
+        </div>
+        <div class="member-main-content">
+            <div class="member-avatar">
+                <img src="img/pfp/admins/Skillet/pfp.jfif" alt="Skillet">
+            </div>
+            <div class="member-info">
+                <h3>Skillet</h3>
+                <p class="member-specialty">Arte Tradicional</p>
+                <p class="member-since">Miembro desde 2023</p>
+                <div class="member-social">
+                    <a href="#" class="member-social-link instagram" title="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="#" class="member-social-link twitter" title="Twitter">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="view-works">
+            <button class="btn-view-works">
+                <i class="fas fa-images"></i>
+                Ver Obras (2)
+            </button>
+        </div>
+        <!-- Obras de Skillet -->
+        <div class="member-works">
+            <div class="works-header">
+                <div class="works-title">
+                    <i class="fas fa-images"></i>
+                    Obras de Skillet
+                </div>
+                <div class="works-count">2 obras</div>
+            </div>
+            <div class="works-grid">
+                <div class="work-item">
+                    <div class="work-image">
+                        <img src="img/pfp/admins/Skillet/obra1.jfif" alt="Goku Black">
+                    </div>
+                    <div class="work-info">
+                        <h4 class="work-title">Goku Black</h4>
+                        <p class="work-technique">Coloreado Anime</p>
+                    </div>
+                </div>
+                <div class="work-item">
+                    <div class="work-image">
+                        <img src="img/pfp/admins/Skillet/obra2.jfif" alt="NarutoxPain">
+                    </div>
+                    <div class="work-info">
+                        <h4 class="work-title">JNarutoxPain</h4>
+                        <p class="work-technique">Coloreado Anime</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Admin 10: Robe -->
+    <div class="member-card" data-member-id="robe" data-role="admin" data-specialty="traditional">
+        <div class="member-badge admin">
+            <i class="fas fa-star"></i>
+            <span>Admin</span>
+        </div>
+        <div class="member-main-content">
+            <div class="member-avatar">
+                <img src="img/pfp/admins/Robe/pfp.jfif" alt="Robe">
+            </div>
+            <div class="member-info">
+                <h3>Robe</h3>
+                <p class="member-specialty">Arte Tradicional</p>
+                <p class="member-since">Miembro desde 2023</p>
+                <div class="member-social">
+                    <a href="#" class="member-social-link instagram" title="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="#" class="member-social-link artstation" title="ArtStation">
+                        <i class="fab fa-artstation"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="view-works">
+            <button class="btn-view-works">
+                <i class="fas fa-images"></i>
+                Ver Obras (3)
+            </button>
+        </div>
+        <!-- Obras de Robe -->
+        <div class="member-works">
+            <div class="works-header">
+                <div class="works-title">
+                    <i class="fas fa-images"></i>
+                    Obras de Robe
+                </div>
+                <div class="works-count">3 obras</div>
+            </div>
+            <div class="works-grid">
+                <div class="work-item">
+                    <div class="work-image">
+                        <img src="img/obras/admins/Robe/ArcaneJinx.jpg" alt="ArcaneJinx">
+                    </div>
+                    <div class="work-info">
+                        <h4 class="work-title">ArcaneJinx</h4>
+                        <p class="work-technique">Digital</p>
+                    </div>
+                </div>
+                <div class="work-item">
+                    <div class="work-image">
+                        <img src="img/obras/admins/Robe/CyberpunkGirl.jpg" alt="CyberpunkGirl">
+                    </div>
+                    <div class="work-info">
+                        <h4 class="work-title">CyberpunkGirl</h4>
+                        <p class="work-technique">Digital</p>
+                    </div>
+                </div>
+                <div class="work-item">
+                    <div class="work-image">
+                        <img src="img/obras/admins/Robe/Jinx.jpg" alt="Jinx">
+                    </div>
+                    <div class="work-info">
+                        <h4 class="work-title">Jinx</h4>
+                        <p class="work-technique">Digital</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Admin 11: Sam -->
+    <div class="member-card" data-member-id="sam" data-role="admin" data-specialty="traditional">
+        <div class="member-badge admin">
+            <i class="fas fa-star"></i>
+            <span>Admin</span>
+        </div>
+        <div class="member-main-content">
+            <div class="member-avatar">
+                <img src="img/pfp/admins/Sam/pfp.jfif" alt="Sam">
+            </div>
+            <div class="member-info">
+                <h3>Sam</h3>
+                <p class="member-specialty">Arte Tradicional</p>
+                <p class="member-since">Miembro desde 2023</p>
+                <div class="member-social">
+                    <a href="#" class="member-social-link instagram" title="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="#" class="member-social-link twitter" title="Twitter">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="view-works">
+            <button class="btn-view-works">
+                <i class="fas fa-images"></i>
+                Ver Obras (3)
+            </button>
+        </div>
+        <!-- Obras de Sam -->
+        <div class="member-works">
+            <div class="works-header">
+                <div class="works-title">
+                    <i class="fas fa-images"></i>
+                    Obras de Sam
+                </div>
+                <div class="works-count">3 obras</div>
+            </div>
+            <div class="works-grid">
+                <div class="work-item">
+                    <div class="work-image">
+                        <img src="img/obras/admins/Sam/Anya.jpg" alt="Anya">
+                    </div>
+                    <div class="work-info">
+                        <h4 class="work-title">Anya</h4>
+                        <p class="work-technique">Lapiz</p>
+                    </div>
+                </div>
+                <div class="work-item">
+                    <div class="work-image">
+                        <img src="img/obras/admins/Sam/Naruto.jpg" alt="Naruto">
+                    </div>
+                    <div class="work-info">
+                        <h4 class="work-title">Naruto</h4>
+                        <p class="work-technique">Lapiz</p>
+                    </div>
+                </div>
+                <div class="work-item">
+                    <div class="work-image">
+                        <img src="img/obras/admins/Sam/Zenitsu.jpg" alt="Zenitsu">
+                    </div>
+                    <div class="work-info">
+                        <h4 class="work-title">Zenitsu</h4>
+                        <p class="work-technique">Lapiz</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Admin 12: Arg_sebas_art -->
+    <div class="member-card" data-member-id="arg_sebas_art" data-role="admin" data-specialty="traditional">
+        <div class="member-badge admin">
+            <i class="fas fa-star"></i>
+            <span>Admin</span>
+        </div>
+        <div class="member-main-content">
+            <div class="member-avatar">
+                <img src="img/pfp/admins/Arg_sebas_art/pfp.jfif" alt="Arg_sebas_art">
+            </div>
+            <div class="member-info">
+                <h3>Arg_sebas_art</h3>
+                <p class="member-specialty">Arte Tradicional</p>
+                <p class="member-since">Miembro desde 2023</p>
+                <div class="member-social">
+                    <a href="#" class="member-social-link instagram" title="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="#" class="member-social-link artstation" title="ArtStation">
+                        <i class="fab fa-artstation"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="view-works">
+            <button class="btn-view-works">
+                <i class="fas fa-images"></i>
+                Ver Obras (3)
+            </button>
+        </div>
+        <!-- Obras de Arg_sebas_art -->
+        <div class="member-works">
+            <div class="works-header">
+                <div class="works-title">
+                    <i class="fas fa-images"></i>
+                    Obras de Arg_sebas_art
+                </div>
+                <div class="works-count">3 obras</div>
+            </div>
+            <div class="works-grid">
+                <div class="work-item">
+                    <div class="work-image">
+                        <img src="img/obras/admins/Arg_sebas_art/CyberpunkGirl.jpg" alt="CyberpunkGirl">
+                    </div>
+                    <div class="work-info">
+                        <h4 class="work-title">CyberpunkGirl</h4>
+                        <p class="work-technique">Digital</p>
+                    </div>
+                </div>
+                <div class="work-item">
+                    <div class="work-image">
+                        <img src="img/obras/admins/Arg_sebas_art/NeonSamurai.jpg" alt="NeonSamurai">
+                    </div>
+                    <div class="work-info">
+                        <h4 class="work-title">NeonSamurai</h4>
+                        <p class="work-technique">Digital</p>
+                    </div>
+                </div>
+                <div class="work-item">
+                    <div class="work-image">
+                        <img src="img/obras/admins/Arg_sebas_art/SpaceGirl.jpg" alt="SpaceGirl">
+                    </div>
+                    <div class="work-info">
+                        <h4 class="work-title">SpaceGirl</h4>
+                        <p class="work-technique">Digital</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    </div>
+</section>
+
+    <!-- Regular Members Section -->
+    <section class="members-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Miembros de la Comunidad</h2>
+            </div>
+            
+            <div class="members-grid">
+
+
+                <!-- Miembro 1: Negro Jose -->
+                <div class="member-card" data-member-id="Negro Jose" data-role="member" data-specialty="traditional">
+                    <div class="member-badge member">
+                        <i class="fas fa-user"></i>
+                        <span>Miembro</span>
+                    </div>
+                    <div class="member-main-content">
+                        <div class="member-avatar">
+                            <img src="img/pfp/miembros/NJ/pfp.jfif" alt="Ari">
+                        </div>
+                        <div class="member-info">
+                            <h3>Negro Jose</h3>
+                            <p class="member-specialty">Anime Girls</p>
+                            <p class="member-since">Miembro desde 2023</p>
+                            <div class="member-social">
+                                <a href="#" class="member-social-link instagram" title="Instagram">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                                <a href="#" class="member-social-link twitter" title="Twitter">
+                                    <i class="fab fa-twitter"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="view-works">
+                        <button class="btn-view-works">
+                            <i class="fas fa-images"></i>
+                            Ver Obras (2)
+                        </button>
+                    </div>
+                    <!-- Obras -->
+                    <div class="member-works">
+                        <div class="works-header">
+                            <div class="works-title">
+                                <i class="fas fa-images"></i>
+                                Obras del Negro Jose
+                            </div>
+                            <div class="works-count">2 obras</div>
+                        </div>
+                        <div class="works-grid">
+                            <div class="work-item">
+                                <div class="work-image">
+                                    <img src="img/pfp/members/nj/" alt="#####">
+                                </div>
+                                <div class="work-info">
+                                    <h4 class="work-title">######</h4>
+                                    <p class="work-technique">######</p>
+                                </div>
+                            </div>
+                            <div class="work-item">
+                                <div class="work-image">
+                                    <img src="img/pfp/members/nj/" alt="Concept Sheet">
+                                </div>
+                                <div class="work-info">
+                                    <h4 class="work-title">###<h4>
+                                    <p class="work-technique">###</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Miembro 2: Trexx -->
+                <div class="member-card" data-member-id="Trexx" data-role="member" data-specialty="traditional">
+                    <div class="member-badge member">
+                        <i class="fas fa-user"></i>
+                        <span>Miembro</span>
+                    </div>
+                    <div class="member-main-content">
+                        <div class="member-avatar">
+                            <img src="img/pfp/members/trexx/pfp.jfif" alt="Trexx">
+                        </div>
+                        <div class="member-info">
+                            <h3>Trexx</h3>
+                            <p class="member-specialty">###</p>
+                            <p class="member-since">Miembro desde 202X</p>
+                            <div class="member-social">
+                                <a href="#" class="member-social-link youtube" title="YouTube">
+                                    <i class="fab fa-youtube"></i>
+                                </a>
+                                <a href="#" class="member-social-link vimeo" title="Vimeo">
+                                    <i class="fab fa-vimeo"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="view-works">
+                        <button class="btn-view-works">
+                            <i class="fas fa-images"></i>
+                            Ver Obras
+                        </button>
+                    </div>
+                    <!-- Obras de Trexx -->
+                    <div class="member-works">
+                        <div class="works-header">
+                            <div class="works-title">
+                                <i class="fas fa-images"></i>
+                                Obras de Trexx
+                            </div>
+                            <div class="works-count">3 obras</div>
+                        </div>
+                        <div class="works-grid">
+                            <div class="work-item">
+                                <div class="work-image">
+                                    <img src="img/pfp/members/trexx/" alt="###">
+                                </div>
+                                <div class="work-info">
+                                    <h4 class="work-title">###</h4>
+                                    <p class="work-technique">###</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Miembro Template--
+                <div class="member-card" data-member-id="###" data-role="member" data-specialty="####">
+                    <div class="member-badge member">
+                        <i class="fas fa-user"></i>
+                        <span>Miembro</span>
+                    </div>
+                    <div class="member-main-content">
+                        <div class="member-avatar">
+                            <img src="img/pfp/members/" alt="pfp">
+                        </div>
+                        <div class="member-info">
+                            <h3>###</h3>
+                            <p class="member-specialty">###</p>
+                            <p class="member-since">Miembro desde 202X</p>
+                            <div class="member-social">
+                                <a href="#" class="member-social-link instagram" title="Instagram">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                                <a href="#" class="member-social-link behance" title="Behance">
+                                    <i class="fab fa-behance"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="view-works">
+                        <button class="btn-view-works">
+                            <i class="fas fa-images"></i>
+                            Ver Obras (2)
+                        </button>
+                    </div>
+                    
+
+                    <div class="member-works">
+                        <div class="works-header">
+                            <div class="works-title">
+                                <i class="fas fa-images"></i>
+                                Obras de #
+                            </div>
+                            <div class="works-count"># obras</div>
+                        </div>
+                        <div class="works-grid">
+                            <div class="work-item">
+                                <div class="work-image">
+                                    <img src="#####" alt="Ilustración Editorial">
+                                </div>
+                                <div class="work-info">
+                                    <h4 class="work-title">Ilustración Editorial</h4>
+                                    <p class="work-technique">Acuarela</p>
+                                </div>
+                            </div>
+                            <div class="work-item">
+                                <div class="work-image">
+                                    <img src="#####" alt="Poster Artístico">
+                                </div>
+                                <div class="work-info">
+                                    <h4 class="work-title">Poster Artístico</h4>
+                                    <p class="work-technique">Digital</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div> -->
+
+
+
+        
+        </div>
+    </section>
+
+
+
+    <!-- No Results Message -->
+    <div class="no-results" id="no-results" style="display: none;">
+        <div class="no-results-content">
+            <i class="fas fa-search"></i>
+            <h3>No se encontraron miembros</h3>
+            <p>Intenta ajustar los filtros de búsqueda</p>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <i class="fas fa-palette"></i>
+                    <span>Nexo Artistico</span>
+                </div>
+                <div class="social-icons">
+                    <a href="#" class="social-icon tiktok">
+                        <i class="fab fa-tiktok"></i>
+                    </a>
+                    <a href="#" class="social-icon instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="#" class="social-icon youtube">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; <span id="current-year"></span> Nexo Artistico. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script src="js/dark-mode.js"></script>
+    <script src="js/miembros-simple.js"></script>
+</body>
+</html>
+ 
