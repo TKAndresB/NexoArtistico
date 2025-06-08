@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="es" class="light-theme">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biblioteca Digital - Nexo Artistico</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/dark-mode.css">
+    <link rel="stylesheet" href="css/biblioteca-avanzada.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <i class="fas fa-palette"></i>
+                <span>Nexo Artistico</span>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="index.html#about">Nosotros</a></li>
+                    <li><a href="biblioteca.html" class="active">Biblioteca</a></li>
+                    <li><a href="centro-mejora.html">Centro de Mejora</a></li>
+                    <li><a href="miembros.html">Miembros</a></li>
+                    <li><a href="index.html#contact">Comunidad</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <button id="theme-toggle" class="theme-toggle" aria-label="Toggle Dark Mode">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <div class="header-btn">
+                    <a href="https://chat.whatsapp.com/Lwj85QzALMFBjCnYirEJ9K" target="_blank">
+                        <i class="fab fa-whatsapp"></i>
+                        Únete por WhatsApp
+                    </a>
+                </div>
+            </div>
+            <div class="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu">
+        <div class="mobile-menu-close">
+            <i class="fas fa-times"></i>
+        </div>
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="index.html#about">Nosotros</a></li>
+            <li><a href="biblioteca.html">Biblioteca</a></li>
+            <li><a href="centro-mejora.html">Centro de Mejora</a></li>
+            <li><a href="miembros.html">Miembros</a></li>
+            <li><a href="index.html#contact">Comunidad</a></li>
+        </ul>
+        <div class="mobile-menu-actions">
+            <button id="mobile-theme-toggle" class="theme-toggle" aria-label="Toggle Dark Mode">
+                <i class="fas fa-moon"></i>
+            </button>
+            <div class="mobile-menu-btn">
+                <a href="https://chat.whatsapp.com/Lwj85QzALMFBjCnYirEJ9K" target="_blank">
+                    <i class="fab fa-whatsapp"></i>
+                    Únete por WhatsApp
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Page Header - Compact -->
+    <section class="page-header-compact">
+        <div class="container">
+            <h1>Biblioteca <span class="gradient-text">Digital</span></h1>
+            <p>Descubre recursos artísticos y encuentra inspiración en nuestras colecciones curadas.</p>
+        </div>
+    </section>
+
+    <!-- Navigation Tabs - Compact -->
+    <section class="library-tabs-compact">
+        <div class="container">
+            <div class="tabs-wrapper">
+                <button class="tab-btn active" data-tab="library">
+                    <i class="fas fa-book"></i>
+                    <span>Biblioteca</span>
+                </button>
+                <button class="tab-btn" data-tab="pinterest">
+                    <i class="fab fa-pinterest"></i>
+                    <span>Pinterest</span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Library Content -->
+    <section class="library-content">
+        <div class="container">
+            <!-- Library Tab -->
+            <div id="library-tab" class="tab-content active">
+                <!-- Search Section -->
+                <div class="search-section">
+                    <div class="search-container">
+                        <div class="search-box">
+                            <input type="text" id="search-input" placeholder="Buscar libros por título, autor o categoría...">
+                            <button id="search-btn">
+                                <i class="fas fa-search"></i>
+                            </button>
+                        </div>
+                        <div class="filter-options">
+                            <select id="category-filter">
+                                <option value="all">Todas las categorías</option>
+                                <option value="anatomia">Anatomía</option>
+                                <option value="arte-digital">Arte Digital</option>
+                                <option value="perspectiva">Perspectiva</option>
+                                <option value="color">Teoría del Color</option>
+                                <option value="animacion">Animación</option>
+                                <option value="tradicional">Arte Tradicional</option>
+                                <option value="composicion">Composición</option>
+                                <option value="fundamentos">Fundamentos</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Books Grid -->
+                <div class="books-grid" id="books-grid">
+                    <!-- Book 1 -->
+                    <div class="book-card" data-category="Diseño">
+                        <div class="book-cover">
+                            <img src="img/portadas/Libros/01 Dibujar para diseñar.png" alt="portada">
+                            <div class="book-overlay">
+                                <div class="book-actions">
+                                    <a href="https://upfiles.com/sRvbKKnS" target="_blank" class="download-btn">
+                                        <i class="fas fa-download"></i>
+                                        Descargar
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="book-info">
+                            <h3>Dibujar para diseñar</h3>
+                            <p class="book-author">Carlos Ruiz Brussain</p>
+                            <div class="book-tags">
+                                <span class="tag">Diseño</span>
+                                <span class="tag">Creatividad</span>
+                                <span class="tag">ilustracion</span>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--Book 2-->    
+                    <div class="book-card" data-category="Artes Plásticas">
+                        <div class="book-cover">
+                            <img src="img/portadas/Libros/ver y comprender las artes plasticas.png" alt="portada">
+                            <div class="book-overlay">
+                                <div class="book-actions">
+                                    <a href="https://upfiles.com/gM7g" target="_blank" class="download-btn">
+                                        <i class="fas fa-download"></i>
+                                        Descargar
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="book-info">
+                            <h3>Ver y Comprender las Artes Plasticas</h3>
+                            <p class="book-author">Oscar Morriña y Maria Elena Jubrias</p>
+                            <div class="book-tags">
+                                <span class="tag">Apreciación artística</span>
+                                <span class="tag">Artes plásticas</span>
+                                <span class="tag">Comprensión</span>
+                            </div>
+                        </div>
+                    </div>
+                
+                    <!--Book 3-->
+                    <div class="book-card" data-category="Artes Plásticas">
+                        <div class="book-cover">
+                            <img src="img/portadas/Libros/Artes plasticas.png" alt="portada">
+                            <div class="book-overlay">
+                                <div class="book-actions">
+                                    <a href="https://upfiles.com/PeYOlYB" target="_blank" class="download-btn">
+                                        <i class="fas fa-download"></i>
+                                        Descargar
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="book-info">
+                            <h3>Artes Plásticas. Primero Básico</h3>
+                            <p class="book-author">Guao.org</p>
+                            <div class="book-tags">
+                                <span class="tag">Educación artística</span>
+                                <span class="tag">Nivel básico</span>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!--Book Template--
+                    <div class="book-card" data-category="#">
+                        <div class="book-cover">
+                            <img src="img/portadas/Libros/#" alt="portada">
+                            <div class="book-overlay">
+                                <div class="book-actions">
+                                    <a href="##" target="_blank" class="download-btn">
+                                        <i class="fas fa-download"></i>
+                                        Descargar
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="book-info">
+                            <h3>Perspective Made Simple</h3>
+                            <p class="book-author">Ernest R. Norling</p>
+                            <div class="book-tags">
+                                <span class="tag">#</span>
+                                <span class="tag">#</span>
+                            </div>
+                        </div>
+                    </div>-->
+
+
+
+                </div>
+            </div>
+
+            <!-- Pinterest Tab -->
+            <div id="pinterest-tab" class="tab-content">
+                <!-- Pinterest Boards Grid -->
+                <div class="pinterest-boards">
+                    <!-- Board 1 -->
+                    <div class="pinterest-board">
+                        <div class="board-preview">
+                            <div class="board-images">
+                                <img src="img/portadas/Tableros/anatomia/main.jpg" alt="Character Design" class="main-image">
+                                <img src="img/portadas/Tableros/anatomia/mini.jpg" alt="Character Design" class="overlay-image overlay-1">
+                                <img src="img/portadas/Tableros/anatomia/mini2.jpg" alt="Character Design" class="overlay-image overlay-2">
+                            </div>
+                            <div class="board-overlay">
+                                <a href="https://co.pinterest.com/Tk_Andres_B/cosas-de-dibujo/anatomia/" target="_blank" class="view-board-btn">
+                                    <i class="fab fa-pinterest"></i>
+                                    Ver Tablero
+                                </a>
+                            </div>
+                        </div>
+                        <div class="board-info">
+                            <h3>Anatomia</h3>
+                            <p>Referencias De Anatomia</p>
+                            <div class="board-stats">
+                                <span><i class="fas fa-thumbtack"></i> 60+ pins</span>
+                            
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Board 2 -->
+                    <div class="pinterest-board">
+                        <div class="board-preview">
+                            <div class="board-images">
+                                <img src="img/portadas/Tableros/perspectiva/main.jpg" alt="Digital Art" class="main-image">
+                                <img src="img/portadas/Tableros/perspectiva/mini1.jpg" alt="Digital Art" class="overlay-image overlay-1">
+                                <img src="img/portadas/Tableros/perspectiva/mini2.jpg" alt="Digital Art" class="overlay-image overlay-2">
+                            </div>
+                            <div class="board-overlay">
+                                <a href="https://co.pinterest.com/Tk_Andres_B/cosas-de-dibujo/perspective-drawing/" target="_blank" class="view-board-btn">
+                                    <i class="fab fa-pinterest"></i>
+                                    Ver Tablero
+                                </a>
+                            </div>
+                        </div>
+                        <div class="board-info">
+                            <h3>Perspectiva</h3>
+                            <p>Inspiración y Referencias en Perspectiva</p>
+                            <div class="board-stats">
+                                <span><i class="fas fa-thumbtack"></i> 20+ pins</span>
+                                
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Board Template
+                    <div class="pinterest-board">
+                        <div class="board-preview">
+                            <div class="board-images">
+                                <img src="img/portadas/Tableros/" alt="Color Palettes" class="main-image">
+                                <img src="img/portadas/Tableros/" alt="Color Palettes" class="overlay-image overlay-1">
+                                <img src="img/portadas/Tableros/" alt="Color Palettes" class="overlay-image overlay-2">
+                            </div>
+                            <div class="board-overlay">
+                                <a href="#" target="_blank" class="view-board-btn">
+                                    <i class="fab fa-pinterest"></i>
+                                    Ver Tablero
+                                </a>
+                            </div>
+                        </div>
+                        <div class="board-info">
+                            <h3>##</h3>
+                            <p>##</p>
+                            <div class="board-stats">
+                                <span><i class="fas fa-thumbtack"></i> x pins</span>
+                            
+                            </div>
+                        </div>
+                    </div>-->
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <i class="fas fa-palette"></i>
+                    <span>Nexo Artistico</span>
+                </div>
+                <div class="social-icons">
+                    <a href="https://www.tiktok.com/@nexo.artistico4" class="social-icon tiktok">
+                        <i class="fab fa-tiktok"></i>
+                    </a>
+                    <a href="#" class="social-icon instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="#" class="social-icon youtube">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; <span id="current-year"></span> Nexo Artistico. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script src="js/dark-mode.js"></script>
+    <script src="js/biblioteca-tabs.js"></script>
+    <script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const menuToggle = document.querySelector('.menu-toggle');
+    const mobileMenu = document.querySelector('.mobile-menu');
+    const closeBtn = document.querySelector('.mobile-menu-close i');
+
+    menuToggle.addEventListener('click', () => {
+      mobileMenu.classList.add('active');
+    });
+
+    closeBtn.addEventListener('click', () => {
+      mobileMenu.classList.remove('active');
+    });
+  });
+</script>
+
+</body>
+</html>

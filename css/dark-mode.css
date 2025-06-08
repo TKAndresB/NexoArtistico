@@ -1,0 +1,410 @@
+/* ===================================
+   MODO OSCURO - ESTILOS GLOBALES
+   ===================================
+   
+   Este archivo contiene los estilos para el modo oscuro
+   que se aplican a toda la aplicación, incluyendo el
+   Centro de Mejora.
+*/
+
+/* Variables para modo oscuro */
+[data-theme="dark"] {
+  --primary-color: #8b5cf6;
+  --primary-light: #a78bfa;
+  --primary-dark: #7c3aed;
+  --secondary-color: #fbbf24;
+  --accent-color: #34d399;
+  --text-primary: #f1f5f9;
+  --text-secondary: #cbd5e1;
+  --text-light: #94a3b8;
+  --bg-primary: #0f172a;
+  --bg-secondary: #1e293b;
+  --bg-accent: #334155;
+  --border-color: #475569;
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.3), 0 2px 4px -1px rgba(0, 0, 0, 0.2);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.3), 0 4px 6px -2px rgba(0, 0, 0, 0.2);
+  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.3), 0 10px 10px -5px rgba(0, 0, 0, 0.2);
+}
+
+/* Asegurar que el modo claro funcione correctamente */
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+}
+
+/* Asegurar que las secciones tengan el fondo correcto */
+.members-controls {
+  background: var(--bg-secondary);
+}
+
+.founder-section,
+.members-section {
+  background: var(--bg-primary);
+}
+
+.admins-section,
+.join-section {
+  background: var(--bg-secondary);
+}
+
+/* Transiciones suaves para el cambio de tema */
+* {
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+/* ===================================
+   HEADER EN MODO OSCURO - ARREGLADO
+   =================================== */
+[data-theme="dark"] header {
+  background: rgba(15, 23, 42, 0.95) !important;
+  border-bottom-color: var(--border-color) !important;
+  backdrop-filter: blur(20px);
+}
+
+[data-theme="dark"] .logo {
+  color: var(--primary-color);
+}
+
+[data-theme="dark"] nav a {
+  color: var(--text-primary);
+}
+
+[data-theme="dark"] nav a:hover {
+  color: var(--primary-color);
+}
+
+[data-theme="dark"] nav a.active {
+  color: var(--primary-color);
+}
+
+/* Botones de tema */
+.theme-toggle {
+  background: none;
+  border: none;
+  color: var(--text-secondary);
+  font-size: 1.2rem;
+  cursor: pointer;
+  padding: 0.5rem;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+}
+
+.theme-toggle:hover {
+  background: var(--bg-accent);
+  color: var(--text-primary);
+}
+
+[data-theme="dark"] .theme-toggle {
+  color: var(--text-secondary);
+}
+
+[data-theme="dark"] .theme-toggle:hover {
+  background: var(--bg-accent);
+  color: var(--text-primary);
+}
+
+/* Header actions container */
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.mobile-menu-actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+/* Mobile menu en modo oscuro */
+[data-theme="dark"] .mobile-menu {
+  background: var(--bg-primary);
+  border-left: 1px solid var(--border-color);
+}
+
+[data-theme="dark"] .mobile-menu a {
+  color: var(--text-secondary);
+  border-bottom-color: var(--border-color);
+}
+
+[data-theme="dark"] .mobile-menu a:hover {
+  color: var(--text-primary);
+}
+
+[data-theme="dark"] .mobile-menu-close i {
+  color: var(--text-primary);
+}
+
+/* Page header en modo oscuro */
+[data-theme="dark"] .page-header {
+  background: var(--bg-primary);
+  color: var(--text-primary);
+}
+
+[data-theme="dark"] .page-header h1 {
+  color: var(--text-primary);
+}
+
+[data-theme="dark"] .page-header p {
+  color: var(--text-secondary);
+}
+
+/* Footer en modo oscuro */
+[data-theme="dark"] footer {
+  background: var(--bg-primary);
+  border-top: 1px solid var(--border-color);
+  color: var(--text-primary);
+}
+
+[data-theme="dark"] .footer-logo {
+  color: var(--text-primary);
+}
+
+[data-theme="dark"] .footer-bottom {
+  border-top-color: var(--border-color);
+  color: var(--text-light);
+}
+
+/* Responsive para header actions */
+@media (max-width: 767px) {
+  .header-actions {
+    display: none;
+  }
+
+  .mobile-menu-actions {
+    display: flex;
+  }
+}
+
+@media (min-width: 768px) {
+  .header-actions {
+    display: flex;
+  }
+
+  .mobile-menu-actions {
+    display: none;
+  }
+}
+
+/* Animación para el icono del tema */
+.theme-toggle i {
+  transition: transform 0.3s ease;
+}
+
+.theme-toggle:hover i {
+  transform: rotate(20deg);
+}
+
+/* Estados de focus para accesibilidad */
+.theme-toggle:focus {
+  outline: 2px solid var(--primary-color);
+  outline-offset: 2px;
+}
+
+/* Mejoras para el contraste en modo oscuro */
+[data-theme="dark"] .gradient-text {
+  background: linear-gradient(135deg, #a78bfa 0%, #fbbf24 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+[data-theme="dark"] .btn-primary {
+  background: linear-gradient(135deg, #8b5cf6 0%, #a78bfa 100%);
+}
+
+[data-theme="dark"] .btn-outline {
+  border-color: var(--primary-color);
+  color: var(--primary-color);
+}
+
+[data-theme="dark"] .btn-outline:hover {
+  background: var(--primary-color);
+  color: var(--bg-primary);
+}
+
+/* ===================================
+   ARREGLOS ESPECÍFICOS PARA PÁGINAS
+   =================================== */
+
+/* Biblioteca en modo oscuro */
+[data-theme="dark"] .library-section {
+  background: var(--bg-secondary);
+}
+
+[data-theme="dark"] .library-controls {
+  background: var(--bg-primary);
+  border-color: var(--border-color);
+}
+
+[data-theme="dark"] .search-box input {
+  background: var(--bg-secondary);
+  color: var(--text-primary);
+  border-color: var(--border-color);
+}
+
+[data-theme="dark"] .category-tag {
+  background: var(--bg-accent);
+  border-color: var(--border-color);
+  color: var(--text-secondary);
+}
+
+[data-theme="dark"] .category-tag:hover {
+  border-color: var(--primary-light);
+}
+
+[data-theme="dark"] .category-tag.active {
+  background: var(--primary-color);
+  border-color: var(--primary-color);
+  color: white;
+}
+
+[data-theme="dark"] .book-item {
+  background: var(--bg-primary);
+  border-color: var(--border-color);
+}
+
+[data-theme="dark"] .book-title {
+  color: var(--text-primary);
+}
+
+[data-theme="dark"] .book-description {
+  color: var(--text-secondary);
+}
+
+/* Centro de mejora en modo oscuro */
+[data-theme="dark"] .learning-center {
+  background: var(--bg-secondary);
+}
+
+[data-theme="dark"] .learning-controls {
+  background: var(--bg-primary);
+  border-color: var(--border-color);
+}
+
+[data-theme="dark"] .progress-section {
+  background: var(--bg-primary);
+  border-color: var(--border-color);
+}
+
+[data-theme="dark"] .playlist-card {
+  background: var(--bg-primary);
+  border-color: var(--border-color);
+}
+
+[data-theme="dark"] .video-card {
+  background: var(--bg-primary);
+  border-color: var(--border-color);
+}
+
+/* Miembros en modo oscuro */
+[data-theme="dark"] .members-controls {
+  background: var(--bg-secondary);
+}
+
+[data-theme="dark"] .founder-section {
+  background: var(--bg-primary);
+}
+
+[data-theme="dark"] .admins-section {
+  background: var(--bg-secondary);
+}
+
+[data-theme="dark"] .members-section {
+  background: var(--bg-primary);
+}
+
+[data-theme="dark"] .founder-card {
+  background: var(--bg-primary);
+  border-color: var(--border-color);
+}
+
+[data-theme="dark"] .member-card {
+  background: var(--bg-primary);
+  border-color: var(--border-color);
+}
+
+[data-theme="dark"] .join-section {
+  background: var(--bg-secondary);
+}
+
+/* ===================================
+   SCROLL EFFECTS EN MODO OSCURO
+   =================================== */
+[data-theme="dark"] header.scrolled {
+  background: rgba(15, 23, 42, 0.98) !important;
+  backdrop-filter: blur(20px);
+}
+
+/* ===================================
+   MENU TOGGLE EN MODO OSCURO
+   =================================== */
+[data-theme="dark"] .menu-toggle {
+  color: var(--primary-color);
+}
+
+[data-theme="dark"] .menu-toggle:hover {
+  color: var(--primary-light);
+}
+
+/* ===================================
+   BOTONES DE WHATSAPP EN MODO OSCURO
+   =================================== */
+[data-theme="dark"] .btn-whatsapp {
+  background: linear-gradient(135deg, #25d366 0%, #128c7e 100%);
+  color: white;
+}
+
+[data-theme="dark"] .header-btn a {
+  color: white;
+}
+
+[data-theme="dark"] .mobile-menu-btn a {
+  color: white;
+}
+
+/* ===================================
+   ARREGLOS ADICIONALES
+   =================================== */
+[data-theme="dark"] .section-title h2 {
+  color: var(--text-primary);
+}
+
+[data-theme="dark"] .divider {
+  background: var(--primary-color);
+}
+
+[data-theme="dark"] input,
+[data-theme="dark"] select,
+[data-theme="dark"] textarea {
+  background: var(--bg-secondary);
+  color: var(--text-primary);
+  border-color: var(--border-color);
+}
+
+[data-theme="dark"] input:focus,
+[data-theme="dark"] select:focus,
+[data-theme="dark"] textarea:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px rgba(139, 92, 246, 0.1);
+}
+@media (max-width: 768px) {
+  nav ul {
+    display: none !important;
+  }
+
+  .menu-toggle {
+    display: block !important;
+  }
+
+  .header-btn {
+    display: none !important;
+  }
+}
