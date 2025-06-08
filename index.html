@@ -1,12 +1,11 @@
 <!DOCTYPE html>
-<html lang="es" class="light-theme">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Miembros - Nexo Artistico</title>
+    <title>Nexo Artistico - Comunidad de Artistas</title>
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/dark-mode.css">
-    <link rel="stylesheet" href="css/miembros.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
@@ -20,25 +19,31 @@
             </div>
             <nav>
                 <ul>
-                    <li><a href="index.html">Inicio</a></li>
-                    <li><a href="index.html#about">Nosotros</a></li>
+                    <li><a href="#hero">Inicio</a></li>
+                    <li><a href="#about">Nosotros</a></li>
+                    <li><a href="#projects">Proyectos</a></li>
+                    <li><a href="#testimonials">Testimonios</a></li>
                     <li><a href="biblioteca.html">Biblioteca</a></li>
                     <li><a href="centro-mejora.html">Centro de Mejora</a></li>
                     <li><a href="miembros.html" class="active">Miembros</a></li>
-                    <li><a href="index.html#contact">Comunidad</a></li>
+                    <li><a href="#contact">Comunidad</a></li>
+                    
                 </ul>
             </nav>
+            
+           
             <div class="header-actions">
                 <button id="theme-toggle" class="theme-toggle" aria-label="Toggle Dark Mode">
                     <i class="fas fa-moon"></i>
                 </button>
                 <div class="header-btn">
-                    <a href="https://chat.whatsapp.com/Lwj85QzALMFBjCnYirEJ9K" target="_blank">
+                    <a href="https://chat.whatsapp.com/Lwj85QzALMFBjCnYirEJ9K" target="_blank" class="btn btn-whatsapp">
                         <i class="fab fa-whatsapp"></i>
                         Únete por WhatsApp
                     </a>
                 </div>
             </div>
+        
             <div class="menu-toggle">
                 <i class="fas fa-bars"></i>
             </div>
@@ -51,12 +56,14 @@
             <i class="fas fa-times"></i>
         </div>
         <ul>
-            <li><a href="index.html">Inicio</a></li>
-            <li><a href="index.html#about">Nosotros</a></li>
-            <li><a href="biblioteca.html">Biblioteca</a></li>
+            <li><a href="#hero">Inicio</a></li>
+            <li><a href="#about">Nosotros</a></li>
+            <li><a href="#projects">Proyectos</a></li>
+            <li><a href="#testimonials">Testimonios</a></li>
+            <li><a href="#contact">Comunidad</a></li>
             <li><a href="centro-mejora.html">Centro de Mejora</a></li>
-            <li><a href="miembros.html">Miembros</a></li>
-            <li><a href="index.html#contact">Comunidad</a></li>
+            <li><a href="miembros.html" class="active">Miembros</a></li>
+            <li><a href="#contact">Comunidad</a></li>
         </ul>
         <div class="mobile-menu-actions">
             <button id="mobile-theme-toggle" class="theme-toggle" aria-label="Toggle Dark Mode">
@@ -71,1672 +78,346 @@
         </div>
     </div>
 
-    <!-- Page Header - Compact -->
-    <section class="page-header-compact">
+    <!-- Hero Section -->
+    <section id="hero">
+        <div class="hero-bg"></div>
         <div class="container">
-            <h1>Nuestros <span class="gradient-text">Miembros</span></h1>
-            <p>Conoce a los artistas que forman parte de nuestra comunidad creativa.</p>
-        </div>
-    </section>
-
-    <!-- Members Search and Filter -->
-    <section class="members-controls">
-        <div class="container">
-            <div class="search-filter">
-                <div class="search-box">
-                    <i class="fas fa-search search-icon"></i>
-                    <input type="text" id="member-search" placeholder="Buscar miembro...">
-                </div>
-                <div class="filter-options">
-                    <select id="role-filter">
-                        <option value="all">Todos los roles</option>
-                        <option value="admin">Administradores</option>
-                        <option value="member">Miembros</option>
-                    </select>
-                    <select id="specialty-filter">
-                        <option value="all">Todas las especialidades</option>
-                        <option value="digital">Arte Digital</option>
-                        <option value="traditional">Arte Tradicional</option>
-                        <option value="concept">Concept Art</option>
-                        <option value="illustration">Ilustración</option>
-                        <option value="character">Diseño de Personajes</option>
-                        <option value="animation">Animación</option>
-                    </select>
-                </div>
-            </div>
-            <div class="members-stats">
-                <div class="stat">
-                    <span class="stat-number" id="total-members">10</span>
-                    <span class="stat-label">Miembros Totales</span>
-                </div>
-                <div class="stat">
-                    <span class="stat-number" id="total-admins">4</span>
-                    <span class="stat-label">Administradores</span>
-                </div>
-                <div class="stat">
-                    <span class="stat-number" id="total-works">24</span>
-                    <span class="stat-label">Obras Compartidas</span>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Founder Section -->
-    <section class="founder-section">
-        <div class="container">
-            <div class="section-title">
-                <h2>Fundador</h2>
-            </div>
-            
-            <div class="founder-card" data-member-id="tkandresb" data-role="founder" data-specialty="traditional">
-                <div class="founder-badge">
-                    <i class="fas fa-crown"></i>
-                    <span>Fundador & Admin Principal</span>
-                </div>
-                <div class="founder-content">
-                    <div class="founder-avatar">
-                        <img src="img/pfp/admins/TkAndresB/pfp.jpg" alt="TkAndresB">
-                    </div>
-                    <div class="founder-info">
-                        <h3>TkAndresB</h3>
-                        <p class="founder-bio">Artista Tradicional especializado en Manga, adicto a Tokyo Ghoul y el detallismo. Fundador del actual Nexo Artistico con la visión de crear un espacio donde los artistas puedan convivir y mejorar juntos.</p>
-                        <div class="founder-details">
-                            <div class="detail">
-                                <i class="fas fa-palette"></i>
-                                <span>Especialidad: Estilo Manga</span>
-                            </div>
-                            <div class="detail">
-                                <i class="fas fa-calendar-alt"></i>
-                                <span>Miembro desde: 2023</span>
-                            </div>
-                            <div class="detail">
-                                <i class="fas fa-trophy"></i>
-                                <span>Proyectos liderados: 5+</span>
-                            </div>
-                        </div>
-                            <div class="founder-social">
-                            <a href="https://www.tiktok.com/@tk_andres.b" class="social-icon tiktok">
-                        <i class="fab fa-tiktok"></i>
-                            </a>
-                    <a href="https://www.instagram.com/tk_andres_b" class="social-icon instagram">
-                        <i class="fab fa-instagram"></i>
+            <div class="hero-content">
+                <h1>Donde el <span class="gradient-text">arte</span> nos conecta</h1>
+                <p class="hero-subtitle">Somos una comunidad vibrante de artistas hispanohablantes unidos por la pasión de crear, compartir y crecer juntos.</p>
+                <div class="hero-buttons">
+                    <a href="https://chat.whatsapp.com/Lwj85QzALMFBjCnYirEJ9K" target="_blank" class="btn btn-primary">
+                        <i class="fab fa-whatsapp"></i>
+                        Únete a nuestra comunidad
                     </a>
-                    <a href="https://www.youtube.com/@Tk_Andres_B" class="social-icon youtube">
-                        <i class="fab fa-youtube"></i>
-                            </a>
+                    <a href="#about" class="btn btn-outline">
+                        Descubre más
+                        <i class="fas fa-arrow-down"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <div class="container">
+            <div class="section-header">
+                <h2>Nuestra Historia</h2>
+                <div class="divider"></div>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>Somos una comunidad de artistas que nació de la mano de Greco Art, quien decidió crear un lugar para que sus fans y amigos artistas pudieran compartir sus dibujos y mejorar juntos a través de diversas temáticas como torneos y VS entre integrantes. Hoy en día es manejada por TkAndresB quien le puso Nexo Artistico, nombre que expone su visión de crear un lugar donde los artistas puedan convivir y mejorar juntos.</p>
+                </div>
+                <div class="statistics">
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <h3>+40</h3>
+                        <p>Miembros activos</p>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-book"></i>
+                        </div>
+                        <h3>+100</h3>
+                        <p>Recursos compartidos</p>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-project-diagram"></i>
+                        </div>
+                        <h3>+5</h3>
+                        <p>Proyectos colaborativos</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Works Carousel -->
+    <section id="featured-works">
+        <div class="container">
+            <div class="section-header">
+                <h2>Obras Destacadas de la Semana</h2>
+                <div class="divider"></div>
+                <p>Descubre las creaciones más impresionantes de nuestros miembros.</p>
+            </div>
+            <div class="carousel-container">
+                <div class="carousel-wrapper">
+                    <div class="carousel-track" id="carousel-track">
+                        <div class="carousel-slide active">
+                            <div class="featured-work">
+                                <img src="img/pfp/admins/TkAndresB/Goku.jfif" alt="Obra destacada 1">
+                                <div class="work-info">
+                                    <h3>Goku MUI</h3>
+                                    <p class="work-author">Por TkAndresB</p>
+                                    <p class="work-description">Un impresionante dibujo de Goku en su forma Ultra Instinct, capturando la esencia del personaje.</p>
+                                    <div class="work-tags">
+                                        <span class="tag">Tradicional</span>
+                                        <span class="tag">Manga</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-slide">
+                            <div class="featured-work">
+                                <img src="img/pfp/admins/Fr/obra1.jfif" alt="Obra destacada 2">
+                                <div class="work-info">
+                                    <h3>Todoroki a Color</h3>
+                                    <p class="work-author">Por Fr</p>
+                                    <p class="work-description">Una vibrante ilustración de Todoroki, mostrando su dualidad de fuego y hielo.</p>
+                                    <div class="work-tags">
+                                        <span class="tag">Tradicional</span>
+                                        <span class="tag">Color</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-slide">
+                            <div class="featured-work">
+                                <img src="img/pfp/admins/Godjo/obra1.jfif" alt="Obra destacada 3">
+                                <div class="work-info">
+                                    <h3>Dibujo Blue Lock</h3>
+                                    <p class="work-author">Por godjo1o</p>
+                                    <p class="work-description">Un dibujo impresionante de Blue Lock hecho con Lapicero.</p>
+                                    <div class="work-tags">
+                                        <span class="tag">Lapicero</span>
+                                        <span class="tag">Anime</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-slide">
+                            <div class="featured-work">
+                                <img src="img/pfp/admins/skillet/obra2.jfif" alt="Obra destacada 4">
+                                <div class="work-info">
+                                    <h3>NarutoxPain</h3>
+                                    <p class="work-author">Por Skillet</p>
+                                    <p class="work-description">Un crossover épico entre Naruto y Pain, mostrando la dualidad entre sus filosofias.</p>
+                                    <div class="work-tags">
+                                        <span class="tag">Tradicional</span>
+                                        <span class="tag">Crossover</span>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="view-works">
-                    <button class="btn-view-works">
-                        <i class="fas fa-images"></i>
-                        Ver Obras (4)
+                <div class="carousel-controls">
+                    <button class="carousel-btn prev" id="carousel-prev">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <button class="carousel-btn next" id="carousel-next">
+                        <i class="fas fa-chevron-right"></i>
                     </button>
                 </div>
-                <!-- Obras del fundador -->
-                <div class="member-works">
-                    <div class="works-header">
-                        <div class="works-title">
-                            <i class="fas fa-images"></i>
-                            Obras de TkAndresB
-                        </div>
-                        <div class="works-count">4 obras</div>
-                    </div>
-                    <div class="works-grid">
-                        <!-- Obra 1 -->
-                        <div class="work-item">
-                            <div class="work-image">
-                                <img src="img/pfp/admins/TkAndresB/Kaneki.jfif" alt="Kaneki">
-                            </div>
-                            <div class="work-content">
-                                <h4 class="work-title">Kaneki</h4>
-                                <div class="work-technique">
-                                    <i class="fas fa-palette"></i>
-                                    Tinta
-                                </div>
-                                <p class="work-description">Retrato detallado del personaje Kaneki de Tokyo Ghoul, realizado con técnica de tinta. Una obra que captura la dualidad y el sufrimiento del protagonista.</p>
-                                <div class="work-footer">
-                                    <div class="work-author">
-                                        <i class="fas fa-user-circle"></i>
-                                        TkAndresB
-                                    </div>
-                                    <div class="work-action">
-                                        <i class="fas fa-expand"></i>
-                                        Ver detalle
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Obra 2 -->
-                        <div class="work-item">
-                            <div class="work-image">
-                                <img src="img/pfp/admins/TkAndresB/Sk.jfif" alt="Skull Knight">
-                            </div>
-                            <div class="work-content">
-                                <h4 class="work-title">Skull Knight</h4>
-                                <div class="work-technique">
-                                    <i class="fas fa-palette"></i>
-                                    Detallismo a líneas
-                                </div>
-                                <p class="work-description">Ilustración detallada del Skull Knight de Berserk con técnica de líneas. Cada trazo representa la complejidad y el misterio de este icónico personaje.</p>
-                                <div class="work-footer">
-                                    <div class="work-author">
-                                        <i class="fas fa-user-circle"></i>
-                                        TkAndresB
-                                    </div>
-                                    <div class="work-action">
-                                        <i class="fas fa-expand"></i>
-                                        Ver detalle
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Obra 3 -->
-                        <div class="work-item">
-                            <div class="work-image">
-                                <img src="img/pfp/admins/TkAndresB/Arima.jfif" alt="Arima">
-                            </div>
-                            <div class="work-content">
-                                <h4 class="work-title">Arima</h4>
-                                <div class="work-technique">
-                                    <i class="fas fa-palette"></i>
-                                    Tinta
-                                </div>
-                                <p class="work-description">Retrato de perfil del personaje Arima con técnica de tinta. Una representación elegante y minimalista que captura la serenidad del personaje.</p>
-                                <div class="work-footer">
-                                    <div class="work-author">
-                                        <i class="fas fa-user-circle"></i>
-                                        TkAndresB
-                                    </div>
-                                    <div class="work-action">
-                                        <i class="fas fa-expand"></i>
-                                        Ver detalle
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Obra 4 -->
-                        <div class="work-item">
-                            <div class="work-image">
-                                <img src="img/pfp/admins/TkAndresB/Goku.jfif" alt="Goku MUI">
-                            </div>
-                            <div class="work-content">
-                                <h4 class="work-title">Goku MUI</h4>
-                                <div class="work-technique">
-                                    <i class="fas fa-palette"></i>
-                                    Tinta
-                                </div>
-                                <p class="work-description">Ilustración de Goku en su forma Ultra Instinto Maestro. Una obra que transmite la serenidad y el poder absoluto de esta transformación legendaria.</p>
-                                <div class="work-footer">
-                                    <div class="work-author">
-                                        <i class="fas fa-user-circle"></i>
-                                        TkAndresB
-                                    </div>
-                                    <div class="work-action">
-                                        <i class="fas fa-expand"></i>
-                                        Ver detalle
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                <div class="carousel-indicators">
+                    <button class="indicator active" data-slide="0"></button>
+                    <button class="indicator" data-slide="1"></button>
+                    <button class="indicator" data-slide="2"></button>
+                    <button class="indicator" data-slide="3"></button>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Admins Section -->
-<section class="admins-section">
-    <div class="container">
-        <div class="section-title">
-            <h2>Administradores</h2>
-        </div>
-        
-        <div class="members-grid">
-
-
-    <!-- Admin 1: Godjo -->
-    <div class="member-card" data-member-id="godjo" data-role="admin" data-specialty="traditional">
-        <div class="member-badge admin">
-            <i class="fas fa-star"></i>
-            <span>Admin</span>
-        </div>
-        <div class="member-main-content">
-            <div class="member-avatar">
-                <img src="img/pfp/admins/Godjo/pfp.jfif" alt="Godjo">
-            </div>
-            <div class="member-info">
-                <h3>Godjo</h3>
-                <p class="member-specialty">Arte Tradicional</p>
-                <p class="member-since">Miembro desde 2024</p>
-                <div class="member-social">
-                    <a href="#" class="member-social-link instagram" title="Instagram">
-                        <i class="fab fa-instagram"></i>
-                    </a>
-                    <a href="#" class="member-social-link twitter" title="Twitter">
-                        <i class="fab fa-twitter"></i>
-                    </a>
-                    <a href="#" class="member-social-link artstation" title="ArtStation">
-                        <i class="fab fa-artstation"></i>
-                    </a>
-                </div>
-            </div>
-        </div>
-        <div class="view-works">
-            <button class="btn-view-works">
-                <i class="fas fa-images"></i>
-                Ver Obras (2)
-            </button>
-        </div>
-        <!-- Obras de Godjo -->
-        <div class="member-works">
-            <div class="works-header">
-                <div class="works-title">
-                    <i class="fas fa-images"></i>
-                    Obras de Godjo
-                </div>
-                <div class="works-count">3 obras</div>
-            </div>
-            <div class="works-grid">
-                <div class="work-item">
-                    <div class="work-image">
-                        <img src="img/pfp/admins/Godjo/obra1.jfif" alt="Obra de Godjo">
-                    </div>
-                    <div class="work-content">
-                        <h4 class="work-title">Retrato Realista</h4>
-                        <div class="work-technique">
-                            <i class="fas fa-palette"></i>
-                            Carboncillo
-                        </div>
-                        <p class="work-description">Un retrato realista ejecutado con técnica de carboncillo, mostrando un dominio excepcional de luces y sombras.</p>
-                        <div class="work-footer">
-                            <div class="work-author">
-                                <i class="fas fa-user-circle"></i>
-                                Godjo
-                            </div>
-                            <div class="work-action">
-                                <i class="fas fa-expand"></i>
-                                Ver detalle
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="work-item">
-                    <div class="work-image">
-                        <img src="img/pfp/admins/Godjo/obra2.jfif" alt="Paisaje Urbano">
-                    </div>
-                    <div class="work-content">
-                        <h4 class="work-title">Paisaje Urbano</h4>
-                        <div class="work-technique">
-                            <i class="fas fa-palette"></i>
-                            Acuarela
-                        </div>
-                        <p class="work-description">Representación de un paisaje urbano en acuarela, capturando la atmósfera y el dinamismo de la ciudad moderna.</p>
-                        <div class="work-footer">
-                            <div class="work-author">
-                                <i class="fas fa-user-circle"></i>
-                                Godjo
-                            </div>
-                            <div class="work-action">
-                                <i class="fas fa-expand"></i>
-                                Ver detalle
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Admin 2: Kvothe -->
-    <div class="member-card" data-member-id="kvothe" data-role="admin" data-specialty="traditional">
-        <div class="member-badge admin">
-            <i class="fas fa-star"></i>
-            <span>Admin</span>
-        </div>
-        <div class="member-main-content">
-            <div class="member-avatar">
-                <img src="img/pfp/admins/Kvothe/pfp.jfif" alt="Kvothe">
-            </div>
-            <div class="member-info">
-                <h3>Kvothe</h3>
-                <p class="member-specialty">Boligrafo</p>
-                <p class="member-since">Miembro desde 2024</p>
-                <div class="member-social">
-                    <a href="#" class="member-social-link instagram" title="Instagram">
-                        <i class="fab fa-instagram"></i>
-                    </a>
-                    <a href="#" class="member-social-link deviantart" title="DeviantArt">
-                        <i class="fab fa-deviantart"></i>
-                    </a>
-                    <a href="#" class="member-social-link behance" title="Behance">
-                        <i class="fab fa-behance"></i>
-                    </a>
-                </div>
-            </div>
-        </div>
-        <div class="view-works">
-            <button class="btn-view-works">
-                <i class="fas fa-images"></i>
-                Ver Obras (2)
-            </button>
-        </div>
-        <!-- Obras de Kvothe -->
-        <div class="member-works">
-            <div class="works-header">
-                <div class="works-title">
-                    <i class="fas fa-images"></i>
-                    Obras de Kvothe
-                </div>
-                <div class="works-count">2 obras</div>
-            </div>
-            <div class="works-grid">
-                <div class="work-item">
-                    <div class="work-image">
-                        <img src="img/pfp/admins/Kvothe/obra1.jfif" alt="Hajime no Ippo">
-                    </div>
-                    <div class="work-content">
-                        <h4 class="work-title">Hajime no Ippo</h4>
-                        <div class="work-technique">
-                            <i class="fas fa-palette"></i>
-                            Lapicero
-                        </div>
-                        <p class="work-description">Dibujo de Hajime no Ippo realizado con lapicero, capturando la intensidad del personaje.</p>
-                        <div class="work-footer">
-                            <div class="work-author">
-                                <i class="fas fa-user-circle"></i>
-                                Kvothe
-                            </div>
-                            <div class="work-action">
-                                <i class="fas fa-expand"></i>
-                                Ver detalle
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="work-item">
-                    <div class="work-image">
-                        <img src="img/pfp/admins/Kvothe/obra2.jfif" alt="Berserk">
-                    </div>
-                    <div class="work-content">
-                        <h4 class="work-title">Berserk</h4>
-                        <div class="work-technique">
-                            <i class="fas fa-palette"></i>
-                            Boligrafo
-                        </div>
-                        <p class="work-description">Ilustración de Berserk realizada con bolígrafo, mostrando el estilo único del artista.</p>
-                        <div class="work-footer">
-                            <div class="work-author">
-                                <i class="fas fa-user-circle"></i>
-                                Kvothe
-                            </div>
-                            <div class="work-action">
-                                <i class="fas fa-expand"></i>
-                                Ver detalle
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Admin 4: El Profe Yee -->
-    <div class="member-card" data-member-id="El Profe Yee" data-role="admin" data-specialty="digital, tradicional, creacion de oc´s">
-        <div class="member-badge admin">
-            <i class="fas fa-star"></i>
-            <span>Admin</span>
-        </div>
-        <div class="member-main-content">
-            <div class="member-avatar">
-                <img src="img/pfp/admins/Yoshio/pfp.jfif" alt="Yoshio">
-            </div>
-            <div class="member-info">
-                <h3>El Profe Yee</h3>
-                <p class="member-specialty">digital, tradicional, creacion de oc´s</p>
-                <p class="member-since">Miembro desde 2023</p>
-                <div class="member-social">
-                    <a href="#" class="member-social-link instagram" title="Instagram">
-                        <i class="fab fa-instagram"></i>
-                    </a>
-                    <a href="https://www.tiktok.com/@elprofeyee8a" class="member-social-link tiktok" title="TikTok">
-                        <i class="fab fa-tiktok"></i>
-                    </a>
-                </div>
-            </div>
-        </div>
-        <div class="view-works">
-            <button class="btn-view-works">
-                <i class="fas fa-images"></i>
-                Ver Obras (4)
-            </button>
-        </div>
-        <!-- Obras de Yoshio -->
-        <div class="member-works">
-            <div class="works-header">
-                <div class="works-title">
-                    <i class="fas fa-images"></i>
-                    Obras de Yoshio
-                </div>
-                <div class="works-count">4 obras</div>
-            </div>
-            <div class="works-grid">
-                <div class="work-item">
-                    <div class="work-image">
-                        <img src="img/obras/admins/Yoshio/Cyberpunk.jpg" alt="Cyberpunk">
-                    </div>
-                    <div class="work-content">
-                        <h4 class="work-title">Cyberpunk</h4>
-                        <div class="work-technique">
-                            <i class="fas fa-palette"></i>
-                            Digital
-                        </div>
-                        <p class="work-description">Ilustración digital de estilo cyberpunk, con colores vibrantes y detalles intrincados.</p>
-                        <div class="work-footer">
-                            <div class="work-author">
-                                <i class="fas fa-user-circle"></i>
-                                El Profe Yee
-                            </div>
-                            <div class="work-action">
-                                <i class="fas fa-expand"></i>
-                                Ver detalle
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="work-item">
-                    <div class="work-image">
-                        <img src="img/obras/admins/Yoshio/Samurai.jpg" alt="Samurai">
-                    </div>
-                    <div class="work-content">
-                        <h4 class="work-title">Samurai</h4>
-                        <div class="work-technique">
-                            <i class="fas fa-palette"></i>
-                            Digital
-                        </div>
-                        <p class="work-description">Representación digital de un samurái, con un estilo moderno y detalles impresionantes.</p>
-                        <div class="work-footer">
-                            <div class="work-author">
-                                <i class="fas fa-user-circle"></i>
-                                El Profe Yee
-                            </div>
-                            <div class="work-action">
-                                <i class="fas fa-expand"></i>
-                                Ver detalle
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="work-item">
-                    <div class="work-image">
-                        <img src="img/obras/admins/Yoshio/SpaceShip.jpg" alt="SpaceShip">
-                    </div>
-                    <div class="work-content">
-                        <h4 class="work-title">SpaceShip</h4>
-                        <div class="work-technique">
-                            <i class="fas fa-palette"></i>
-                            Digital
-                        </div>
-                        <p class="work-description">Diseño digital de una nave espacial, con un estilo futurista y detalles técnicos.</p>
-                        <div class="work-footer">
-                            <div class="work-author">
-                                <i class="fas fa-user-circle"></i>
-                                El Profe Yee
-                            </div>
-                            <div class="work-action">
-                                <i class="fas fa-expand"></i>
-                                Ver detalle
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="work-item">
-                    <div class="work-image">
-                        <img src="img/obras/admins/Yoshio/Synthwave.jpg" alt="Synthwave">
-                    </div>
-                    <div class="work-content">
-                        <h4 class="work-title">Synthwave</h4>
-                        <div class="work-technique">
-                            <i class="fas fa-palette"></i>
-                            Digital
-                        </div>
-                        <p class="work-description">Ilustración digital de estilo synthwave, con colores neón y una atmósfera retro.</p>
-                        <div class="work-footer">
-                            <div class="work-author">
-                                <i class="fas fa-user-circle"></i>
-                                El Profe Yee
-                            </div>
-                            <div class="work-action">
-                                <i class="fas fa-expand"></i>
-                                Ver detalle
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Admin 5: Adrian  -->
-    <div class="member-card" data-member-id="adrian" data-role="admin" data-specialty="traditional">
-        <div class="member-badge admin">
-            <i class="fas fa-star"></i>
-            <span>Admin</span>
-        </div>
-        <div class="member-main-content">
-            <div class="member-avatar">
-                <img src="img/pfp/admins/Adrian/pfp.jfif" alt="Adrian">
-            </div>
-            <div class="member-info">
-                <h3>Adrian</h3>
-                <p class="member-specialty">Arte Tradicional</p>
-                <p class="member-since">Miembro desde 2023</p>
-                <div class="member-social">
-                    <a href="#" class="member-social-link instagram" title="Instagram">
-                        <i class="fab fa-instagram"></i>
-                    </a>
-                    <a href="#" class="member-social-link facebook" title="Facebook">
-                        <i class="fab fa-facebook"></i>
-                    </a>
-                </div>
-            </div>
-        </div>
-        <div class="view-works">
-            <button class="btn-view-works">
-                <i class="fas fa-images"></i>
-                Ver Obras (3)
-            </button>
-        </div>
-        <!-- Obras de Adrian -->
-        <div class="member-works">
-            <div class="works-header">
-                <div class="works-title">
-                    <i class="fas fa-images"></i>
-                    Obras de Adrian
-                </div>
-                <div class="works-count">3 obras</div>
-            </div>
-            <div class="works-grid">
-                <div class="work-item">
-                    <div class="work-image">
-                        <img src="img/obras/admins/Adrian/DragonBall.jpg" alt="DragonBall">
-                    </div>
-                    <div class="work-content">
-                        <h4 class="work-title">DragonBall</h4>
-                        <div class="work-technique">
-                            <i class="fas fa-palette"></i>
-                            Lapiz
-                        </div>
-                        <p class="work-description">Dibujo a lápiz de personajes de Dragon Ball, mostrando un gran detalle y precisión.</p>
-                        <div class="work-footer">
-                            <div class="work-author">
-                                <i class="fas fa-user-circle"></i>
-                                Adrian
-                            </div>
-                            <div class="work-action">
-                                <i class="fas fa-expand"></i>
-                                Ver detalle
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="work-item">
-                    <div class="work-image">
-                        <img src="img/obras/admins/Adrian/GokuSSJ3.jpg" alt="GokuSSJ3">
-                    </div>
-                    <div class="work-content">
-                        <h4 class="work-title">GokuSSJ3</h4>
-                        <div class="work-technique">
-                            <i class="fas fa-palette"></i>
-                            Lapiz
-                        </div>
-                        <p class="work-description">Ilustración a lápiz de Goku en Super Saiyan 3, con un estilo dinámico y enérgico.</p>
-                        <div class="work-footer">
-                            <div class="work-author">
-                                <i class="fas fa-user-circle"></i>
-                                Adrian
-                            </div>
-                            <div class="work-action">
-                                <i class="fas fa-expand"></i>
-                                Ver detalle
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="work-item">
-                    <div class="work-image">
-                        <img src="img/obras/admins/Adrian/GokuSSJ4.jpg" alt="GokuSSJ4">
-                    </div>
-                    <div class="work-content">
-                        <h4 class="work-title">GokuSSJ4</h4>
-                        <div class="work-technique">
-                            <i class="fas fa-palette"></i>
-                            Lapiz
-                        </div>
-                        <p class="work-description">Dibujo a lápiz de Goku en Super Saiyan 4, mostrando un gran nivel de detalle y sombreado.</p>
-                        <div class="work-footer">
-                            <div class="work-author">
-                                <i class="fas fa-user-circle"></i>
-                                Adrian
-                            </div>
-                            <div class="work-action">
-                                <i class="fas fa-expand"></i>
-                                Ver detalle
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Admin 6: Alan -->
-    <div class="member-card" data-member-id="alan" data-role="admin" data-specialty="trditional">
-        <div class="member-badge admin">
-            <i class="fas fa-star"></i>
-            <span>Admin</span>
-        </div>
-        <div class="member-main-content">
-            <div class="member-avatar">
-                <img src="img/pfp/admins/Alan/pfp.jfif" alt="Alan">
-            </div>
-            <div class="member-info">
-                <h3>Alan</h3>
-                <p class="member-specialty">Arte Tradicional</p>
-                <p class="member-since">Miembro desde 2023</p>
-                <div class="member-social">
-                    <a href="#" class="member-social-link instagram" title="Instagram">
-                        <i class="fab fa-instagram"></i>
-                    </a>
-                    <a href="#" class="member-social-link twitter" title="Twitter">
-                        <i class="fab fa-twitter"></i>
-                    </a>
-                </div>
-            </div>
-        </div>
-        <div class="view-works">
-            <button class="btn-view-works">
-                <i class="fas fa-images"></i>
-                Ver Obras (3)
-            </button>
-        </div>
-        <!-- Obras de Alan -->
-        <div class="member-works">
-            <div class="works-header">
-                <div class="works-title">
-                    <i class="fas fa-images"></i>
-                    Obras de Alan
-                </div>
-                <div class="works-count">3 obras</div>
-            </div>
-            <div class="works-grid">
-                <div class="work-item">
-                    <div class="work-image">
-                        <img src="img/obras/admins/Alan/Astronaut.jpg" alt="Astronaut">
-                    </div>
-                    <div class="work-content">
-                        <h4 class="work-title">Astronaut</h4>
-                        <div class="work-technique">
-                            <i class="fas fa-palette"></i>
-                            Digital
-                        </div>
-                        <p class="work-description">Ilustración digital de un astronauta, con un estilo moderno y colores vibrantes.</p>
-                        <div class="work-footer">
-                            <div class="work-author">
-                                <i class="fas fa-user-circle"></i>
-                                Alan
-                            </div>
-                            <div class="work-action">
-                                <i class="fas fa-expand"></i>
-                                Ver detalle
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="work-item">
-                    <div class="work-image">
-                        <img src="img/obras/admins/Alan/CyberpunkGirl.jpg" alt="CyberpunkGirl">
-                    </div>
-                    <div class="work-content">
-                        <h4 class="work-title">CyberpunkGirl</h4>
-                        <div class="work-technique">
-                            <i class="fas fa-palette"></i>
-                            Digital
-                        </div>
-                        <p class="work-description">Ilustración digital de una chica cyberpunk, con un estilo futurista y detalles intrincados.</p>
-                        <div class="work-footer">
-                            <div class="work-author">
-                                <i class="fas fa-user-circle"></i>
-                                Alan
-                            </div>
-                            <div class="work-action">
-                                <i class="fas fa-expand"></i>
-                                Ver detalle
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="work-item">
-                    <div class="work-image">
-                        <img src="img/obras/admins/Alan/GirlWithCat.jpg" alt="GirlWithCat">
-                    </div>
-                    <div class="work-content">
-                        <h4 class="work-title">GirlWithCat</h4>
-                        <div class="work-technique">
-                            <i class="fas fa-palette"></i>
-                            Digital
-                        </div>
-                        <p class="work-description">Ilustración digital de una chica con un gato, con un estilo tierno y colores suaves.</p>
-                        <div class="work-footer">
-                            <div class="work-author">
-                                <i class="fas fa-user-circle"></i>
-                                Alan
-                            </div>
-                            <div class="work-action">
-                                <i class="fas fa-expand"></i>
-                                Ver detalle
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Admin 7: Fr -->
-    <div class="member-card" data-member-id="fr" data-role="admin" data-specialty="traditional">
-        <div class="member-badge admin">
-            <i class="fas fa-star"></i>
-            <span>Admin</span>
-        </div>
-        <div class="member-main-content">
-            <div class="member-avatar">
-                <img src="img/pfp/admins/Fr/pfp.jfif" alt="Fr">
-            </div>
-            <div class="member-info">
-                <h3>Fr</h3>
-                <p class="member-specialty">Arte Tradicional</p>
-                <p class="member-since">Miembro desde 2023</p>
-                <div class="member-social">
-                    <a href="#" class="member-social-link instagram" title="Instagram">
-                        <i class="fab fa-instagram"></i>
-                    </a>
-                    <a href="#" class="member-social-link twitter" title="Twitter">
-                        <i class="fab fa-twitter"></i>
-                    </a>
-                </div>
-            </div>
-        </div>
-        <div class="view-works">
-            <button class="btn-view-works">
-                <i class="fas fa-images"></i>
-                Ver Obras (3)
-            </button>
-        </div>
-        <!-- Obras de Fr -->
-        <div class="member-works">
-            <div class="works-header">
-                <div class="works-title">
-                    <i class="fas fa-images"></i>
-                    Obras de Fr
-                </div>
-                <div class="works-count">2 obras</div>
-            </div>
-            <div class="works-grid">
-                <div class="work-item">
-                    <div class="work-image">
-                        <img src="img/pfp/admins/Fr/obra1.jfif" alt="Todoroki">
-                    </div>
-                    <div class="work-content">
-                        <h4 class="work-title">Todoroki</h4>
-                        <div class="work-technique">
-                            <i class="fas fa-palette"></i>
-                            Coloreado Anime
-                        </div>
-                        <p class="work-description">Ilustración coloreada de Todoroki de My Hero Academia, con un estilo vibrante y dinámico.</p>
-                        <div class="work-footer">
-                            <div class="work-author">
-                                <i class="fas fa-user-circle"></i>
-                                Fr
-                            </div>
-                            <div class="work-action">
-                                <i class="fas fa-expand"></i>
-                                Ver detalle
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="work-item">
-                    <div class="work-image">
-                        <img src="img/pfp/admins/Fr/obra2.jfif" alt="Rengoku">
-                    </div>
-                    <div class="work-content">
-                        <h4 class="work-title">Rengoku</h4>
-                        <div class="work-technique">
-                            <i class="fas fa-palette"></i>
-                            Manga
-                        </div>
-                        <p class="work-description">Ilustración de Rengoku de Demon Slayer en estilo manga, con un gran nivel de detalle y sombreado.</p>
-                        <div class="work-footer">
-                            <div class="work-author">
-                                <i class="fas fa-user-circle"></i>
-                                Fr
-                            </div>
-                            <div class="work-action">
-                                <i class="fas fa-expand"></i>
-                                Ver detalle
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Admin 8: Duvan -->
-    <div class="member-card" data-member-id="duvan" data-role="admin" data-specialty="traditional">
-        <div class="member-badge admin">
-            <i class="fas fa-star"></i>
-            <span>Admin</span>
-        </div>
-        <div class="member-main-content">
-            <div class="member-avatar">
-                <img src="img/pfp/admins/Duvan/pfp.jfif" alt="Duvan">
-            </div>
-            <div class="member-info">
-                <h3>Duvan</h3>
-                <p class="member-specialty">Arte en Lienzo</p>
-                <p class="member-since">Miembro desde 2023</p>
-                <div class="member-social">
-                    <a href="#" class="member-social-link instagram" title="Instagram">
-                        <i class="fab fa-instagram"></i>
-                    </a>
-                    <a href="#" class="member-social-link artstation" title="ArtStation">
-                        <i class="fab fa-artstation"></i>
-                    </a>
-                </div>
-            </div>
-        </div>
-        <div class="view-works">
-            <button class="btn-view-works">
-                <i class="fas fa-images"></i>
-                Ver Obras (3)
-            </button>
-        </div>
-        <!-- Obras de Duvan -->
-        <div class="member-works">
-            <div class="works-header">
-                <div class="works-title">
-                    <i class="fas fa-images"></i>
-                    Obras de Duvan
-                </div>
-                <div class="works-count">3 obras</div>
-            </div>
-            <div class="works-grid">
-                <div class="work-item">
-                    <div class="work-image">
-                        <img src="img/obras/admins/Duvan/MechaGirl.jpg" alt="MechaGirl">
-                    </div>
-                    <div class="work-content">
-                        <h4 class="work-title">MechaGirl</h4>
-                        <div class="work-technique">
-                            <i class="fas fa-palette"></i>
-                            Digital
-                        </div>
-                        <p class="work-description">Ilustración digital de una chica mecha, con un estilo futurista y detalles intrincados.</p>
-                        <div class="work-footer">
-                            <div class="work-author">
-                                <i class="fas fa-user-circle"></i>
-                                Duvan
-                            </div>
-                            <div class="work-action">
-                                <i class="fas fa-expand"></i>
-                                Ver detalle
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="work-item">
-                    <div class="work-image">
-                        <img src="img/obras/admins/Duvan/Mercenary.jpg" alt="Mercenary">
-                    </div>
-                    <div class="work-content">
-                        <h4 class="work-title">Mercenary</h4>
-                        <div class="work-technique">
-                            <i class="fas fa-palette"></i>
-                            Digital
-                        </div>
-                        <p class="work-description">Ilustración digital de un mercenario, con un estilo realista y detalles impresionantes.</p>
-                        <div class="work-footer">
-                            <div class="work-author">
-                                <i class="fas fa-user-circle"></i>
-                                Duvan
-                            </div>
-                            <div class="work-action">
-                                <i class="fas fa-expand"></i>
-                                Ver detalle
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="work-item">
-                    <div class="work-image">
-                        <img src="img/obras/admins/Duvan/SciFiGirl.jpg" alt="SciFiGirl">
-                    </div>
-                    <div class="work-content">
-                        <h4 class="work-title">SciFiGirl</h4>
-                        <div class="work-technique">
-                            <i class="fas fa-palette"></i>
-                            Digital
-                        </div>
-                        <p class="work-description">Ilustración digital de una chica de ciencia ficción, con un estilo futurista y colores vibrantes.</p>
-                        <div class="work-footer">
-                            <div class="work-author">
-                                <i class="fas fa-user-circle"></i>
-                                Duvan
-                            </div>
-                            <div class="work-action">
-                                <i class="fas fa-expand"></i>
-                                Ver detalle
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Admin 9: Skillet -->
-    <div class="member-card" data-member-id="skillet" data-role="admin" data-specialty="traditional">
-        <div class="member-badge admin">
-            <i class="fas fa-star"></i>
-            <span>Admin</span>
-        </div>
-        <div class="member-main-content">
-            <div class="member-avatar">
-                <img src="img/pfp/admins/Skillet/pfp.jfif" alt="Skillet">
-            </div>
-            <div class="member-info">
-                <h3>Skillet</h3>
-                <p class="member-specialty">Arte Tradicional</p>
-                <p class="member-since">Miembro desde 2023</p>
-                <div class="member-social">
-                    <a href="#" class="member-social-link instagram" title="Instagram">
-                        <i class="fab fa-instagram"></i>
-                    </a>
-                    <a href="#" class="member-social-link twitter" title="Twitter">
-                        <i class="fab fa-twitter"></i>
-                    </a>
-                </div>
-            </div>
-        </div>
-        <div class="view-works">
-            <button class="btn-view-works">
-                <i class="fas fa-images"></i>
-                Ver Obras (2)
-            </button>
-        </div>
-        <!-- Obras de Skillet -->
-        <div class="member-works">
-            <div class="works-header">
-                <div class="works-title">
-                    <i class="fas fa-images"></i>
-                    Obras de Skillet
-                </div>
-                <div class="works-count">2 obras</div>
-            </div>
-            <div class="works-grid">
-                <div class="work-item">
-                    <div class="work-image">
-                        <img src="img/pfp/admins/Skillet/obra1.jfif" alt="Goku Black">
-                    </div>
-                    <div class="work-content">
-                        <h4 class="work-title">Goku Black</h4>
-                        <div class="work-technique">
-                            <i class="fas fa-palette"></i>
-                            Coloreado Anime
-                        </div>
-                        <p class="work-description">Ilustración coloreada de Goku Black, con un estilo vibrante y detalles impresionantes.</p>
-                        <div class="work-footer">
-                            <div class="work-author">
-                                <i class="fas fa-user-circle"></i>
-                                Skillet
-                            </div>
-                            <div class="work-action">
-                                <i class="fas fa-expand"></i>
-                                Ver detalle
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="work-item">
-                    <div class="work-image">
-                        <img src="img/pfp/admins/Skillet/obra2.jfif" alt="NarutoxPain">
-                    </div>
-                    <div class="work-content">
-                        <h4 class="work-title">JNarutoxPain</h4>
-                        <div class="work-technique">
-                            <i class="fas fa-palette"></i>
-                            Coloreado Anime
-                        </div>
-                        <p class="work-description">Ilustración coloreada de Naruto y Pain, con un estilo dinámico y detalles intrincados.</p>
-                        <div class="work-footer">
-                            <div class="work-author">
-                                <i class="fas fa-user-circle"></i>
-                                Skillet
-                            </div>
-                            <div class="work-action">
-                                <i class="fas fa-expand"></i>
-                                Ver detalle
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Admin 10: Robe -->
-    <div class="member-card" data-member-id="robe" data-role="admin" data-specialty="traditional">
-        <div class="member-badge admin">
-            <i class="fas fa-star"></i>
-            <span>Admin</span>
-        </div>
-        <div class="member-main-content">
-            <div class="member-avatar">
-                <img src="img/pfp/admins/Robe/pfp.jfif" alt="Robe">
-            </div>
-            <div class="member-info">
-                <h3>Robe</h3>
-                <p class="member-specialty">Arte Tradicional</p>
-                <p class="member-since">Miembro desde 2023</p>
-                <div class="member-social">
-                    <a href="#" class="member-social-link instagram" title="Instagram">
-                        <i class="fab fa-instagram"></i>
-                    </a>
-                    <a href="#" class="member-social-link artstation" title="ArtStation">
-                        <i class="fab fa-artstation"></i>
-                    </a>
-                </div>
-            </div>
-        </div>
-        <div class="view-works">
-            <button class="btn-view-works">
-                <i class="fas fa-images"></i>
-                Ver Obras (3)
-            </button>
-        </div>
-        <!-- Obras de Robe -->
-        <div class="member-works">
-            <div class="works-header">
-                <div class="works-title">
-                    <i class="fas fa-images"></i>
-                    Obras de Robe
-                </div>
-                <div class="works-count">3 obras</div>
-            </div>
-            <div class="works-grid">
-                <div class="work-item">
-                    <div class="work-image">
-                        <img src="img/obras/admins/Robe/ArcaneJinx.jpg" alt="ArcaneJinx">
-                    </div>
-                    <div class="work-content">
-                        <h4 class="work-title">ArcaneJinx</h4>
-                        <div class="work-technique">
-                            <i class="fas fa-palette"></i>
-                            Digital
-                        </div>
-                        <p class="work-description">Ilustración digital de Arcane Jinx, con un estilo moderno y colores vibrantes.</p>
-                        <div class="work-footer">
-                            <div class="work-author">
-                                <i class="fas fa-user-circle"></i>
-                                Robe
-                            </div>
-                            <div class="work-action">
-                                <i class="fas fa-expand"></i>
-                                Ver detalle
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="work-item">
-                    <div class="work-image">
-                        <img src="img/obras/admins/Robe/CyberpunkGirl.jpg" alt="CyberpunkGirl">
-                    </div>
-                    <div class="work-content">
-                        <h4 class="work-title">CyberpunkGirl</h4>
-                        <div class="work-technique">
-                            <i class="fas fa-palette"></i>
-                            Digital
-                        </div>
-                        <p class="work-description">Ilustración digital de una chica cyberpunk, con un estilo futurista y detalles intrincados.</p>
-                        <div class="work-footer">
-                            <div class="work-author">
-                                <i class="fas fa-user-circle"></i>
-                                Robe
-                            </div>
-                            <div class="work-action">
-                                <i class="fas fa-expand"></i>
-                                Ver detalle
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="work-item">
-                    <div class="work-image">
-                        <img src="img/obras/admins/Robe/Jinx.jpg" alt="Jinx">
-                    </div>
-                    <div class="work-content">
-                        <h4 class="work-title">Jinx</h4>
-                        <div class="work-technique">
-                            <i class="fas fa-palette"></i>
-                            Digital
-                        </div>
-                        <p class="work-description">Ilustración digital de Jinx, con un estilo moderno y colores vibrantes.</p>
-                        <div class="work-footer">
-                            <div class="work-author">
-                                <i class="fas fa-user-circle"></i>
-                                Robe
-                            </div>
-                            <div class="work-action">
-                                <i class="fas fa-expand"></i>
-                                Ver detalle
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Admin 11: Sam -->
-    <div class="member-card" data-member-id="sam" data-role="admin" data-specialty="traditional">
-        <div class="member-badge admin">
-            <i class="fas fa-star"></i>
-            <span>Admin</span>
-        </div>
-        <div class="member-main-content">
-            <div class="member-avatar">
-                <img src="img/pfp/admins/Sam/pfp.jfif" alt="Sam">
-            </div>
-            <div class="member-info">
-                <h3>Sam</h3>
-                <p class="member-specialty">Arte Tradicional</p>
-                <p class="member-since">Miembro desde 2023</p>
-                <div class="member-social">
-                    <a href="#" class="member-social-link instagram" title="Instagram">
-                        <i class="fab fa-instagram"></i>
-                    </a>
-                    <a href="#" class="member-social-link twitter" title="Twitter">
-                        <i class="fab fa-twitter"></i>
-                    </a>
-                </div>
-            </div>
-        </div>
-        <div class="view-works">
-            <button class="btn-view-works">
-                <i class="fas fa-images"></i>
-                Ver Obras (3)
-            </button>
-        </div>
-        <!-- Obras de Sam -->
-        <div class="member-works">
-            <div class="works-header">
-                <div class="works-title">
-                    <i class="fas fa-images"></i>
-                    Obras de Sam
-                </div>
-                <div class="works-count">3 obras</div>
-            </div>
-            <div class="works-grid">
-                <div class="work-item">
-                    <div class="work-image">
-                        <img src="img/obras/admins/Sam/Anya.jpg" alt="Anya">
-                    </div>
-                    <div class="work-content">
-                        <h4 class="work-title">Anya</h4>
-                        <div class="work-technique">
-                            <i class="fas fa-palette"></i>
-                            Lapiz
-                        </div>
-                        <p class="work-description">Dibujo a lápiz de Anya, con un estilo tierno y detalles precisos.</p>
-                        <div class="work-footer">
-                            <div class="work-author">
-                                <i class="fas fa-user-circle"></i>
-                                Sam
-                            </div>
-                            <div class="work-action">
-                                <i class="fas fa-expand"></i>
-                                Ver detalle
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="work-item">
-                    <div class="work-image">
-                        <img src="img/obras/admins/Sam/Naruto.jpg" alt="Naruto">
-                    </div>
-                    <div class="work-content">
-                        <h4 class="work-title">Naruto</h4>
-                        <div class="work-technique">
-                            <i class="fas fa-palette"></i>
-                            Lapiz
-                        </div>
-                        <p class="work-description">Dibujo a lápiz de Naruto, con un estilo dinámico y detalles impresionantes.</p>
-                        <div class="work-footer">
-                            <div class="work-author">
-                                <i class="fas fa-user-circle"></i>
-                                Sam
-                            </div>
-                            <div class="work-action">
-                                <i class="fas fa-expand"></i>
-                                Ver detalle
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="work-item">
-                    <div class="work-image">
-                        <img src="img/obras/admins/Sam/Zenitsu.jpg" alt="Zenitsu">
-                    </div>
-                    <div class="work-content">
-                        <h4 class="work-title">Zenitsu</h4>
-                        <div class="work-technique">
-                            <i class="fas fa-palette"></i>
-                            Lapiz
-                        </div>
-                        <p class="work-description">Dibujo a lápiz de Zenitsu, con un estilo detallado y sombreado preciso.</p>
-                        <div class="work-footer">
-                            <div class="work-author">
-                                <i class="fas fa-user-circle"></i>
-                                Sam
-                            </div>
-                            <div class="work-action">
-                                <i class="fas fa-expand"></i>
-                                Ver detalle
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Admin 12: Arg_sebas_art -->
-    <div class="member-card" data-member-id="arg_sebas_art" data-role="admin" data-specialty="traditional">
-        <div class="member-badge admin">
-            <i class="fas fa-star"></i>
-            <span>Admin</span>
-        </div>
-        <div class="member-main-content">
-            <div class="member-avatar">
-                <img src="img/pfp/admins/Arg_sebas_art/pfp.jfif" alt="Arg_sebas_art">
-            </div>
-            <div class="member-info">
-                <h3>Arg_sebas_art</h3>
-                <p class="member-specialty">Arte Tradicional</p>
-                <p class="member-since">Miembro desde 2023</p>
-                <div class="member-social">
-                    <a href="#" class="member-social-link instagram" title="Instagram">
-                        <i class="fab fa-instagram"></i>
-                    </a>
-                    <a href="#" class="member-social-link artstation" title="ArtStation">
-                        <i class="fab fa-artstation"></i>
-                    </a>
-                </div>
-            </div>
-        </div>
-        <div class="view-works">
-            <button class="btn-view-works">
-                <i class="fas fa-images"></i>
-                Ver Obras (3)
-            </button>
-        </div>
-        <!-- Obras de Arg_sebas_art -->
-        <div class="member-works">
-            <div class="works-header">
-                <div class="works-title">
-                    <i class="fas fa-images"></i>
-                    Obras de Arg_sebas_art
-                </div>
-                <div class="works-count">3 obras</div>
-            </div>
-            <div class="works-grid">
-                <div class="work-item">
-                    <div class="work-image">
-                        <img src="img/obras/admins/Arg_sebas_art/CyberpunkGirl.jpg" alt="CyberpunkGirl">
-                    </div>
-                    <div class="work-content">
-                        <h4 class="work-title">CyberpunkGirl</h4>
-                        <div class="work-technique">
-                            <i class="fas fa-palette"></i>
-                            Digital
-                        </div>
-                        <p class="work-description">Ilustración digital de una chica cyberpunk, con un estilo futurista y detalles intrincados.</p>
-                        <div class="work-footer">
-                            <div class="work-author">
-                                <i class="fas fa-user-circle"></i>
-                                Arg_sebas_art
-                            </div>
-                            <div class="work-action">
-                                <i class="fas fa-expand"></i>
-                                Ver detalle
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="work-item">
-                    <div class="work-image">
-                        <img src="img/obras/admins/Arg_sebas_art/NeonSamurai.jpg" alt="NeonSamurai">
-                    </div>
-                    <div class="work-content">
-                        <h4 class="work-title">NeonSamurai</h4>
-                        <div class="work-technique">
-                            <i class="fas fa-palette"></i>
-                            Digital
-                        </div>
-                        <p class="work-description">Ilustración digital de un samurái neón, con un estilo moderno y colores vibrantes.</p>
-                        <div class="work-footer">
-                            <div class="work-author">
-                                <i class="fas fa-user-circle"></i>
-                                Arg_sebas_art
-                            </div>
-                            <div class="work-action">
-                                <i class="fas fa-expand"></i>
-                                Ver detalle
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="work-item">
-                    <div class="work-image">
-                        <img src="img/obras/admins/Arg_sebas_art/SpaceGirl.jpg" alt="SpaceGirl">
-                    </div>
-                    <div class="work-content">
-                        <h4 class="work-title">SpaceGirl</h4>
-                        <div class="work-technique">
-                            <i class="fas fa-palette"></i>
-                            Digital
-                        </div>
-                        <p class="work-description">Ilustración digital de una chica espacial, con un estilo futurista y detalles impresionantes.</p>
-                        <div class="work-footer">
-                            <div class="work-author">
-                                <i class="fas fa-user-circle"></i>
-                                Arg_sebas_art
-                            </div>
-                            <div class="work-action">
-                                <i class="fas fa-expand"></i>
-                                Ver detalle
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-    </div>
-</section>
-
-    <!-- Regular Members Section -->
-    <section class="members-section">
+    <!-- Projects Section -->
+    <section id="projects">
         <div class="container">
-            <div class="section-title">
-                <h2>Miembros de la Comunidad</h2>
+            <div class="section-header">
+                <h2>Proyectos de la Comunidad</h2>
+                <div class="divider"></div>
+                <p>Descubre las actividades y retos en los que nuestra comunidad está trabajando actualmente.</p>
+            </div>
+            <div class="project-grid">
+                <div class="project-card active">
+                    <div class="project-status">
+                        <span class="status-badge active">Activo</span>
+                    </div>
+                    <div class="project-content">
+                        <h3>Torneo De Temática Libre</h3>
+                        <p>Explora tu creatividad sin límites en nuestro torneo más libre y expresivo.</p>
+                        <div class="project-date">
+                            <i class="fas fa-calendar"></i>
+                            <span>Fecha límite: 30 de Mayo, 2025</span>
+                        </div>
+                    </div>
+                    <div class="project-footer">
+                        <a href="https://chat.whatsapp.com/DH9Udvs50Pj4497ipVHlRk" target="_blank" class="btn btn-primary">
+                            Participar
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="project-card in-progress">
+                    <div class="project-status">
+                        <span class="status-badge in-progress">En Progreso</span>
+                    </div>
+                    <div class="project-content">
+                        <h3>Colaboración 15 vs 15 Con Lioxen Community</h3>
+                        <p>Una épica colaboración entre comunidades que promete ser espectacular.</p>
+                        <div class="project-date">
+                            <i class="fas fa-calendar"></i>
+                            <span>Fecha límite: 24 de Junio, 2025</span>
+                        </div>
+                    </div>
+                    <div class="project-footer">
+                        <a href="https://chat.whatsapp.com/Lwj85QzALMFBjCnYirEJ9K" target="_blank" class="btn btn-primary">
+                            Participar
+                        </a>
+                    </div>
+                </div>
             </div>
             
-            <div class="members-grid">
-
-
-                <!-- Miembro 1: Negro Jose -->
-                <div class="member-card" data-member-id="Negro Jose" data-role="member" data-specialty="traditional">
-                    <div class="member-badge member">
-                        <i class="fas fa-user"></i>
-                        <span>Miembro</span>
+            <div class="past-projects">
+                <h3>Proyectos Anteriores</h3>
+                <div class="past-project-list">
+                    <div class="past-project-item">
+                        <span class="project-name">Torneo Solo Leveling</span>
+                        <span class="project-date">Abril 2025</span>
                     </div>
-                    <div class="member-main-content">
-                        <div class="member-avatar">
-                            <img src="img/pfp/miembros/NJ/pfp.jfif" alt="Ari">
-                        </div>
-                        <div class="member-info">
-                            <h3>Negro Jose</h3>
-                            <p class="member-specialty">Anime Girls</p>
-                            <p class="member-since">Miembro desde 2023</p>
-                            <div class="member-social">
-                                <a href="#" class="member-social-link instagram" title="Instagram">
-                                    <i class="fab fa-instagram"></i>
-                                </a>
-                                <a href="#" class="member-social-link twitter" title="Twitter">
-                                    <i class="fab fa-twitter"></i>
-                                </a>
-                            </div>
-                        </div>
+                    <div class="past-project-item">
+                        <span class="project-name">Torneo Libre</span>
+                        <span class="project-date">Marzo 2025</span>
                     </div>
-                    <div class="view-works">
-                        <button class="btn-view-works">
-                            <i class="fas fa-images"></i>
-                            Ver Obras (2)
-                        </button>
+                    <div class="past-project-item">
+                        <span class="project-name">Torneo Navideño</span>
+                        <span class="project-date">Diciembre 2024</span>
                     </div>
-                    <!-- Obras -->
-                    <div class="member-works">
-                        <div class="works-header">
-                            <div class="works-title">
-                                <i class="fas fa-images"></i>
-                                Obras del Negro Jose
-                            </div>
-                            <div class="works-count">2 obras</div>
-                        </div>
-                        <div class="works-grid">
-                            <div class="work-item">
-                                <div class="work-image">
-                                    <img src="img/pfp/members/nj/" alt="#####">
-                                </div>
-                                <div class="work-content">
-                                    <h4 class="work-title">######</h4>
-                                    <div class="work-technique">######</div>
-                                    <p class="work-description">######</p>
-                                    <div class="work-footer">
-                                        <div class="work-author">
-                                            <i class="fas fa-user-circle"></i>
-                                            Negro Jose
-                                        </div>
-                                        <div class="work-action">
-                                            <i class="fas fa-expand"></i>
-                                            Ver detalle
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="work-item">
-                                <div class="work-image">
-                                    <img src="img/pfp/members/nj/" alt="Concept Sheet">
-                                </div>
-                                <div class="work-content">
-                                    <h4 class="work-title">###</h4>
-                                    <div class="work-technique">###</div>
-                                    <p class="work-description">###</p>
-                                    <div class="work-footer">
-                                        <div class="work-author">
-                                            <i class="fas fa-user-circle"></i>
-                                            Negro Jose
-                                        </div>
-                                        <div class="work-action">
-                                            <i class="fas fa-expand"></i>
-                                            Ver detalle
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                    <div class="past-project-item">
+                        <span class="project-name">Torneo de creación de OC's</span>
+                        <span class="project-date">Noviembre 2024</span>
+                    </div>
+                    <div class="past-project-item">
+                        <span class="project-name">Reto InkTober</span>
+                        <span class="project-date">Octubre 2024</span>
                     </div>
                 </div>
-
-                <!-- Miembro 2: Trexx -->
-                <div class="member-card" data-member-id="Trexx" data-role="member" data-specialty="traditional">
-                    <div class="member-badge member">
-                        <i class="fas fa-user"></i>
-                        <span>Miembro</span>
-                    </div>
-                    <div class="member-main-content">
-                        <div class="member-avatar">
-                            <img src="img/pfp/members/trexx/pfp.jfif" alt="Trexx">
-                        </div>
-                        <div class="member-info">
-                            <h3>Trexx</h3>
-                            <p class="member-specialty">###</p>
-                            <p class="member-since">Miembro desde 202X</p>
-                            <div class="member-social">
-                                <a href="#" class="member-social-link youtube" title="YouTube">
-                                    <i class="fab fa-youtube"></i>
-                                </a>
-                                <a href="#" class="member-social-link vimeo" title="Vimeo">
-                                    <i class="fab fa-vimeo"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="view-works">
-                        <button class="btn-view-works">
-                            <i class="fas fa-images"></i>
-                            Ver Obras
-                        </button>
-                    </div>
-                    <!-- Obras de Trexx -->
-                    <div class="member-works">
-                        <div class="works-header">
-                            <div class="works-title">
-                                <i class="fas fa-images"></i>
-                                Obras de Trexx
-                            </div>
-                            <div class="works-count">3 obras</div>
-                        </div>
-                        <div class="works-grid">
-                            <div class="work-item">
-                                <div class="work-image">
-                                    <img src="img/pfp/members/trexx/" alt="###">
-                                </div>
-                                <div class="work-content">
-                                    <h4 class="work-title">###</h4>
-                                    <div class="work-technique">###</div>
-                                    <p class="work-description">###</p>
-                                    <div class="work-footer">
-                                        <div class="work-author">
-                                            <i class="fas fa-user-circle"></i>
-                                            Trexx
-                                        </div>
-                                        <div class="work-action">
-                                            <i class="fas fa-expand"></i>
-                                            Ver detalle
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Miembro Template--
-                <div class="member-card" data-member-id="###" data-role="member" data-specialty="####">
-                    <div class="member-badge member">
-                        <i class="fas fa-user"></i>
-                        <span>Miembro</span>
-                    </div>
-                    <div class="member-main-content">
-                        <div class="member-avatar">
-                            <img src="img/pfp/members/" alt="pfp">
-                        </div>
-                        <div class="member-info">
-                            <h3>###</h3>
-                            <p class="member-specialty">###</p>
-                            <p class="member-since">Miembro desde 202X</p>
-                            <div class="member-social">
-                                <a href="#" class="member-social-link instagram" title="Instagram">
-                                    <i class="fab fa-instagram"></i>
-                                </a>
-                                <a href="#" class="member-social-link behance" title="Behance">
-                                    <i class="fab fa-behance"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="view-works">
-                        <button class="btn-view-works">
-                            <i class="fas fa-images"></i>
-                            Ver Obras (2)
-                        </button>
-                    </div>
-                    
-
-                    <div class="member-works">
-                        <div class="works-header">
-                            <div class="works-title">
-                                <i class="fas fa-images"></i>
-                                Obras de #
-                            </div>
-                            <div class="works-count"># obras</div>
-                        </div>
-                        <div class="works-grid">
-                            <div class="work-item">
-                                <div class="work-image">
-                                    <img src="#####" alt="Ilustración Editorial">
-                                </div>
-                                <div class="work-content">
-                                    <h4 class="work-title">Ilustración Editorial</h4>
-                                    <div class="work-technique">Acuarela</div>
-                                    <p class="work-description">###</p>
-                                    <div class="work-footer">
-                                        <div class="work-author">
-                                            <i class="fas fa-user-circle"></i>
-                                            ###
-                                        </div>
-                                        <div class="work-action">
-                                            <i class="fas fa-expand"></i>
-                                            Ver detalle
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="work-item">
-                                <div class="work-image">
-                                    <img src="#####" alt="Poster Artístico">
-                                </div>
-                                <div class="work-content">
-                                    <h4 class="work-title">Poster Artístico</h4>
-                                    <div class="work-technique">Digital</div>
-                                    <p class="work-description">###</p>
-                                    <div class="work-footer">
-                                        <div class="work-author">
-                                            <i class="fas fa-user-circle"></i>
-                                            ###
-                                        </div>
-                                        <div class="work-action">
-                                            <i class="fas fa-expand"></i>
-                                            Ver detalle
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div> -->
-
-
-
-        
+            </div>
         </div>
     </section>
 
-
-
-    <!-- No Results Message -->
-    <div class="no-results" id="no-results" style="display: none;">
-        <div class="no-results-content">
-            <i class="fas fa-search"></i>
-            <h3>No se encontraron miembros</h3>
-            <p>Intenta ajustar los filtros de búsqueda</p>
+    <!-- Testimonials Section -->
+    <section id="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <h2>Lo Que Dicen Nuestros Miembros</h2>
+                <div class="divider"></div>
+            </div>
+            <div class="testimonial-grid">
+                <div class="testimonial-card featured">
+                    <div class="testimonial-header">
+                        <div class="admin-badge">
+                            <i class="fas fa-crown"></i>
+                            <span>Admin Principal</span>
+                        </div>
+                    </div>
+                    <div class="quote-icon">
+                        <i class="fas fa-quote-left"></i>
+                    </div>
+                    <p>"Gracias al nexo pude mejorar como artista, la comunidad me ha brindado de un espacio donde puedo expresarme y mejorar junto a otros artistas que me motivan a superarme constantemente a través de una competencia sana"</p>
+                    <div class="testimonial-author">
+                        <strong>TkAndresB</strong>
+                        <span>Admin Principal</span>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="quote-icon">
+                        <i class="fas fa-quote-left"></i>
+                    </div>
+                    <p>"Mi experiencia aquí fue maravillosa, gracias a personas por ejemplo Joel y Emmanuel, pude mejorar mi conocimiento en el dibujo y agrandar también mi conocimiento en la anatomía, todo gracias a ellos y me gusta estar rodeado a artistas que buscan superarse a si mismo como yo, está fue mi experiencia de mi corto plazo que pase aquí."</p>
+                    <div class="testimonial-author">
+                        <strong>Victor</strong>
+                        <span>Miembro</span>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="testimonial-header">
+                        <div class="admin-badge">
+                            <i class="fas fa-star"></i>
+                            <span>Admin</span>
+                        </div>
+                    </div>
+                    <div class="quote-icon">
+                        <i class="fas fa-quote-left"></i>
+                    </div>
+                    <p>"Mi experienca aca es magnifica, me encanta rodearme de buenos artistas, todos talentosos y muy buenos amigos, el trato que me dieron cuando me uni fue muy bueno y por eso siempre busco como admin actualmente dar lo mismo, mejore mucho desde que estoy en la comunidad, todo gracias a los buenos artistas y compañeros que hay"</p>
+                    <div class="testimonial-author">
+                        <strong>godjo1o</strong>
+                        <span>Admin</span>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="quote-icon">
+                        <i class="fas fa-quote-left"></i>
+                    </div>
+                    <p>"Mi experiencia ha sido muy buena ya tengo tiempo en este grupo y la verdad de los consejos son demasiado buenos ayudan demasiado y es un buen grupo para darte tips y ayudarte en lo que necesite"</p>
+                    <div class="testimonial-author">
+                        <strong>Jesus</strong>
+                        <span>Miembro</span>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="quote-icon">
+                        <i class="fas fa-quote-left"></i>
+                    </div>
+                    <p>"Mi exeperiencia en el grupo a sido sobre todo emocional, se ayudan mutuamente y te dan consejos de como mejorar tu dibujo o te ayudan a encontrar referencias buenas, sobre todo es genial platicar con otros artistas, me gustaria que siguiera creciendo el grupo y sigamos asi"</p>
+                    <div class="testimonial-author">
+                        <strong>German</strong>
+                        <span>Miembro</span>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="testimonial-header">
+                        <div class="admin-badge">
+                            <i class="fas fa-star"></i>
+                            <span>Admin</span>
+                        </div>
+                    </div>
+                    <div class="quote-icon">
+                        <i class="fas fa-quote-left"></i>
+                    </div>
+                    <p>"Mi experiencia aca fue interesante, como artista puedo aprender de los demas, enseñarles e incluso hacer amistades, todos muy buenos en lo que hacen, intento ayudar con lo que puedo, me gusta la idea de mejorar entre si, ademas de eso, el grupo es bastante innovador, con algunas cosas que lo haces muy interesante para el aprendizaje general"</p>
+                    <div class="testimonial-author">
+                        <strong>Duvan</strong>
+                        <span>Admin</span>
+                    </div>
+                </div>
+            </div>
         </div>
-    </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2>Únete a Nuestra Comunidad</h2>
+                <div class="divider"></div>
+                <p>Conecta con artistas apasionados, comparte tu trabajo y crece junto a nosotros.</p>
+            </div>
+            <div class="contact-content">
+                <div class="whatsapp-card">
+                    <div class="whatsapp-icon">
+                        <i class="fab fa-whatsapp"></i>
+                    </div>
+                    <h3>Grupo de WhatsApp</h3>
+                    <p>Únete a más de 40 artistas en nuestra comunidad principal. Compartimos recursos, feedback y mucho más.</p>
+                    <a href="https://chat.whatsapp.com/Lwj85QzALMFBjCnYirEJ9K" target="_blank" class="btn btn-whatsapp">
+                        <i class="fab fa-whatsapp"></i>
+                        Unirse al Grupo
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <!-- Footer -->
     <footer>
@@ -1759,13 +440,12 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; <span id="current-year"></span> Nexo Artistico. Todos los derechos reservados.</p>
+                <p>&copy; 2025 Nexo Artistico. Todos los derechos reservados.</p>
             </div>
         </div>
     </footer>
 
     <script src="js/script.js"></script>
     <script src="js/dark-mode.js"></script>
-    <script src="js/miembros-simple.js"></script>
 </body>
 </html>
