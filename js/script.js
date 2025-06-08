@@ -1005,6 +1005,19 @@ function initCarousel() {
   indicators.forEach((indicator, index) => {
     indicator.addEventListener("click", () => goToSlide(index))
   })
+  document.addEventListener('DOMContentLoaded', function () {
+    const menuToggle = document.querySelector('.menu-toggle');
+    const mobileMenu = document.querySelector('.mobile-menu');
+    const closeBtn = document.querySelector('.mobile-menu-close i');
+
+    menuToggle.addEventListener('click', () => {
+      mobileMenu.classList.add('active');
+    });
+
+    closeBtn.addEventListener('click', () => {
+      mobileMenu.classList.remove('active');
+    });
+  });
 
   // Keyboard navigation
   document.addEventListener("keydown", (e) => {
