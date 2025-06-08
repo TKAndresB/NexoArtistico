@@ -1,0 +1,1205 @@
+/* ===================================
+   BIBLIOTECA DIGITAL - ESTILOS AVANZADOS
+   =================================== */
+
+/* Header fixes */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--border-color);
+  padding: 0.75rem 0;
+  transition: all 0.3s ease;
+}
+
+[data-theme="dark"] header {
+  background: rgba(15, 23, 42, 0.95);
+  border-bottom-color: var(--border-color);
+}
+
+.mobile-menu {
+  z-index: 1001;
+}
+
+/* Compact Page Header */
+.page-header-compact {
+  padding: 100px 0 40px 0;
+  background: linear-gradient(135deg, var(--primary-color) 0%, #8b5cf6 100%);
+  color: white;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.page-header-compact::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Ccircle cx='20' cy='20' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")
+    repeat;
+  animation: float 15s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.page-header-compact h1 {
+  font-size: clamp(1.8rem, 4vw, 2.5rem);
+  font-weight: 800;
+  margin-bottom: 0.5rem;
+  position: relative;
+  z-index: 1;
+}
+
+.page-header-compact p {
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.9);
+  max-width: 500px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.gradient-text {
+  background: linear-gradient(90deg, #ff9a8b 0%, #ff6a88 55%, #ff99ac 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  font-weight: 700;
+}
+
+/* ===================================
+   TABS COMPACTAS
+   =================================== */
+.library-tabs-compact {
+  background: var(--card-bg);
+  border-bottom: 1px solid var(--border-color);
+  position: sticky;
+  top: 70px;
+  z-index: 100;
+  padding: 0.75rem 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.tabs-wrapper {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.tab-btn {
+  background: transparent;
+  border: 2px solid var(--border-color);
+  color: var(--text-light);
+  padding: 0.6rem 1.5rem;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 600;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  min-width: 120px;
+  justify-content: center;
+}
+
+.tab-btn:hover {
+  border-color: var(--primary-color);
+  color: var(--primary-color);
+  transform: translateY(-2px);
+}
+
+.tab-btn.active {
+  background: var(--primary-color);
+  border-color: var(--primary-color);
+  color: white;
+  box-shadow: 0 4px 12px rgba(124, 58, 237, 0.3);
+}
+
+.tab-btn i {
+  font-size: 1rem;
+}
+
+/* ===================================
+   CONTENIDO DE LA BIBLIOTECA
+   =================================== */
+.library-content {
+  padding: 2rem 0 3rem;
+  background: var(--bg-color);
+  min-height: 70vh;
+}
+
+.tab-content {
+  display: none;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.tab-content.active {
+  display: block;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ===================================
+   SECCIÓN DE BÚSQUEDA
+   =================================== */
+.search-section {
+  margin-bottom: 2rem;
+}
+
+.search-container {
+  background: var(--card-bg);
+  padding: 1.5rem;
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  border: 1px solid var(--border-color);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.search-box {
+  position: relative;
+  flex: 1;
+  max-width: 500px;
+}
+
+.search-box input {
+  width: 100%;
+  padding: 0.75rem 2.5rem 0.75rem 1rem;
+  border: 2px solid var(--border-color);
+  border-radius: 12px;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+  background: var(--card-bg);
+  color: var(--text-color);
+}
+
+.search-box input:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px rgba(124, 58, 237, 0.1);
+}
+
+.search-box button {
+  position: absolute;
+  right: 0.5rem;
+  top: 50%;
+  transform: translateY(-50%);
+  background: var(--primary-color);
+  color: white;
+  border: none;
+  padding: 0.5rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.search-box button:hover {
+  background: var(--primary-dark);
+  transform: translateY(-50%) scale(1.05);
+}
+
+/* Opciones de filtro */
+.filter-options {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.filter-options select {
+  padding: 0.5rem 0.75rem;
+  border: 2px solid var(--learning-border);
+  border-radius: var(--learning-radius);
+  background: var(--learning-card-bg);
+  color: var(--learning-text);
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  min-width: 130px;
+}
+
+.filter-options select:focus {
+  outline: none;
+  border-color: var(--learning-primary);
+  box-shadow: 0 0 0 3px rgba(124, 58, 237, 0.1);
+}
+
+/* ===================================
+   GRID DE LIBROS
+   =================================== */
+.books-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.book-card {
+  background: var(--card-bg);
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  border: 1px solid var(--border-color);
+  position: relative;
+}
+
+.book-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+}
+
+.book-cover {
+  position: relative;
+  width: 100%;
+  height: 280px;
+  overflow: hidden;
+}
+
+.book-cover img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.book-card:hover .book-cover img {
+  transform: scale(1.05);
+}
+
+.book-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.7) 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.book-card:hover .book-overlay {
+  opacity: 1;
+}
+
+.download-btn {
+  background: var(--primary-color);
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(124, 58, 237, 0.3);
+}
+
+.download-btn:hover {
+  background: var(--primary-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(124, 58, 237, 0.4);
+}
+
+.book-info {
+  padding: 1.25rem;
+}
+
+.book-info h3 {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text-color);
+  margin-bottom: 0.5rem;
+  line-height: 1.3;
+}
+
+.book-author {
+  color: var(--text-light);
+  font-size: 0.85rem;
+  margin-bottom: 0.75rem;
+  font-weight: 500;
+}
+
+.book-tags {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.tag {
+  background: linear-gradient(135deg, var(--primary-color), #8b5cf6);
+  color: white;
+  padding: 0.25rem 0.75rem;
+  border-radius: 15px;
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* ===================================
+   PINTEREST BOARDS
+   =================================== */
+.pinterest-boards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-top: 1rem;
+}
+
+.pinterest-board {
+  background: var(--card-bg);
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+  transition: all 0.4s ease;
+  border: 1px solid var(--border-color);
+  position: relative;
+}
+
+.pinterest-board:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
+}
+
+.board-preview {
+  position: relative;
+  height: 200px;
+  overflow: hidden;
+}
+
+.board-images {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.main-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.pinterest-board:hover .main-image {
+  transform: scale(1.1);
+}
+
+.overlay-image {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 12px;
+  border: 3px solid white;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  transition: all 0.4s ease;
+}
+
+.overlay-1 {
+  top: 15px;
+  right: 15px;
+  transform: rotate(-5deg);
+}
+
+.overlay-2 {
+  bottom: 15px;
+  right: 15px;
+  transform: rotate(5deg);
+}
+
+.pinterest-board:hover .overlay-1 {
+  transform: rotate(-10deg) scale(1.1);
+}
+
+.pinterest-board:hover .overlay-2 {
+  transform: rotate(10deg) scale(1.1);
+}
+
+.board-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(230, 0, 35, 0.8) 0%, rgba(189, 8, 28, 0.8) 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.pinterest-board:hover .board-overlay {
+  opacity: 1;
+}
+
+.view-board-btn {
+  background: white;
+  color: #e60023;
+  padding: 1rem 2rem;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+.view-board-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+.board-info {
+  padding: 1.5rem;
+}
+
+.board-info h3 {
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: var(--text-color);
+  margin-bottom: 0.5rem;
+}
+
+.board-info p {
+  color: var(--text-light);
+  font-size: 0.9rem;
+  line-height: 1.5;
+  margin-bottom: 1rem;
+}
+
+.board-stats {
+  display: flex;
+  gap: 1rem;
+  font-size: 0.8rem;
+  color: var(--text-light);
+  font-weight: 600;
+}
+
+.board-stats span {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.board-stats i {
+  color: #e60023;
+}
+
+/* ===================================
+   RESPONSIVE DESIGN MEJORADO - BIBLIOTECA
+   =================================== */
+
+/* Large tablets */
+@media (max-width: 1024px) {
+  .books-grid {
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    gap: 1rem;
+  }
+
+  .pinterest-boards {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .search-container {
+    padding: 1.25rem;
+  }
+}
+
+/* Tablets */
+@media (max-width: 768px) {
+  /* Header adjustments */
+  .page-header-compact {
+    padding: 80px 0 25px 0;
+  }
+
+  .library-tabs-compact {
+    top: 60px;
+    padding: 0.5rem 0;
+  }
+
+  .tabs-wrapper {
+    gap: 0.5rem;
+    padding: 0 1rem;
+  }
+
+  .tab-btn {
+    padding: 0.5rem 1rem;
+    font-size: 0.85rem;
+    min-width: 100px;
+    flex: 1;
+  }
+
+  .tab-btn span {
+    display: block;
+  }
+
+  .tab-btn i {
+    font-size: 0.9rem;
+    margin-bottom: 0.2rem;
+  }
+
+  /* Content adjustments */
+  .library-content {
+    padding: 1.5rem 0 2rem;
+  }
+
+  .search-container {
+    padding: 1rem;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .search-box {
+    max-width: 100%;
+  }
+
+  .filter-options {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.75rem;
+  }
+
+  .filter-options select {
+    min-width: auto;
+    width: 100%;
+    padding: 0.6rem 0.75rem;
+  }
+
+  /* Books grid mobile */
+  .books-grid {
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    gap: 0.75rem;
+  }
+
+  .book-card {
+    border-radius: 12px;
+  }
+
+  .book-cover {
+    height: 200px;
+  }
+
+  .book-info {
+    padding: 1rem;
+  }
+
+  .book-info h3 {
+    font-size: 0.9rem;
+    line-height: 1.2;
+    margin-bottom: 0.4rem;
+  }
+
+  .book-author {
+    font-size: 0.8rem;
+    margin-bottom: 0.6rem;
+  }
+
+  .book-tags {
+    gap: 0.3rem;
+    flex-wrap: wrap;
+  }
+
+  .tag {
+    font-size: 0.65rem;
+    padding: 0.2rem 0.5rem;
+    border-radius: 12px;
+  }
+
+  .download-btn {
+    padding: 0.6rem 1.2rem;
+    font-size: 0.8rem;
+    border-radius: 20px;
+  }
+
+  /* Pinterest boards mobile */
+  .pinterest-boards {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+
+  .board-preview {
+    height: 180px;
+  }
+
+  .overlay-image {
+    width: 60px;
+    height: 60px;
+  }
+
+  .overlay-1,
+  .overlay-2 {
+    top: 10px;
+    right: 10px;
+  }
+
+  .overlay-2 {
+    bottom: 10px;
+    top: auto;
+  }
+
+  .board-info {
+    padding: 1.25rem;
+  }
+
+  .board-info h3 {
+    font-size: 1.1rem;
+    margin-bottom: 0.4rem;
+  }
+
+  .board-info p {
+    font-size: 0.85rem;
+    margin-bottom: 0.8rem;
+  }
+
+  .view-board-btn {
+    padding: 0.8rem 1.5rem;
+    font-size: 0.9rem;
+    border-radius: 25px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  /* Header ultra mobile */
+  .page-header-compact {
+    padding: 70px 0 20px 0;
+  }
+
+  .page-header-compact h1 {
+    font-size: clamp(1.5rem, 8vw, 2rem);
+  }
+
+  .page-header-compact p {
+    font-size: 0.9rem;
+    padding: 0 1rem;
+  }
+
+  /* Tabs ultra mobile */
+  .library-tabs-compact {
+    top: 55px;
+    padding: 0.4rem 0;
+  }
+
+  .tabs-wrapper {
+    gap: 0.3rem;
+    padding: 0 0.5rem;
+  }
+
+  .tab-btn {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.8rem;
+    min-width: 80px;
+    flex-direction: column;
+    gap: 0.2rem;
+  }
+
+  .tab-btn span {
+    font-size: 0.7rem;
+  }
+
+  .tab-btn i {
+    font-size: 1rem;
+  }
+
+  /* Content ultra mobile */
+  .library-content {
+    padding: 1rem 0 1.5rem;
+  }
+
+  .search-container {
+    padding: 0.8rem;
+    margin-bottom: 1rem;
+    border-radius: 12px;
+  }
+
+  .search-box input {
+    padding: 0.6rem 2rem 0.6rem 0.8rem;
+    font-size: 0.9rem;
+    border-radius: 10px;
+  }
+
+  .search-box button {
+    right: 0.4rem;
+    padding: 0.4rem;
+    border-radius: 8px;
+  }
+
+  .filter-options select {
+    padding: 0.5rem 0.6rem;
+    font-size: 0.8rem;
+    border-radius: 10px;
+  }
+
+  /* Books ultra mobile */
+  .books-grid {
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    gap: 0.6rem;
+  }
+
+  .book-cover {
+    height: 160px;
+    border-radius: 10px 10px 0 0;
+  }
+
+  .book-info {
+    padding: 0.8rem;
+  }
+
+  .book-info h3 {
+    font-size: 0.8rem;
+    line-height: 1.1;
+    margin-bottom: 0.3rem;
+  }
+
+  .book-author {
+    font-size: 0.7rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .book-tags {
+    gap: 0.2rem;
+  }
+
+  .tag {
+    font-size: 0.6rem;
+    padding: 0.15rem 0.4rem;
+    border-radius: 8px;
+  }
+
+  .download-btn {
+    padding: 0.5rem 1rem;
+    font-size: 0.75rem;
+    gap: 0.3rem;
+  }
+
+  .download-btn i {
+    font-size: 0.7rem;
+  }
+
+  /* Pinterest ultra mobile */
+  .pinterest-boards {
+    gap: 1rem;
+  }
+
+  .board-preview {
+    height: 150px;
+    border-radius: 15px 15px 0 0;
+  }
+
+  .overlay-image {
+    width: 50px;
+    height: 50px;
+    border-width: 2px;
+  }
+
+  .board-info {
+    padding: 1rem;
+  }
+
+  .board-info h3 {
+    font-size: 1rem;
+    margin-bottom: 0.3rem;
+  }
+
+  .board-info p {
+    font-size: 0.8rem;
+    margin-bottom: 0.6rem;
+    line-height: 1.3;
+  }
+
+  .board-stats {
+    gap: 0.5rem;
+    font-size: 0.7rem;
+  }
+
+  .view-board-btn {
+    padding: 0.7rem 1.2rem;
+    font-size: 0.8rem;
+    gap: 0.4rem;
+  }
+
+  /* No results mobile */
+  .no-results {
+    padding: 2rem 1rem;
+  }
+
+  .no-results i {
+    font-size: 2.5rem;
+    margin-bottom: 0.8rem;
+  }
+
+  .no-results h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.4rem;
+  }
+
+  .no-results p {
+    font-size: 0.9rem;
+  }
+}
+
+/* Very small mobile (320px) */
+@media (max-width: 320px) {
+  .page-header-compact {
+    padding: 65px 0 15px 0;
+  }
+
+  .page-header-compact h1 {
+    font-size: 1.4rem;
+  }
+
+  .page-header-compact p {
+    font-size: 0.8rem;
+  }
+
+  .library-tabs-compact {
+    top: 50px;
+  }
+
+  .tab-btn {
+    padding: 0.3rem 0.6rem;
+    font-size: 0.75rem;
+    min-width: 70px;
+  }
+
+  .tab-btn span {
+    font-size: 0.65rem;
+  }
+
+  .books-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.5rem;
+  }
+
+  .book-cover {
+    height: 140px;
+  }
+
+  .book-info {
+    padding: 0.6rem;
+  }
+
+  .book-info h3 {
+    font-size: 0.75rem;
+  }
+
+  .book-author {
+    font-size: 0.65rem;
+  }
+
+  .tag {
+    font-size: 0.55rem;
+    padding: 0.1rem 0.3rem;
+  }
+
+  .pinterest-boards {
+    gap: 0.8rem;
+  }
+
+  .board-preview {
+    height: 130px;
+  }
+
+  .board-info {
+    padding: 0.8rem;
+  }
+
+  .board-info h3 {
+    font-size: 0.9rem;
+  }
+
+  .board-info p {
+    font-size: 0.75rem;
+  }
+}
+
+/* Landscape mobile optimizations */
+@media (max-width: 768px) and (orientation: landscape) {
+  .page-header-compact {
+    padding: 60px 0 15px 0;
+  }
+
+  .library-tabs-compact {
+    top: 50px;
+  }
+
+  .books-grid {
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  }
+
+  .book-cover {
+    height: 140px;
+  }
+
+  .pinterest-boards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .board-preview {
+    height: 120px;
+  }
+}
+
+/* Touch device optimizations */
+@media (hover: none) and (pointer: coarse) {
+  .book-card {
+    transition: transform 0.2s ease;
+  }
+
+  .book-card:active {
+    transform: scale(0.98);
+  }
+
+  .pinterest-board:active {
+    transform: scale(0.98);
+  }
+
+  .download-btn,
+  .view-board-btn {
+    min-height: 44px;
+    min-width: 44px;
+  }
+
+  .tab-btn {
+    min-height: 44px;
+  }
+
+  .search-box button {
+    min-height: 36px;
+    min-width: 36px;
+  }
+
+  /* Remove hover effects on touch devices */
+  .book-card:hover,
+  .pinterest-board:hover {
+    transform: none;
+  }
+
+  .book-card:hover .book-overlay,
+  .pinterest-board:hover .board-overlay {
+    opacity: 0;
+  }
+
+  /* Show overlays by default on touch devices */
+  .book-overlay,
+  .board-overlay {
+    opacity: 1;
+    background: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.5) 100%);
+  }
+
+  .download-btn,
+  .view-board-btn {
+    background: rgba(255, 255, 255, 0.95);
+    color: var(--text-primary);
+    backdrop-filter: blur(10px);
+  }
+}
+
+/* Improved accessibility for mobile */
+@media (max-width: 768px) {
+  .book-card:focus,
+  .pinterest-board:focus {
+    outline: 2px solid var(--primary-color);
+    outline-offset: 2px;
+  }
+
+  .download-btn:focus,
+  .view-board-btn:focus {
+    outline: 2px solid var(--primary-color);
+    outline-offset: 2px;
+  }
+
+  /* Better contrast for small screens */
+  .tag {
+    background: var(--primary-color);
+    color: white;
+    font-weight: 600;
+  }
+
+  .book-author {
+    color: var(--text-color);
+    font-weight: 500;
+  }
+}
+
+/* ===================================
+   ANIMACIONES Y TRANSICIONES
+   =================================== */
+.book-card,
+.pinterest-board {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Stagger animation para las tarjetas */
+.book-card:nth-child(1),
+.pinterest-board:nth-child(1) {
+  animation-delay: 0.1s;
+}
+.book-card:nth-child(2),
+.pinterest-board:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.book-card:nth-child(3),
+.pinterest-board:nth-child(3) {
+  animation-delay: 0.3s;
+}
+.book-card:nth-child(4),
+.pinterest-board:nth-child(4) {
+  animation-delay: 0.4s;
+}
+.book-card:nth-child(5),
+.pinterest-board:nth-child(5) {
+  animation-delay: 0.5s;
+}
+.book-card:nth-child(6),
+.pinterest-board:nth-child(6) {
+  animation-delay: 0.6s;
+}
+
+/* Reducir animaciones si el usuario prefiere menos movimiento */
+@media (prefers-reduced-motion: reduce) {
+  .book-card,
+  .pinterest-board {
+    animation: none;
+  }
+
+  .tab-content {
+    animation: none;
+  }
+}
+
+/* ===================================
+   ESTADOS DE FILTRADO
+   =================================== */
+.book-card.hidden {
+  display: none;
+}
+
+.no-results {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: 3rem 1rem;
+  color: var(--text-light);
+}
+
+.no-results i {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  opacity: 0.5;
+}
+
+.no-results h3 {
+  margin-bottom: 0.5rem;
+  color: var(--text-color);
+}
+
+/* ===================================
+   MEJORAS PROFESIONALES
+   =================================== */
+
+/* Loading states */
+.loading {
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+.loading::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 20px;
+  height: 20px;
+  margin: -10px 0 0 -10px;
+  border: 2px solid var(--border-color);
+  border-top-color: var(--primary-color);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Focus states mejorados */
+.book-card:focus,
+.pinterest-board:focus,
+.download-btn:focus,
+.view-board-btn:focus {
+  outline: 2px solid var(--primary-color);
+  outline-offset: 2px;
+}
+
+/* Scrollbar personalizado */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--border-color);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--text-light);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--text-color);
+}
