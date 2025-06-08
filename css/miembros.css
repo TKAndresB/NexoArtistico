@@ -538,6 +538,9 @@ header {
   background: #1ab7ea;
 }
 
+.member-social-link.tiktok {
+  background: #000000;
+}
 .member-social-link:hover {
   transform: translateY(-2px);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
