@@ -1211,6 +1211,11 @@ header {
     text-align: center;
     gap: 1rem;
     padding: 1.25rem;
+    align-items: center; /* Añadir esta línea */
+  }
+
+  .founder-avatar {
+    align-self: center; /* Añadir esta línea para centrar específicamente la imagen */
   }
 
   .founder-avatar img {
