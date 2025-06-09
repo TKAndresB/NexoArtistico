@@ -85,7 +85,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // Contenido del modal
     modal.innerHTML = `
             <div class="modal-backdrop"></div>
-            <div class="work-modal-content">
+            <div class="work-modal-content" id="modal-content">
                 <button class="work-modal-close">
                     <i class="fas fa-times"></i>
                 </button>
@@ -125,6 +125,35 @@ document.addEventListener("DOMContentLoaded", () => {
                 </div>
             </div>
         `
+
+    // Detectar orientación de la imagen y ajustar el layout
+    const modalImage = modal.querySelector("#modal-work-image")
+    const modalContent = modal.querySelector("#modal-content")
+
+    modalImage.onload = function () {
+      const aspectRatio = this.naturalWidth / this.naturalHeight
+
+      // Si la imagen es más ancha que alta (horizontal)
+      if (aspectRatio > 1.2) {
+        modalContent.classList.add("horizontal")
+        modalContent.classList.remove("vertical")
+      }
+      // Si la imagen es más alta que ancha (vertical)
+      else if (aspectRatio < 0.8) {
+        modalContent.classList.add("vertical")
+        modalContent.classList.remove("horizontal")
+      }
+      // Para imágenes cuadradas o casi cuadradas, usar layout horizontal por defecto
+      else {
+        modalContent.classList.add("horizontal")
+        modalContent.classList.remove("vertical")
+      }
+    }
+
+    // Si la imagen ya está cargada (cache)
+    if (modalImage.complete) {
+      modalImage.onload()
+    }
 
     // Mostrar el modal
     modal.classList.add("active")
