@@ -68,11 +68,11 @@ class ThemeManager {
       const icon = toggle.querySelector("i")
       if (icon) {
         if (this.theme === "dark") {
-          icon.className = "fas fa-sun"
+          icon.className = "ri-sun-line"
           toggle.setAttribute("aria-label", "Cambiar a modo claro")
           toggle.setAttribute("title", "Cambiar a modo claro")
         } else {
-          icon.className = "fas fa-moon"
+          icon.className = "ri-moon-line"
           toggle.setAttribute("aria-label", "Cambiar a modo oscuro")
           toggle.setAttribute("title", "Cambiar a modo oscuro")
         }
@@ -135,9 +135,36 @@ class ThemeManager {
   }
 }
 
+// Función para establecer el tema inicial
+function setInitialTheme() {
+  // Verificar si hay una preferencia guardada en localStorage
+  const savedTheme = localStorage.getItem("theme")
+
+  // Verificar si el sistema operativo tiene preferencia de tema oscuro
+  const prefersDarkMode = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches
+
+  // Determinar el tema a usar
+  let theme = "light" // Tema predeterminado
+
+  if (savedTheme) {
+    // Usar la preferencia guardada si existe
+    theme = savedTheme
+  } else if (prefersDarkMode) {
+    // Si no hay preferencia guardada, usar la preferencia del sistema
+    theme = "dark"
+  }
+
+  // Establecer el tema
+  document.documentElement.setAttribute("data-theme", theme)
+
+  // Actualizar el icono
+  window.themeManager.updateThemeIcon(theme)
+}
+
 // Inicializar cuando el DOM esté listo
 document.addEventListener("DOMContentLoaded", () => {
   window.themeManager = new ThemeManager()
+  setInitialTheme()
 })
 
 // También inicializar inmediatamente para evitar flash
@@ -147,12 +174,14 @@ if (document.readyState === "loading") {
     if (!window.themeManager) {
       window.themeManager = new ThemeManager()
     }
+    setInitialTheme()
   })
 } else {
   // DOM ya cargado
   if (!window.themeManager) {
     window.themeManager = new ThemeManager()
   }
+  setInitialTheme()
 }
 
 // Exportar para uso global
