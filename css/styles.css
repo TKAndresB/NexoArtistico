@@ -509,6 +509,24 @@ section {
   margin-top: 3rem;
 }
 
+/* Hacer que las tarjetas de estadísticas sean enlaces */
+.statistics a.stat-card {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: block;
+}
+
+.statistics a.stat-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+[data-theme="dark"] .statistics a.stat-card:hover {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
 .stat-card {
   background: var(--bg-primary);
   padding: 2rem;
@@ -1111,6 +1129,18 @@ footer {
   box-shadow: var(--shadow-md);
 }
 
+/* Arreglo para botones de carrusel en modo oscuro */
+[data-theme="dark"] .carousel-btn {
+  background: rgba(30, 41, 59, 0.8);
+  color: var(--text-light);
+  border: 1px solid var(--border-color);
+}
+
+[data-theme="dark"] .carousel-btn:hover {
+  background: var(--bg-accent);
+  color: var(--text-primary);
+}
+
 .carousel-btn:hover {
   background: white;
   transform: scale(1.1);
@@ -1138,6 +1168,21 @@ footer {
   background: rgba(255, 255, 255, 0.5);
   cursor: pointer;
   transition: all 0.3s ease;
+}
+
+/* Arreglo para indicadores de carrusel en modo oscuro */
+[data-theme="dark"] .indicator {
+  background: rgba(203, 213, 225, 0.3);
+  border: 1px solid rgba(203, 213, 225, 0.1);
+}
+
+[data-theme="dark"] .indicator.active {
+  background: var(--primary-light);
+  transform: scale(1.2);
+}
+
+[data-theme="dark"] .indicator:hover {
+  background: rgba(203, 213, 225, 0.5);
 }
 
 .indicator.active {
