@@ -1,0 +1,150 @@
+/* ===================================
+   ANIMACIONES AL SCROLL
+   =================================== */
+
+/* Clases base para animaciones */
+[data-animate] {
+  opacity: 0;
+  will-change: transform, opacity;
+}
+
+[data-animate].animated {
+  opacity: 1;
+}
+
+/* Tipos de animaciones */
+.fade-in {
+  transition: opacity 0.6s ease-out;
+}
+
+.fade-in.animated {
+  opacity: 1;
+}
+
+.slide-up {
+  transform: translateY(30px);
+  transition: transform 0.6s ease-out, opacity 0.6s ease-out;
+}
+
+.slide-up.animated {
+  transform: translateY(0);
+}
+
+.slide-left {
+  transform: translateX(30px);
+  transition: transform 0.6s ease-out, opacity 0.6s ease-out;
+}
+
+.slide-left.animated {
+  transform: translateX(0);
+}
+
+.slide-right {
+  transform: translateX(-30px);
+  transition: transform 0.6s ease-out, opacity 0.6s ease-out;
+}
+
+.slide-right.animated {
+  transform: translateX(0);
+}
+
+.zoom-in {
+  transform: scale(0.95);
+  transition: transform 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275), opacity 0.6s ease-out;
+}
+
+.zoom-in.animated {
+  transform: scale(1);
+}
+
+/* Delays para crear efectos escalonados */
+.delay-100 {
+  transition-delay: 0.1s;
+}
+
+.delay-200 {
+  transition-delay: 0.2s;
+}
+
+.delay-300 {
+  transition-delay: 0.3s;
+}
+
+.delay-400 {
+  transition-delay: 0.4s;
+}
+
+.delay-500 {
+  transition-delay: 0.5s;
+}
+
+/* Animaciones específicas para elementos */
+.book-card[data-animate] {
+  transition-duration: 0.5s;
+}
+
+.pinterest-board[data-animate] {
+  transition-duration: 0.7s;
+}
+
+.page-header-compact[data-animate] {
+  transition-duration: 0.8s;
+}
+
+/* Animación para el contador de estadísticas */
+.stat-counter {
+  display: inline-block;
+  position: relative;
+}
+
+.stat-counter::after {
+  content: "";
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--primary-color), transparent);
+  transition: width 1s ease-out;
+}
+
+.stat-counter.animated::after {
+  width: 100%;
+}
+
+/* Animación para elementos destacados */
+.highlight-item {
+  position: relative;
+}
+
+.highlight-item::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: inherit;
+  background: linear-gradient(135deg, var(--primary-color), transparent);
+  opacity: 0;
+  z-index: -1;
+  transition: opacity 0.6s ease-out;
+}
+
+.highlight-item.animated::before {
+  opacity: 0.1;
+}
+
+/* Desactivar animaciones si el usuario prefiere reducir el movimiento */
+@media (prefers-reduced-motion: reduce) {
+  [data-animate] {
+    transition: none !important;
+    transform: none !important;
+    opacity: 1 !important;
+  }
+
+  .stat-counter::after,
+  .highlight-item::before {
+    display: none !important;
+  }
+}
