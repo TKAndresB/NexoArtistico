@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plantillas Nexo Artistico - Redes Sociales</title>
+    <link rel="stylesheet" href="plantillas-redes.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="app-container" id="app">
+        <!-- Header -->
+        <header class="app-header">
+            <div class="header-content">
+                <div class="logo">
+                    <i class="fas fa-palette"></i>
+                    <h1>Plantillas Nexo Artistico</h1>
+                </div>
+                <p class="subtitle">Crea contenido para redes sociales con la identidad visual de la comunidad</p>
+            </div>
+        </header>
+
+        <!-- Controls -->
+        <div class="controls-section">
+            <div class="template-tabs">
+                <button class="tab-btn active" data-template="torneo">
+                    <i class="fas fa-trophy"></i>
+                    Torneo
+                </button>
+                <button class="tab-btn" data-template="publicacion">
+                    <i class="fas fa-image"></i>
+                    Publicación
+                </button>
+                <button class="tab-btn" data-template="entrevista">
+                    <i class="fas fa-comments"></i>
+                    Entrevista
+                </button>
+            </div>
+
+            <div class="aspect-ratio-selector">
+                <label for="canvas-aspect">Relación de aspecto:</label>
+                <select id="canvas-aspect">
+                    <option value="4:3" selected>4:3 (Horizontal)</option>
+                    <option value="16:9">16:9 (Panorámico)</option>
+                    <option value="1:1">1:1 (Cuadrado)</option>
+                    <option value="9:16">9:16 (Vertical móvil)</option>
+                    <option value="3:4">3:4 (Vertical)</option>
+                </select>
+            </div>
+            
+            <button class="theme-toggle" id="themeToggle">
+                <i class="fas fa-moon"></i>
+                <span>Modo Oscuro</span>
+            </button>
+        </div>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <!-- Configuration Panel -->
+            <div class="config-panel">
+                <h2><i class="fas fa-cog"></i> Configuración</h2>
+                
+                <!-- Torneo Template Config -->
+                <div class="template-config active" id="torneo-config">
+                    <div class="form-group">
+                        <label>Imagen de la obra</label>
+                        <div class="file-input-wrapper">
+                            <input type="file" id="torneo-imagen" accept="image/*">
+                            <div class="file-input-display">
+                                <i class="fas fa-upload"></i>
+                                <span>Seleccionar imagen</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Relación de aspecto de la imagen</label>
+                        <select id="torneo-aspecto">
+                            <option value="1:1">Cuadrado (1:1)</option>
+                            <option value="4:3">Horizontal (4:3)</option>
+                            <option value="3:4">Vertical (3:4)</option>
+                            <option value="16:9">Panorámico (16:9)</option>
+                            <option value="9:16">Vertical móvil (9:16)</option>
+                        </select>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Artista</label>
+                            <input type="text" id="torneo-artista" value="TkAndresB" placeholder="Nombre del artista">
+                        </div>
+                        <div class="form-group">
+                            <label>Posición</label>
+                            <select id="torneo-posicion">
+                                <option value="1er">🥇 1er Lugar</option>
+                                <option value="2do">🥈 2do Lugar</option>
+                                <option value="3er">🥉 3er Lugar</option>
+                                <option value="4to">🏅 4to Lugar</option>
+                                <option value="5to">🏅 5to Lugar</option>
+                                <option value="6to">🏅 6to Lugar</option>
+                                <option value="7mo"> 🏅 7mo Lugar</option>
+                                <option value="8vo">🏅 8vo Lugar</option>
+                                <option value="9no">🏅 9no Lugar</option>
+                                <option value="10mo">🏅 10mo Lugar</option>
+                                <option value="11vo">11vo Lugar</option>
+                                <option value="12vo">12vo Lugar</option>
+                                <option value="13vo">13vo Lugar</option>
+                                <option value="14vo">14vo Lugar</option>
+                                <option value="15vo">15vo Lugar</option>
+                                <option value="16vo">16vo Lugar</option>
+                                <option value="17vo">17vo Lugar</option>
+                                <option value="18vo">18vo Lugar</option>
+                                <option value="19vo">19vo Lugar</option>
+                                <option value="20vo">20vo Lugar</option>
+                                <option value="21vo">21vo Lugar</option>
+                                <option value="22vo">22vo Lugar</option>
+                                <option value="23vo">23vo Lugar</option>
+                                <option value="24vo">24vo Lugar</option>
+                                <option value="25vo">25vo Lugar</option>
+                                <option value="26vo">26vo Lugar</option>
+                                <option value="27vo">27vo Lugar</option>
+                                <option value="28vo">28vo Lugar</option>
+                                <option value="29vo">29vo Lugar</option>
+                                <option value="30vo">30vo Lugar</option>
+                                <option value="31vo">31vo Lugar</option>
+                                <option value="32vo">32vo Lugar</option>
+                                <option value="33vo">33vo Lugar</option>
+                                <option value="34vo">34vo Lugar</option>
+                                <option value="35vo">35vo Lugar</option>
+                                <option value="36vo">36vo Lugar</option>
+                                <option value="37vo">37vo Lugar</option>
+                                <option value="38vo">38vo Lugar</option>
+                                <option value="39vo">39vo Lugar</option>
+                                <option value="40vo">40vo Lugar</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Foto de perfil del artista</label>
+                        <div class="file-input-wrapper">
+                            <input type="file" id="torneo-perfil" accept="image/*">
+                            <div class="file-input-display">
+                                <i class="fas fa-user"></i>
+                                <span>Seleccionar foto de perfil</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Calificación Total</label>
+                            <input type="number" id="torneo-total" value="9.5" min="0" max="10" step="0.1">
+                        </div>
+                        <div class="form-group">
+                            <label>Rol</label>
+                            <select id="torneo-rol">
+                                <option value="founder">Fundador</option>
+                                <option value="admin" selected>Admin</option>
+                                <option value="member">Miembro</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-row three-cols">
+                        <div class="form-group">
+                            <label>Impacto Escénico</label>
+                            <input type="number" id="torneo-impacto" value="9.2" min="0" max="10" step="0.1">
+                        </div>
+                        <div class="form-group">
+                            <label>Ambientación</label>
+                            <input type="number" id="torneo-ambientacion" value="9.8" min="0" max="10" step="0.1">
+                        </div>
+                        <div class="form-group">
+                            <label>Originalidad</label>
+                            <input type="number" id="torneo-originalidad" value="9.5" min="0" max="10" step="0.1">
+                        </div>
+                    </div>
+
+                    <div class="form-row three-cols">
+                        <div class="form-group">
+                            <label>Coloreo/Delineado</label>
+                            <input type="number" id="torneo-coloreo" value="9.3" min="0" max="10" step="0.1">
+                        </div>
+                        <div class="form-group">
+                            <label>Dificultad</label>
+                            <input type="number" id="torneo-dificultad" value="9.0" min="0" max="10" step="0.1">
+                        </div>
+                        <div class="form-group">
+                            <label>Dinamismo</label>
+                            <input type="number" id="torneo-dinamismo" value="9.7" min="0" max="10" step="0.1">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Especialidad</label>
+                        <input type="text" id="torneo-especialidad" value="Manga" placeholder="Especialidad del artista">
+                    </div>
+                </div>
+
+                <!-- Publicacion Template Config -->
+                <div class="template-config" id="publicacion-config">
+                    <div class="form-group">
+                        <label>Número de imágenes en el mosaico</label>
+                        <select id="publicacion-mosaico">
+                            <option value="1">1 imagen</option>
+                            <option value="2">2 imágenes</option>
+                            <option value="3">3 imágenes</option>
+                            <option value="4">4 imágenes</option>
+                        </select>
+                    </div>
+
+                    <div id="publicacion-imagenes">
+                        <div class="form-group">
+                            <label>Imagen 1</label>
+                            <div class="file-input-wrapper">
+                                <input type="file" id="publicacion-imagen-1" accept="image/*">
+                                <div class="file-input-display">
+                                    <i class="fas fa-upload"></i>
+                                    <span>Seleccionar imagen 1</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Artista</label>
+                            <input type="text" id="publicacion-artista" value="godjo1o" placeholder="Nombre del artista">
+                        </div>
+                        <div class="form-group">
+                            <label>Rol</label>
+                            <select id="publicacion-rol">
+                                <option value="founder">Fundador</option>
+                                <option value="admin" selected>Admin</option>
+                                <option value="member">Miembro</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Foto de perfil del artista</label>
+                        <div class="file-input-wrapper">
+                            <input type="file" id="publicacion-perfil" accept="image/*">
+                            <div class="file-input-display">
+                                <i class="fas fa-user"></i>
+                                <span>Seleccionar foto de perfil</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Especialidad</label>
+                        <input type="text" id="publicacion-especialidad" value="Arte Tradicional" placeholder="Especialidad del artista">
+                    </div>
+                </div>
+
+                <!-- Entrevista Template Config -->
+                <div class="template-config" id="entrevista-config">
+                    <div class="form-group">
+                        <label>Foto de perfil</label>
+                        <div class="file-input-wrapper">
+                            <input type="file" id="entrevista-foto" accept="image/*">
+                            <div class="file-input-display">
+                                <i class="fas fa-upload"></i>
+                                <span>Seleccionar foto</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Artista</label>
+                            <input type="text" id="entrevista-artista" value="TkAndresB" placeholder="Nombre del artista">
+                        </div>
+                        <div class="form-group">
+                            <label>Rol</label>
+                            <select id="entrevista-rol">
+                                <option value="founder" selected>Fundador</option>
+                                <option value="admin">Admin</option>
+                                <option value="member">Miembro</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Especialidad</label>
+                        <input type="text" id="entrevista-especialidad" value="Estilo Manga" placeholder="Especialidad del artista">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Descripción</label>
+                        <textarea id="entrevista-descripcion" rows="3" placeholder="Descripción breve del artista">Fundador del actual Nexo Artistico con la visión de crear un espacio donde los artistas puedan convivir y mejorar juntos.</textarea>
+                    </div>
+
+                    <div id="entrevista-qa-container">
+                        <div class="qa-pair" data-index="0">
+                            <div class="form-group">
+                                <label>Pregunta 1</label>
+                                <input type="text" class="entrevista-pregunta" value="¿Cuál fue tu inspiración para crear Nexo Artistico?" placeholder="Pregunta de la entrevista">
+                            </div>
+                            <div class="form-group">
+                                <label>Respuesta 1</label>
+                                <textarea class="entrevista-respuesta" rows="3" placeholder="Respuesta del artista">Quería crear un lugar donde los artistas pudieran compartir, aprender y crecer juntos a través de una competencia sana y constructiva.</textarea>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button type="button" id="add-qa-btn" class="add-btn">
+                        <i class="fas fa-plus"></i>
+                        Agregar Pregunta
+                    </button>
+                </div>
+            </div>
+
+            <!-- Preview Panel -->
+            <div class="preview-panel">
+                <div class="preview-header">
+                    <h2><i class="fas fa-eye"></i> Vista Previa</h2>
+                    <button class="download-btn" id="downloadBtn">
+                        <i class="fas fa-download"></i>
+                        Descargar
+                    </button>
+                </div>
+
+                <div class="preview-container">
+                    <canvas id="previewCanvas" width="1200" height="900"></canvas>
+                </div>
+            </div>
+        </div>
+
+        <!-- Hidden canvas for final render -->
+        <canvas id="finalCanvas" width="1200" height="900" style="display: none;"></canvas>
+    </div>
+
+    <script src="plantillas-redes.js"></script>
+</body>
+</html>
