@@ -582,7 +582,7 @@ class PlantillasRedes {
       { label: "Impacto Escénico", value: data.impacto, color: "#10B981" },
       { label: "Ambientación", value: data.ambientacion, color: "#8B5CF6" },
       { label: "Originalidad", value: data.originalidad, color: "#F59E0B" },
-      { label: "Coloreo/Delineado", value: data.coloreo, color: "#EF4444" },
+      { label: "Color/Delineado", value: data.coloreo, color: "#EF4444" },
       { label: "Dificultad", value: data.dificultad, color: "#06B6D4" },
       { label: "Dinamismo", value: data.dinamismo, color: "#84CC16" },
     ]
@@ -775,7 +775,7 @@ class PlantillasRedes {
       { label: "Impacto Escénico", value: data.impacto, color: "#10B981" },
       { label: "Ambientación", value: data.ambientacion, color: "#8B5CF6" },
       { label: "Originalidad", value: data.originalidad, color: "#F59E0B" },
-      { label: "Coloreo/Delineado", value: data.coloreo, color: "#EF4444" },
+      { label: "Color/Delineado", value: data.coloreo, color: "#EF4444" },
       { label: "Dificultad", value: data.dificultad, color: "#06B6D4" },
       { label: "Dinamismo", value: data.dinamismo, color: "#84CC16" },
     ]
