@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="es" class="light-theme">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galería de Arte - Nexo Artistico</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/galeria.css">
+    <link rel="stylesheet" href="css/dark-mode.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <i class="fas fa-palette"></i>
+                <span>Nexo Artistico</span>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="about.html">Sobre el Nexo</a></li>
+                    <li><a href="apoyanos.html">Apóyanos</a></li>
+                    <li><a href="biblioteca.html">Biblioteca</a></li>
+                    <li><a href="centro-mejora.html">Centro de Mejora</a></li>
+                    <li><a href="miembros.html">Miembros</a></li>
+                    <li><a href="proyectos.html">Proyectos</a></li>
+                    <li><a href="galeria.html" class="active">Galería</a></li>
+                    <li><a href="https://chat.whatsapp.com/Lwj85QzALMFBjCnYirEJ9K" target="_blank">Comunidad</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <button id="theme-toggle" class="theme-toggle" aria-label="Toggle Dark Mode">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <div class="header-btn">
+                    <a href="https://chat.whatsapp.com/Lwj85QzALMFBjCnYirEJ9K" target="_blank">
+                        <i class="fab fa-whatsapp"></i>
+                        Únete por WhatsApp
+                    </a>
+                </div>
+            </div>
+            <div class="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu">
+        <div class="mobile-menu-close">
+            <i class="fas fa-times"></i>
+        </div>
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="about.html">Sobre el Nexo</a></li>
+            <li><a href="apoyanos.html">Apóyanos</a></li>
+            <li><a href="biblioteca.html">Biblioteca</a></li>
+            <li><a href="centro-mejora.html">Centro de Mejora</a></li>
+            <li><a href="miembros.html">Miembros</a></li>
+            <li><a href="proyectos.html">Proyectos</a></li>
+            <li><a href="galeria.html">Galería</a></li>
+            <li><a href="https://chat.whatsapp.com/Lwj85QzALMFBjCnYirEJ9K" target="_blank">Comunidad</a></li>
+        </ul>
+        <div class="mobile-menu-actions">
+            <button id="mobile-theme-toggle" class="theme-toggle" aria-label="Toggle Dark Mode">
+                <i class="fas fa-moon"></i>
+            </button>
+            <div class="mobile-menu-btn">
+                <a href="https://chat.whatsapp.com/Lwj85QzALMFBjCnYirEJ9K" target="_blank">
+                    <i class="fab fa-whatsapp"></i>
+                    Únete por WhatsApp
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu-overlay"></div>
+
+    <!-- Hero Section -->
+    <section class="page-header-compact">
+        <div class="container">
+            <h1>Galería de <span class="gradient-text">Arte</span></h1>
+            <p>Explora las increíbles obras de arte creadas por nuestra talentosa comunidad artística.</p>
+        </div>
+    </section>
+
+    <!-- Gallery Filters -->
+    <section class="gallery-filters">
+        <div class="container">
+            <div class="filters-header">
+                <h2>Filtrar Obras</h2>
+                <div class="results-count">
+                    <span id="results-count">4 obras encontradas</span>
+                </div>
+            </div>
+            
+            <div class="filters-grid">
+                <!-- Search Filter -->
+                <div class="filter-group">
+                    <label for="search-filter" class="filter-label">
+                        <i class="fas fa-search"></i>
+                        Buscar obra
+                    </label>
+                    <input type="text" id="search-filter" placeholder="Buscar por título o descripción...">
+                </div>
+
+                <!-- Artist Filter -->
+                <div class="filter-group">
+                    <label for="artist-filter" class="filter-label">
+                        <i class="fas fa-user-circle"></i>
+                        Artista
+                    </label>
+                    <!-- Changed select dropdown to search input for easier artist filtering -->
+                    <input type="text" id="artist-filter" placeholder="Buscar por nombre de artista...">
+                </div>
+
+                <!-- Category Filter -->
+                <div class="filter-group">
+                    <label for="category-filter" class="filter-label">
+                        <i class="fas fa-tags"></i>
+                        Categoría
+                    </label>
+                    <select id="category-filter">
+                        <option value="all">Todas las categorías</option>
+                        <option value="anime">Anime/Manga</option>
+                        <option value="retrato">Retratos</option>
+                        <option value="fantasia">Fantasía</option>
+                        <option value="abstracto">Arte Abstracto</option>
+                        <option value="paisaje">Paisajes</option>
+                        <option value="digital">Arte Digital</option>
+                    </select>
+                </div>
+
+                <!-- Style Filter -->
+                <div class="filter-group">
+                    <label for="style-filter" class="filter-label">
+                        <i class="fas fa-palette"></i>
+                        Estilo Artístico
+                    </label>
+                    <select id="style-filter">
+                        <option value="all">Todos los estilos</option>
+                        <option value="tinta">Tinta</option>
+                        <option value="detallismo">Detallismo a líneas</option>
+                        <option value="acuarela">Acuarela</option>
+                        <option value="oleo">Óleo</option>
+                        <option value="digital">Digital</option>
+                        <option value="lapiz">Lápiz</option>
+                        <option value="mixta">Técnica Mixta</option>
+                    </select>
+                </div>
+
+                <!-- Year Filter -->
+                <div class="filter-group">
+                    <label for="year-filter" class="filter-label">
+                        <i class="fas fa-calendar"></i>
+                        Año
+                    </label>
+                    <select id="year-filter">
+                        <option value="all">Todos los años</option>
+                        <option value="2024">2024</option>
+                        <option value="2023">2023</option>
+                        <option value="2022">2022</option>
+                    </select>
+                </div>
+
+                <!-- Clear Filters -->
+                <div class="filter-group">
+                    <button class="clear-filters-btn" id="clear-filters">
+                        <i class="fas fa-times"></i>
+                        Limpiar Filtros
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Grid -->
+    <section class="gallery-section">
+        <div class="container">
+            <div class="gallery-grid" id="gallery-grid">
+                
+                <!-- Obra 1 -->
+                <div class="artwork-card" data-artist="TkAndresB" data-category="anime" data-style="tinta" data-year="2024">
+                    <div class="artwork-image">
+                        <img src="img/pfp/admins/TkAndresB/Kaneki.jfif" alt="Kaneki">
+                        <div class="artwork-overlay">
+                            <!-- Simplified modal to only show enlarged image -->
+                            <button class="view-artwork-btn" onclick="openArtworkModal('img/pfp/admins/TkAndresB/Kaneki.jfif', 'Kaneki')">
+                                <i class="fas fa-expand"></i>
+                            </button>
+                        </div>
+                        <button class="favorite-btn-compact" onclick="toggleFavorite('kaneki')" data-artwork="kaneki">
+                            <i class="far fa-heart"></i>
+                        </button>
+                    </div>
+                    <div class="artwork-info-compact">
+                        <h3 class="artwork-title-compact">Kaneki</h3>
+                        <div class="artwork-artist-compact">
+                            <i class="fas fa-user-circle"></i>
+                            <span>TkAndresB</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Obra 2 -->
+                <div class="artwork-card" data-artist="TkAndresB" data-category="anime" data-style="detallismo" data-year="2024">
+                    <div class="artwork-image">
+                        <img src="img/pfp/admins/TkAndresB/Sk.jfif" alt="Skull Knight">
+                        <div class="artwork-overlay">
+                            <button class="view-artwork-btn" onclick="openArtworkModal('img/pfp/admins/TkAndresB/Sk.jfif', 'Skull Knight')">
+                                <i class="fas fa-expand"></i>
+                            </button>
+                        </div>
+                        <button class="favorite-btn-compact" onclick="toggleFavorite('skull-knight')" data-artwork="skull-knight">
+                            <i class="far fa-heart"></i>
+                        </button>
+                    </div>
+                    <div class="artwork-info-compact">
+                        <h3 class="artwork-title-compact">Skull Knight</h3>
+                        <div class="artwork-artist-compact">
+                            <i class="fas fa-user-circle"></i>
+                            <span>TkAndresB</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Obra 3 -->
+                <div class="artwork-card" data-artist="TkAndresB" data-category="anime" data-style="tinta" data-year="2023">
+                    <div class="artwork-image">
+                        <img src="img/pfp/admins/TkAndresB/Arima.jfif" alt="Arima">
+                        <div class="artwork-overlay">
+                            <button class="view-artwork-btn" onclick="openArtworkModal('img/pfp/admins/TkAndresB/Arima.jfif', 'Arima')">
+                                <i class="fas fa-expand"></i>
+                            </button>
+                        </div>
+                        <button class="favorite-btn-compact" onclick="toggleFavorite('arima')" data-artwork="arima">
+                            <i class="far fa-heart"></i>
+                        </button>
+                    </div>
+                    <div class="artwork-info-compact">
+                        <h3 class="artwork-title-compact">Arima</h3>
+                        <div class="artwork-artist-compact">
+                            <i class="fas fa-user-circle"></i>
+                            <span>TkAndresB</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Obra 4 -->
+                <div class="artwork-card" data-artist="TkAndresB" data-category="anime" data-style="tinta" data-year="2024">
+                    <div class="artwork-image">
+                        <img src="img/pfp/admins/TkAndresB/Goku.jfif" alt="Goku MUI">
+                        <div class="artwork-overlay">
+                            <button class="view-artwork-btn" onclick="openArtworkModal('img/pfp/admins/TkAndresB/Goku.jfif', 'Goku MUI')">
+                                <i class="fas fa-expand"></i>
+                            </button>
+                        </div>
+                        <button class="favorite-btn-compact" onclick="toggleFavorite('goku-mui')" data-artwork="goku-mui">
+                            <i class="far fa-heart"></i>
+                        </button>
+                    </div>
+                    <div class="artwork-info-compact">
+                        <h3 class="artwork-title-compact">Goku MUI</h3>
+                        <div class="artwork-artist-compact">
+                            <i class="fas fa-user-circle"></i>
+                            <span>TkAndresB</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Simplified modal to only show enlarged image -->
+    <div class="artwork-modal" id="artwork-modal">
+        <div class="modal-overlay" onclick="closeArtworkModal()"></div>
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeArtworkModal()">
+                <i class="fas fa-times"></i>
+            </button>
+            <div class="modal-artwork">
+                <div class="modal-image">
+                    <img id="modal-artwork-image" src="/placeholder.svg" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <i class="fas fa-palette"></i>
+                    <span>Nexo Artistico</span>
+                </div>
+                <div class="social-icons">
+                    <a href="https://www.tiktok.com/@nexo.artistico4" class="social-icon tiktok" aria-label="TikTok">
+                        <i class="fab fa-tiktok"></i>
+                    </a>
+                    <a href="#" class="social-icon instagram" aria-label="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="#" class="social-icon youtube" aria-label="YouTube">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; <span id="current-year">2025</span> Nexo Artistico. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script src="js/dark-mode.js"></script>
+    <script src="js/galeria.js"></script>
+</body>
+</html>

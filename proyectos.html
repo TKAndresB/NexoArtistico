@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="es" class="light-theme">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Proyectos - Nexo Artistico</title>
+   <link rel="stylesheet" href="css/styles.css">
+   <link rel="stylesheet" href="css/dark-mode.css">
+   <link rel="stylesheet" href="css/proyectos.css">
+   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+   <!-- Header -->
+   <header>
+       <div class="container">
+           <div class="logo">
+               <i class="fas fa-palette"></i>
+               <span>Nexo Artistico</span>
+           </div>
+           <nav>
+               <ul>
+                   <li><a href="index.html">Inicio</a></li>
+                   <li><a href="about.html">Sobre el Nexo</a></li>
+                   <li><a href="apoyanos.html">Apóyanos</a></li>
+                   <li><a href="biblioteca.html">Biblioteca</a></li>
+                   <li><a href="centro-mejora.html">Centro de Mejora</a></li>
+                   <li><a href="miembros.html">Miembros</a></li>
+                   <li><a href="proyectos.html" class="active">Proyectos</a></li>
+                   <li><a href="galeria.html">Galería</a></li>
+                   <li><a href="https://chat.whatsapp.com/Lwj85QzALMFBjCnYirEJ9K" target="_blank">Comunidad</a></li>
+               </ul>
+           </nav>
+           <div class="header-actions">
+               <button id="theme-toggle" class="theme-toggle" aria-label="Toggle Dark Mode">
+                   <i class="fas fa-moon"></i>
+               </button>
+               <div class="header-btn">
+                   <a href="https://chat.whatsapp.com/Lwj85QzALMFBjCnYirEJ9K" target="_blank">
+                       <i class="fab fa-whatsapp"></i>
+                       Únete por WhatsApp
+                   </a>
+               </div>
+           </div>
+           <div class="menu-toggle">
+               <i class="fas fa-bars"></i>
+           </div>
+       </div>
+   </header>
+
+   <!-- Mobile Menu -->
+    <div class="mobile-menu">
+        <div class="mobile-menu-close">
+            <i class="fas fa-times"></i>
+        </div>
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="about.html">Sobre el Nexo</a></li>
+            <li><a href="apoyanos.html">Apóyanos</a></li>
+            <li><a href="biblioteca.html">Biblioteca</a></li>
+            <li><a href="centro-mejora.html">Centro de Mejora</a></li>
+            <li><a href="miembros.html">Miembros</a></li>
+            <li><a href="proyectos.html">Proyectos</a></li>
+            <li><a href="galeria.html">Galería</a></li>
+            <li><a href="https://chat.whatsapp.com/Lwj85QzALMFBjCnYirEJ9K" target="_blank">Comunidad</a></li>
+        </ul>
+        <div class="mobile-menu-actions">
+            <button id="mobile-theme-toggle" class="theme-toggle" aria-label="Toggle Dark Mode">
+                <i class="fas fa-moon"></i>
+            </button>
+            <div class="mobile-menu-btn">
+                <a href="https://chat.whatsapp.com/Lwj85QzALMFBjCnYirEJ9K" target="_blank">
+                    <i class="fab fa-whatsapp"></i>
+                    Únete por WhatsApp
+                </a>
+            </div>
+        </div>
+    </div>
+
+   <!-- Mobile Menu Overlay -->
+   <div class="mobile-menu-overlay"></div>
+
+   <!-- Page Header - Compact -->
+   <section class="page-header-compact">
+       <div class="container">
+           <h1>Nuestros <span class="gradient-text">Proyectos</span></h1>
+           <p>Explora nuestros torneos, colaboraciones y la Liga Nexo Artística donde la comunidad da vida a nuevas ideas.</p>
+       </div>
+   </section>
+
+   <!-- Project Statistics -->
+   <section id="project-stats" class="stats-section">
+       <div class="container">
+           <div class="statistics">
+               <div class="stat-card" data-animate="fade-up" data-delay="0">
+                   <div class="stat-icon">
+                       <i class="fas fa-trophy"></i>
+                   </div>
+                   <div class="stat-content">
+                       <h3 id="total-tournaments" data-count="15">0</h3>
+                       <p>Torneos Realizados</p>
+                   </div>
+               </div>
+               <div class="stat-card" data-animate="fade-up" data-delay="100">
+                   <div class="stat-icon">
+                       <i class="fas fa-handshake"></i>
+                   </div>
+                   <div class="stat-content">
+                       <h3 id="total-collaborations" data-count="8">0</h3>
+                       <p>Colaboraciones</p>
+                   </div>
+               </div>
+               <div class="stat-card" data-animate="fade-up" data-delay="200">
+                   <div class="stat-icon">
+                       <i class="fas fa-medal"></i>
+                   </div>
+                   <div class="stat-content">
+                       <h3 id="league-seasons" data-count="0">0</h3>
+                       <p>Liga Próximamente</p>
+                   </div>
+               </div>
+               <div class="stat-card" data-animate="fade-up" data-delay="300">
+                   <div class="stat-icon">
+                       <i class="fas fa-users"></i>
+                   </div>
+                   <div class="stat-content">
+                       <h3 id="total-participants" data-count="200">0</h3>
+                       <p>Participantes Totales</p>
+                   </div>
+               </div>
+           </div>
+       </div>
+   </section>
+
+   <!-- Current Projects Section -->
+   <section id="current-projects" class="current-projects-section">
+       <div class="container">
+           <div class="section-header">
+               <div class="section-badge">
+                   <i class="fas fa-fire"></i>
+                   <span>En Vivo</span>
+               </div>
+               <h2>Proyectos Activos</h2>
+               <div class="divider"></div>
+               <p>Participa en nuestras iniciativas actuales y muestra tu talento artístico al mundo.</p>
+           </div>
+           
+           <div class="projects-grid">
+               <div class="project-card featured active" data-category="torneo" data-animate="slide-up" data-delay="0">
+                   <div class="project-status-badge active">
+                       <i class="fas fa-circle pulse"></i>
+                       <span>Activo</span>
+                   </div>
+                   <div class="project-header">
+                       <div class="project-category torneo">
+                           <i class="fas fa-trophy"></i>
+                           <span>Torneo</span>
+                       </div>
+                       <div class="project-priority high">
+                           <i class="fas fa-star"></i>
+                       </div>
+                   </div>
+                   <div class="project-content">
+                       <h3>Torneo De Temática Viejo Oeste</h3>
+                       <p>Explora tu creatividad sin límites en nuestro torneo sobre el Viejo Oeste. ¡Demuestra quién es el mejor artista del salvaje oeste!</p>
+                       <div class="project-details">
+                           <div class="detail-item">
+                               <i class="fas fa-calendar-alt"></i>
+                               <span>Finaliza: 31 de Julio, 2025</span>
+                           </div>
+                           <div class="detail-item">
+                               <i class="fas fa-users"></i>
+                               <span>25 Participantes</span>
+                           </div>
+                           <div class="detail-item">
+                               <i class="fas fa-gift"></i>
+                               <span>Premios disponibles</span>
+                           </div>
+                       </div>
+                       <div class="project-progress">
+                           <div class="progress-info">
+                               <span>Progreso del torneo</span>
+                               <span>65%</span>
+                           </div>
+                           <div class="progress-bar">
+                               <div class="progress-fill" style="width: 65%"></div>
+                           </div>
+                       </div>
+                   </div>
+                   <div class="project-footer">
+                       <a href="https://chat.whatsapp.com/DH9Udvs50Pj4497ipVHlRk" target="_blank" class="btn btn-primary">
+                           <i class="fas fa-rocket"></i>
+                           Participar Ahora
+                       </a>
+                   </div>
+               </div>
+               
+               <div class="project-card active" data-category="colaboracion" data-animate="slide-up" data-delay="100">
+                   <div class="project-status-badge full">
+                       <i class="fas fa-lock"></i>
+                       <span>Completo</span>
+                   </div>
+                   <div class="project-header">
+                       <div class="project-category colaboracion">
+                           <i class="fas fa-handshake"></i>
+                           <span>Colaboración</span>
+                       </div>
+                       <div class="project-priority medium">
+                           <i class="fas fa-eye"></i>
+                       </div>
+                   </div>
+                   <div class="project-content">
+                       <h3>Colaboración 15 vs 15 Con Artist Academy</h3>
+                       <p>Una épica colaboración entre comunidades que promete ser espectacular. ¡Un desafío de habilidades y estilos únicos!</p>
+                       <div class="project-details">
+                           <div class="detail-item">
+                               <i class="fas fa-calendar-alt"></i>
+                               <span>Finaliza: 24 de Julio, 2025</span>
+                           </div>
+                           <div class="detail-item">
+                               <i class="fas fa-users"></i>
+                               <span>30/30 Participantes</span>
+                           </div>
+                           <div class="detail-item">
+                               <i class="fas fa-crown"></i>
+                               <span>Evento especial</span>
+                           </div>
+                       </div>
+                       <div class="project-progress">
+                           <div class="progress-info">
+                               <span>Participación</span>
+                               <span>100%</span>
+                           </div>
+                           <div class="progress-bar">
+                               <div class="progress-fill complete" style="width: 100%"></div>
+                           </div>
+                       </div>
+                   </div>
+                   <div class="project-footer">
+                       <button class="btn btn-outline disabled" disabled>
+                           <i class="fas fa-users"></i>
+                           Cupos Llenos
+                       </button>
+                   </div>
+               </div>
+
+               <div class="project-card upcoming" data-category="liga" data-animate="slide-up" data-delay="200">
+                   <div class="project-status-badge upcoming">
+                       <i class="fas fa-clock"></i>
+                       <span>Próximamente</span>
+                   </div>
+                   <div class="project-header">
+                       <div class="project-category liga">
+                           <i class="fas fa-medal"></i>
+                           <span>Liga Nexo</span>
+                       </div>
+                       <div class="project-priority high">
+                           <i class="fas fa-crown"></i>
+                       </div>
+                   </div>
+                   <div class="project-content">
+                       <h3>Liga Nexo Artística - Temporada 1</h3>
+                       <p>La nueva temporada de nuestra liga competitiva está por comenzar. ¡Prepárate para demostrar tu evolución artística!</p>
+                       <div class="project-details">
+                           <div class="detail-item">
+                               <i class="fas fa-calendar-alt"></i>
+                               <span>Inicio: 14 de Julio, 2025</span>
+                           </div>
+                           <div class="detail-item">
+                               <i class="fas fa-trophy"></i>
+                               <span>Sistema de puntos</span>
+                           </div>
+                           <div class="detail-item">
+                               <i class="fas fa-medal"></i>
+                               <span>Título de campeón</span>
+                           </div>
+                       </div>
+                   </div>
+                   <div class="project-footer">
+                       <button class="btn btn-outline">
+                           <i class="fas fa-bell"></i>
+                           Mantente Atento
+                       </button>
+                   </div>
+               </div>
+           </div>
+       </div>
+   </section>
+
+   <!-- Past Projects Section -->
+   <section id="past-projects" class="past-projects-section">
+       <div class="container">
+           <div class="section-header">
+               <div class="section-badge">
+                   <i class="fas fa-history"></i>
+                   <span>Archivo</span>
+               </div>
+               <h2>Historial de Proyectos</h2>
+               <div class="divider"></div>
+               <p>Explora nuestros proyectos anteriores y descubre los increíbles resultados de la comunidad.</p>
+           </div>
+
+           <!-- Project Filters -->
+           <div class="project-filters">
+               <div class="filter-section">
+                   <div class="filter-buttons">
+                       <button class="filter-btn active" data-filter="all">
+                           <i class="fas fa-th-large"></i>
+                           <span>Todos</span>
+                           <div class="filter-count">6</div>
+                       </button>
+                       <button class="filter-btn" data-filter="torneo">
+                           <i class="fas fa-trophy"></i>
+                           <span>Torneos</span>
+                           <div class="filter-count">6</div>
+                       </button>
+                       <button class="filter-btn" data-filter="colaboracion">
+                           <i class="fas fa-handshake"></i>
+                           <span>Colaboraciones</span>
+                           <div class="filter-count">0</div>
+                       </button>
+                       <button class="filter-btn" data-filter="liga">
+                           <i class="fas fa-medal"></i>
+                           <span>Liga Nexo</span>
+                           <div class="filter-count">0</div>
+                       </button>
+                   </div>
+               </div>
+               <div class="filter-search">
+                   <div class="search-wrapper">
+                       <input type="text" id="project-search" placeholder="Buscar proyecto...">
+                       <i class="fas fa-search"></i>
+                       <button class="search-clear" style="display: none;">
+                           <i class="fas fa-times"></i>
+                       </button>
+                   </div>
+               </div>
+           </div>
+
+           <!-- Past Projects Grid -->
+           <div class="past-projects-grid">
+               <!-- Torneos -->
+               <div class="past-project-card" data-category="torneo" data-animate="fade-up">
+    <div class="project-info">
+        <div class="project-meta">
+            <span class="project-date">
+                <i class="fas fa-calendar"></i>
+                Junio 2025
+            </span>
+        </div>
+        <h3>Torneo Libre</h3>
+        <p class="project-description">Un torneo sin restricciones de temática, donde la creatividad fue el único límite para nuestros artistas.</p>
+        <div class="project-stats">
+            <div class="stat-item">
+                <i class="fas fa-users"></i>
+                <span>22 participantes</span>
+            </div>
+            <div class="stat-item">
+                <i class="fas fa-images"></i>
+                <span>22 obras</span>
+            </div>
+            <div class="stat-item">
+                <i class="fas fa-award"></i>
+                <span>3 ganadores</span>
+            </div>
+        </div>
+    </div>
+    <div class="project-actions">
+        <a href="resultados/torneo-junio-2025.html" class="btn btn-primary">
+            <i class="fas fa-eye"></i>
+            Ver Resultados
+        </a>
+    </div>
+</div>
+
+<div class="past-project-card" data-category="torneo" data-animate="fade-up">
+    <div class="project-info">
+        <div class="project-meta">
+            <span class="project-date">
+                <i class="fas fa-calendar"></i>
+                Abril 2025
+            </span>
+        </div>
+        <h3>Torneo Solo Leveling</h3>
+        <p class="project-description">Los miembros se sumergieron en el universo de Solo Leveling, creando obras épicas inspiradas en el manhwa.</p>
+        <div class="project-stats">
+            <div class="stat-item">
+                <i class="fas fa-users"></i>
+                <span>7 participantes</span>
+            </div>
+            <div class="stat-item">
+                <i class="fas fa-images"></i>
+                <span>7 obras</span>
+            </div>
+            <div class="stat-item">
+                <i class="fas fa-award"></i>
+                <span>3 ganadores</span>
+            </div>
+        </div>
+    </div>
+    <div class="project-actions">
+        <a href="https://vm.tiktok.com/ZMSst5hvb/" class="btn btn-primary">
+            <i class="fas fa-eye"></i>
+            Ver Resultados (TikTok)
+        </a>
+    </div>
+</div>
+
+<div class="past-project-card" data-category="torneo" data-animate="fade-up">
+    <div class="project-info">
+        <div class="project-meta">
+            <span class="project-date">
+                <i class="fas fa-calendar"></i>
+                Marzo 2025
+            </span>
+        </div>
+        <h3>Torneo Libre</h3>
+        <p class="project-description">Otro torneo de temática libre que permitió a los artistas explorar su creatividad sin limitaciones.</p>
+        <div class="project-stats">
+            <div class="stat-item">
+                <i class="fas fa-users"></i>
+                <span>8 participantes</span>
+            </div>
+            <div class="stat-item">
+                <i class="fas fa-images"></i>
+                <span>8 obras</span>
+            </div>
+            <div class="stat-item">
+                <i class="fas fa-award"></i>
+                <span>3 ganadores</span>
+            </div>
+        </div>
+    </div>
+    <div class="project-actions">
+        <a href="https://vm.tiktok.com/ZMSstA5VL/" class="btn btn-primary">
+            <i class="fas fa-eye"></i>
+            Ver Resultados (TikTok)
+        </a>
+    </div>
+</div>
+
+<div class="past-project-card" data-category="torneo" data-animate="fade-up">
+    <div class="project-info">
+        <div class="project-meta">
+            <span class="project-date">
+                <i class="fas fa-calendar"></i>
+                Diciembre 2024
+            </span>
+        </div>
+        <h3>Torneo Navideño</h3>
+        <p class="project-description">Un evento festivo para celebrar la temporada con arte temático navideño lleno de magia y creatividad.</p>
+        <div class="project-stats">
+            <div class="stat-item">
+                <i class="fas fa-users"></i>
+                <span>10 participantes</span>
+            </div>
+            <div class="stat-item">
+                <i class="fas fa-images"></i>
+                <span>10 obras</span>
+            </div>
+            <div class="stat-item">
+                <i class="fas fa-award"></i>
+                <span>3 ganadores</span>
+            </div>
+        </div>
+    </div>
+    <div class="project-actions">
+        <a href="" class="btn btn-primary">
+            <i class="fas fa-eye"></i>
+            (resultados no disponibles)
+        </a>
+    </div>
+</div>
+
+<div class="past-project-card" data-category="torneo" data-animate="fade-up">
+    <div class="project-info">
+        <div class="project-meta">
+            <span class="project-date">
+                <i class="fas fa-calendar"></i>
+                Noviembre 2024
+            </span>
+        </div>
+        <h3>Torneo de Creación de OC's</h3>
+        <p class="project-description">Un torneo dedicado a la creación de personajes originales, donde la imaginación fue la protagonista.</p>
+        <div class="project-stats">
+            <div class="stat-item">
+                <i class="fas fa-users"></i>
+                <span>5 participantes</span>
+            </div>
+            <div class="stat-item">
+                <i class="fas fa-images"></i>
+                <span>5 obras</span>
+            </div>
+            <div class="stat-item">
+                <i class="fas fa-award"></i>
+                <span>3 ganadores</span>
+            </div>
+        </div>
+    </div>
+    <div class="project-actions">
+        <a href="" class="btn btn-primary">
+            <i class="fas fa-eye"></i>
+            (Resultados no disponibles)
+        </a>
+    </div>
+</div>
+
+<div class="past-project-card" data-category="torneo" data-animate="fade-up">
+    <div class="project-info">
+        <div class="project-meta">
+            <span class="project-date">
+                <i class="fas fa-calendar"></i>
+                Octubre 2024
+            </span>
+        </div>
+        <h3>Reto Inktober</h3>
+        <p class="project-description">Nuestro primer reto especial siguiendo la tradición del Inktober, con dibujos diarios en tinta.</p>
+        <div class="project-stats">
+            <div class="stat-item">
+                <i class="fas fa-users"></i>
+                <span>1 participante</span>
+            </div>
+            <div class="stat-item">
+                <i class="fas fa-images"></i>
+                <span>31 obras</span>
+            </div>
+            <div class="stat-item">
+                <i class="fas fa-calendar-day"></i>
+                <span>31 días</span>
+            </div>
+        </div>
+    </div>
+    <div class="project-actions">
+        <a href="" class="btn btn-primary">
+            <i class="fas fa-eye"></i>
+            (resultados no disponibles)
+        </a>
+    </div>
+</div>
+           </div>
+
+           <!-- No Results Message -->
+           <div id="no-projects-found" class="no-results" style="display: none;">
+               <div class="no-results-animation">
+                   <i class="fas fa-search"></i>
+               </div>
+               <h3>No se encontraron proyectos</h3>
+               <p>No hay proyectos que coincidan con tu búsqueda o filtro seleccionado.</p>
+               <button onclick="resetProjectFilters()" class="btn btn-outline">
+                   <i class="fas fa-refresh"></i>
+                   Mostrar Todos
+               </button>
+           </div>
+       </div>
+   </section>
+
+   <!-- Call to Action Section -->
+   <section id="call-to-action" class="cta-section">
+       <div class="container">
+           <div class="cta-content">
+               <div class="cta-text">
+                   <div class="section-badge">
+                       <i class="fas fa-lightbulb"></i>
+                       <span>¡Participa!</span>
+                   </div>
+                   <h2>¿Tienes una idea para un proyecto?</h2>
+                   <div class="divider"></div>
+                   <p>¡Nos encantaría escucharla! Sugiere tu próximo torneo, colaboración o mejora para la Liga Nexo Artística. Tu creatividad puede ser el próximo gran evento de nuestra comunidad.</p>
+               </div>
+               <div class="cta-card">
+                   <div class="cta-card-content">
+                       <div class="whatsapp-icon">
+                           <i class="fab fa-whatsapp"></i>
+                       </div>
+                       <h3>¡Comparte tu idea!</h3>
+                       <p>Contacta con los administradores a través de nuestro grupo de WhatsApp para compartir tus sugerencias y propuestas.</p>
+                       <div class="cta-features">
+                           <div class="feature-item">
+                               <i class="fas fa-check"></i>
+                               <span>Respuesta rápida</span>
+                           </div>
+                           <div class="feature-item">
+                               <i class="fas fa-check"></i>
+                               <span>Ideas valoradas</span>
+                           </div>
+                           <div class="feature-item">
+                               <i class="fas fa-check"></i>
+                               <span>Comunidad activa</span>
+                           </div>
+                       </div>
+                       <a href="https://chat.whatsapp.com/CigsciXzZzkD9YN5mTb0XA" target="_blank" class="btn btn-whatsapp">
+                           <i class="fab fa-whatsapp"></i>
+                           Sugerir Proyecto
+                       </a>
+                   </div>
+               </div>
+           </div>
+       </div>
+   </section>
+
+   <footer>
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <i class="fas fa-palette"></i>
+                <span>Nexo Artistico</span>
+            </div>
+            <div class="social-icons">
+                <a href="https://www.tiktok.com/@nexo.artistico4" class="social-icon tiktok">
+                    <i class="fab fa-tiktok"></i>
+                </a>
+                <a href="#" class="social-icon instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="#" class="social-icon youtube">
+                    <i class="fab fa-youtube"></i>
+                </a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; <span id="current-year"></span> Nexo Artistico. Todos los derechos reservados.</p>
+        </div>
+    </div>
+   </footer>
+
+   <!-- Scripts -->
+   <script src="js/script.js"></script>
+   <script src="js/dark-mode.js"></script>
+   <script src="js/proyectos.js"></script>
+</body>
+</html>

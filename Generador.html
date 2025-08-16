@@ -1,0 +1,1058 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generador de Código - Nexo Artistico</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/color-palette.css">
+    <link rel="stylesheet" href="css/dark-mode.css">
+    <link rel="stylesheet" href="css/generador.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css">
+</head>
+<body>
+     <header>
+       <div class="container">
+           <div class="logo">
+               <i class="fas fa-palette"></i>
+               <span>Nexo Artistico</span>
+           </div>
+           <nav>
+               <ul>
+                   <li><a href="index.html">Inicio</a></li>
+                   <li><a href="index.html#about">Nosotros</a></li>
+                   <li><a href="biblioteca.html">Biblioteca</a></li>
+                   <li><a href="centro-mejora.html">Centro de Mejora</a></li>
+                   <li><a href="miembros.html">Miembros</a></li>
+                   <li><a href="proyectos.html" >Proyectos</a></li>
+                   <li><a href="index.html#contact">Comunidad</a></li>
+               </ul>
+           </nav>
+           <div class="header-actions">
+               <button id="theme-toggle" class="theme-toggle" aria-label="Toggle Dark Mode">
+                   <i class="fas fa-moon"></i>
+               </button>
+               <div class="header-btn">
+                   <a href="https://chat.whatsapp.com/Lwj85QzALMFBjCnYirEJ9K" target="_blank">
+                       <i class="fab fa-whatsapp"></i>
+                       Únete por WhatsApp
+                   </a>
+               </div>
+           </div>
+           <div class="menu-toggle">
+               <i class="fas fa-bars"></i>
+           </div>
+       </div>
+   </header>
+
+   <!-- Mobile Menu -->
+    <div class="mobile-menu">
+        <div class="mobile-menu-close">
+            <i class="fas fa-times"></i>
+        </div>
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="index.html#about">Nosotros</a></li>
+            <li><a href="biblioteca.html">Biblioteca</a></li>
+            <li><a href="centro-mejora.html">Centro de Mejora</a></li>
+            <li><a href="miembros.html">Miembros</a></li>
+            <li><a href="proyectos.html">Proyectos</a></li>
+            <li><a href="index.html#contact">Comunidad</a></li>
+        </ul>
+        <div class="mobile-menu-actions">
+            <button id="mobile-theme-toggle" class="theme-toggle" aria-label="Toggle Dark Mode">
+                <i class="fas fa-moon"></i>
+            </button>
+            <div class="mobile-menu-btn">
+                <a href="https://chat.whatsapp.com/Lwj85QzALMFBjCnYirEJ9K" target="_blank">
+                    <i class="fab fa-whatsapp"></i>
+                    Únete por WhatsApp
+                </a>
+            </div>
+        </div>
+    </div>
+
+   <!-- Mobile Menu Overlay -->
+   <div class="mobile-menu-overlay"></div>
+
+    <!-- Page Header -->
+    <section class="page-header-compact">
+        <div class="container">
+            <h1>Generador de <span class="gradient-text">Código</span></h1>
+            <p>Genera automáticamente el código HTML para playlists, videos y pines de Pinterest.</p>
+        </div>
+    </section>
+
+    <!-- Generator Tabs -->
+    <section class="generator-tabs">
+        <div class="container">
+            <div class="tabs-wrapper">
+                <button class="tab-btn active" data-tab="playlist">
+                    <i class="fas fa-list-ul"></i>
+                    <span>Playlist</span>
+                </button>
+                <button class="tab-btn" data-tab="video">
+                    <i class="fas fa-video"></i>
+                    <span>Video</span>
+                </button>
+                <button class="tab-btn" data-tab="pinterest">
+                    <i class="fab fa-pinterest"></i>
+                    <span>Pinterest</span>
+                </button>
+                <button class="tab-btn" data-tab="libro">
+                    <i class="fas fa-book"></i>
+                    <span>Libro</span>
+                </button>
+                <!-- Added software generator tab -->
+                <button class="tab-btn" data-tab="software">
+                    <i class="fas fa-desktop"></i>
+                    <span>Software</span>
+                </button>
+                <button class="tab-btn" data-tab="miembro">
+                    <i class="fas fa-user-plus"></i>
+                    <span>Miembro</span>
+                </button>
+                <button class="tab-btn" data-tab="galeria">
+                    <i class="fas fa-images"></i>
+                    <span>Obra de Arte</span>
+                </button>
+                <button class="tab-btn" data-tab="apoyo">
+                    <i class="fas fa-heart"></i>
+                    <span>Método de Apoyo</span>
+                </button>
+                <button class="tab-btn" data-tab="destacada">
+                    <i class="fas fa-star"></i>
+                    <span>Obra Destacada</span>
+                </button>
+                <button class="tab-btn" data-tab="recurso">
+                    <i class="fas fa-file-alt"></i>
+                    <span>Recurso Digital</span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Generator Content -->
+    <section class="generator-content">
+        <div class="container">
+            
+            <!-- Enhanced Playlist Generator -->
+            <div id="playlist" class="tab-content active">
+                <div class="generator-card">
+                    <div class="card-header">
+                        <h2><i class="fas fa-list-ul"></i> Generador de Playlist Mejorado</h2>
+                        <p>Crea playlists para el Centro de Mejora agregando videos uno por uno</p>
+                    </div>
+                    
+                    <div class="form-section">
+                        <!-- Enhanced playlist form with manual video addition -->
+                        <div class="input-group">
+                            <label for="playlist-title">Título de la Playlist</label>
+                            <input type="text" id="playlist-title" placeholder="Ej: Fundamentos del Dibujo">
+                        </div>
+                        
+                        <div class="input-group">
+                            <label for="playlist-author">Autor/Canal</label>
+                            <input type="text" id="playlist-author" placeholder="Nombre del autor o canal">
+                        </div>
+                        
+                        <div class="input-group">
+                            <label for="playlist-thumbnail">URL de la Miniatura de la Playlist</label>
+                            <input type="url" id="playlist-thumbnail" placeholder="https://imagen-miniatura.jpg">
+                            <small>Imagen que representará toda la playlist</small>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="input-group">
+                                <label for="playlist-category">Categoría</label>
+                                <select id="playlist-category">
+                                    <option value="fundamentos">Fundamentos</option>
+                                    <option value="anatomia">Anatomía</option>
+                                    <option value="arte-digital">Arte Digital</option>
+                                    <option value="perspectiva">Perspectiva</option>
+                                    <option value="color">Teoría del Color</option>
+                                    <option value="animacion">Animación</option>
+                                    <option value="tradicional">Arte Tradicional</option>
+                                    <option value="composicion">Composición</option>
+                                </select>
+                            </div>
+                            
+                            <div class="input-group">
+                                <label for="playlist-level">Nivel</label>
+                                <select id="playlist-level">
+                                    <option value="principiante">Principiante</option>
+                                    <option value="intermedio">Intermedio</option>
+                                    <option value="avanzado">Avanzado</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <div class="input-group">
+                            <label for="playlist-description">Descripción de la Playlist</label>
+                            <textarea id="playlist-description" placeholder="Descripción de lo que aprenderán en esta playlist" rows="3"></textarea>
+                        </div>
+
+                        <!-- Video Management Section -->
+                        <div class="videos-management-section">
+                            <h4><i class="fas fa-video"></i> Videos de la Playlist</h4>
+                            
+                            <!-- Add Video Form -->
+                            <div class="add-video-form">
+                                <div class="form-row">
+                                    <div class="input-group">
+                                        <label for="video-url-input">URL del Video</label>
+                                        <input type="url" id="video-url-input" placeholder="https://www.youtube.com/watch?v=...">
+                                    </div>
+                                    <div class="input-group">
+                                        <label for="video-title-input">Título del Video</label>
+                                        <input type="text" id="video-title-input" placeholder="Título personalizado del video">
+                                    </div>
+                                </div>
+                                <div class="input-group">
+                                    <label for="video-description-input">Descripción del Video</label>
+                                    <input type="text" id="video-description-input" placeholder="Breve descripción del contenido">
+                                </div>
+                                <button type="button" id="add-video-btn" class="btn-add-video">
+                                    <i class="fas fa-plus"></i>
+                                    Agregar Video
+                                </button>
+                            </div>
+
+                            <!-- Videos List -->
+                            <div class="videos-list" id="videos-list">
+                                <p class="no-videos-message">No hay videos agregados. Agrega el primer video usando el formulario de arriba.</p>
+                            </div>
+                        </div>
+                        
+                        <button id="generate-playlist" class="btn-generate">
+                            <i class="fas fa-magic"></i>
+                            Generar Código de Playlist
+                        </button>
+                    </div>
+                    
+                    <div class="preview-section" id="playlist-preview" style="display: none;">
+                        <h3>Vista Previa</h3>
+                        <div class="preview-container" id="playlist-preview-container"></div>
+                    </div>
+                    
+                    <div class="code-section" id="playlist-code" style="display: none;">
+                        <div class="code-header">
+                            <h3>Código Generado</h3>
+                            <button class="btn-copy" data-target="playlist-code-content">
+                                <i class="fas fa-copy"></i>
+                                Copiar Código
+                            </button>
+                        </div>
+                        <pre><code id="playlist-code-content" class="language-html"></code></pre>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Enhanced Video Generator -->
+            <div id="video" class="tab-content">
+                <div class="generator-card">
+                    <div class="card-header">
+                        <h2><i class="fas fa-video"></i> Generador de Video para Biblioteca</h2>
+                        <p>Genera código para videos individuales en la Biblioteca Digital</p>
+                    </div>
+                    
+                    <div class="form-section">
+                        <div class="input-group">
+                            <label for="video-url">URL del Video de YouTube</label>
+                            <input type="url" id="video-url" placeholder="https://www.youtube.com/watch?v=...">
+                            <small>Pega la URL completa del video de YouTube</small>
+                        </div>
+                        
+                        <div class="input-group">
+                            <label for="video-custom-title">Título Personalizado (opcional)</label>
+                            <input type="text" id="video-custom-title" placeholder="Deja vacío para usar el título original">
+                            <small>Si se deja vacío, se obtendrá automáticamente de YouTube</small>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="input-group">
+                                <label for="video-category">Categoría</label>
+                                <select id="video-category">
+                                    <option value="speedpaint">Speedpaints</option>
+                                    <option value="tutorial">Tutoriales</option>
+                                    <option value="review">Reviews</option>
+                                    <option value="process">Procesos</option>
+                                    <option value="tips">Tips y Consejos</option>
+                                    <option value="unboxing">Unboxing</option>
+                                    <option value="timelapses">Timelapses</option>
+                                </select>
+                            </div>
+                            
+                            <div class="input-group">
+                                <label for="video-author">Autor/Canal</label>
+                                <input type="text" id="video-author" placeholder="Nombre del autor o canal">
+                            </div>
+                        </div>
+                        
+                        <div class="input-group">
+                            <label for="video-description">Descripción Personalizada</label>
+                            <textarea id="video-description" placeholder="Descripción personalizada del video" rows="3"></textarea>
+                            <small>Si se deja vacío, se generará automáticamente</small>
+                        </div>
+                        
+                        <div class="input-group">
+                            <label for="video-tags">Tags (separados por comas)</label>
+                            <input type="text" id="video-tags" placeholder="Arte Digital, Tutorial, Photoshop">
+                            <small>Escribe las etiquetas separadas por comas</small>
+                        </div>
+                        
+                        <button id="generate-video" class="btn-generate">
+                            <i class="fas fa-magic"></i>
+                            Generar Código de Video
+                        </button>
+                    </div>
+                    
+                    <div class="preview-section" id="video-preview" style="display: none;">
+                        <h3>Vista Previa</h3>
+                        <div class="preview-container" id="video-preview-container"></div>
+                    </div>
+                    
+                    <div class="code-section" id="video-code" style="display: none;">
+                        <div class="code-header">
+                            <h3>Código Generado</h3>
+                            <button class="btn-copy" data-target="video-code-content">
+                                <i class="fas fa-copy"></i>
+                                Copiar Código
+                            </button>
+                        </div>
+                        <pre><code id="video-code-content" class="language-html"></code></pre>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pinterest Generator -->
+            <div id="pinterest" class="tab-content">
+                <div class="generator-card">
+                    <div class="card-header">
+                        <h2><i class="fab fa-pinterest"></i> Generador de Pinterest</h2>
+                        <p>Genera código para tableros de Pinterest</p>
+                    </div>
+                    
+                    <div class="form-section">
+                        <div class="input-group">
+                            <label for="pinterest-url">URL del Tablero de Pinterest</label>
+                            <input type="url" id="pinterest-url" placeholder="https://pinterest.com/usuario/tablero/">
+                            <small>Pega la URL completa del tablero de Pinterest</small>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="input-group">
+                                <label for="pinterest-title">Título del Tablero</label>
+                                <input type="text" id="pinterest-title" placeholder="Nombre del tablero">
+                            </div>
+                            
+                            <div class="input-group">
+                                <label for="pinterest-pins">Número de Pines</label>
+                                <input type="number" id="pinterest-pins" placeholder="50" min="1">
+                            </div>
+                        </div>
+                        
+                        <div class="input-group">
+                            <label for="pinterest-description">Descripción</label>
+                            <textarea id="pinterest-description" placeholder="Descripción del tablero de Pinterest" rows="3"></textarea>
+                        </div>
+                        
+                        <div class="input-group">
+                            <label for="pinterest-images">URLs de Imágenes (3 imágenes separadas por líneas)</label>
+                            <textarea id="pinterest-images" placeholder="https://imagen1.jpg&#10;https://imagen2.jpg&#10;https://imagen3.jpg" rows="4"></textarea>
+                            <small>Pega las URLs de 3 imágenes representativas del tablero, una por línea</small>
+                        </div>
+                        
+                        <button id="generate-pinterest" class="btn-generate">
+                            <i class="fas fa-magic"></i>
+                            Generar Código de Pinterest
+                        </button>
+                    </div>
+                    
+                    <div class="preview-section" id="pinterest-preview" style="display: none;">
+                        <h3>Vista Previa</h3>
+                        <div class="preview-container" id="pinterest-preview-container"></div>
+                    </div>
+                    
+                    <div class="code-section" id="pinterest-code" style="display: none;">
+                        <div class="code-header">
+                            <h3>Código Generado</h3>
+                            <button class="btn-copy" data-target="pinterest-code-content">
+                                <i class="fas fa-copy"></i>
+                                Copiar Código
+                            </button>
+                        </div>
+                        <pre><code id="pinterest-code-content" class="language-html"></code></pre>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Libro Generator -->
+            <div id="libro" class="tab-content">
+                <div class="generator-card">
+                    <div class="card-header">
+                        <h2><i class="fas fa-book"></i> Generador de Libro</h2>
+                        <p>Genera código para libros en la Biblioteca Digital</p>
+                    </div>
+                    
+                    <div class="form-section">
+                        <div class="form-row">
+                            <div class="input-group">
+                                <label for="libro-title">Título del Libro</label>
+                                <input type="text" id="libro-title" placeholder="Título del libro">
+                            </div>
+                            
+                            <div class="input-group">
+                                <label for="libro-author">Autor</label>
+                                <input type="text" id="libro-author" placeholder="Nombre del autor">
+                            </div>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="input-group">
+                                <label for="libro-category">Categoría</label>
+                                <select id="libro-category">
+                                    <option value="Diseño">Diseño</option>
+                                    <option value="Artes Plásticas">Artes Plásticas</option>
+                                    <option value="Anatomía">Anatomía</option>
+                                    <option value="Perspectiva">Perspectiva</option>
+                                    <option value="Color">Teoría del Color</option>
+                                    <option value="Historia del Arte">Historia del Arte</option>
+                                    <option value="Técnicas">Técnicas</option>
+                                </select>
+                            </div>
+                            
+                            <div class="input-group">
+                                <label for="libro-download">URL de Descarga</label>
+                                <input type="url" id="libro-download" placeholder="https://enlace-descarga.com">
+                            </div>
+                        </div>
+                        
+                        <div class="input-group">
+                            <label for="libro-cover">URL de la Portada</label>
+                            <input type="url" id="libro-cover" placeholder="https://imagen-portada.jpg">
+                            <small>URL de la imagen de la portada del libro</small>
+                        </div>
+                        
+                        <div class="input-group">
+                            <label for="libro-tags">Tags (separados por comas)</label>
+                            <input type="text" id="libro-tags" placeholder="Diseño, Creatividad, Ilustración">
+                            <small>Escribe las etiquetas separadas por comas</small>
+                        </div>
+                        
+                        <button id="generate-libro" class="btn-generate">
+                            <i class="fas fa-magic"></i>
+                            Generar Código de Libro
+                        </button>
+                    </div>
+                    
+                    <div class="preview-section" id="libro-preview" style="display: none;">
+                        <h3>Vista Previa</h3>
+                        <div class="preview-container" id="libro-preview-container"></div>
+                    </div>
+                    
+                    <div class="code-section" id="libro-code" style="display: none;">
+                        <div class="code-header">
+                            <h3>Código Generado</h3>
+                            <button class="btn-copy" data-target="libro-code-content">
+                                <i class="fas fa-copy"></i>
+                                Copiar Código
+                            </button>
+                        </div>
+                        <pre><code id="libro-code-content" class="language-html"></code></pre>
+                    </div>
+                </div>
+            </div>
+
+            <!-- NEW: Software Generator -->
+            <div id="software" class="tab-content">
+                <div class="generator-card">
+                    <div class="card-header">
+                        <h2><i class="fas fa-desktop"></i> Generador de Software</h2>
+                        <p>Genera código para software en la sección de Biblioteca</p>
+                    </div>
+                    
+                    <div class="form-section">
+                        <div class="form-row">
+                            <div class="input-group">
+                                <label for="software-name">Nombre del Software</label>
+                                <input type="text" id="software-name" placeholder="Ej: Krita, Blender, GIMP">
+                            </div>
+                            
+                            <div class="input-group">
+                                <label for="software-version">Versión</label>
+                                <input type="text" id="software-version" placeholder="Ej: 5.0.0, 3.6, 2.10.34">
+                            </div>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="input-group">
+                                <label for="software-category">Categoría</label>
+                                <select id="software-category">
+                                    <option value="drawing">Dibujo</option>
+                                    <option value="3d">3D</option>
+                                    <option value="animation">Animación</option>
+                                    <option value="photo">Fotografía</option>
+                                    <option value="design">Diseño Gráfico</option>
+                                    <option value="video">Edición de Video</option>
+                                </select>
+                            </div>
+                            
+                            <div class="input-group">
+                                <label for="software-price">Tipo de Licencia</label>
+                                <select id="software-price">
+                                    <option value="free">Gratis</option>
+                                    <option value="paid">De Pago</option>
+                                    <option value="freemium">Freemium</option>
+                                    <option value="trial">Prueba Gratuita</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <div class="input-group">
+                            <label for="software-description">Descripción</label>
+                            <textarea id="software-description" placeholder="Descripción del software y sus características principales" rows="3"></textarea>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="input-group">
+                                <label for="software-download-url">URL de Descarga</label>
+                                <input type="url" id="software-download-url" placeholder="https://sitio-oficial.com/download">
+                            </div>
+                            
+                            <div class="input-group">
+                                <label for="software-logo">URL del Logo</label>
+                                <input type="url" id="software-logo" placeholder="https://logo-software.png">
+                            </div>
+                        </div>
+                        
+                        <div class="input-group">
+                            <label for="software-platforms">Plataformas Compatibles</label>
+                            <div class="checkbox-group">
+                                <label class="checkbox-label">
+                                    <input type="checkbox" id="platform-windows" value="windows" checked>
+                                    <i class="fab fa-windows"></i> Windows
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" id="platform-mac" value="mac">
+                                    <i class="fab fa-apple"></i> macOS
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" id="platform-linux" value="linux">
+                                    <i class="fab fa-linux"></i> Linux
+                                </label>
+                            </div>
+                        </div>
+                        
+                        <div class="input-group">
+                            <label>
+                                <input type="checkbox" id="software-open-source">
+                                Es Open Source
+                            </label>
+                        </div>
+                        
+                        <button id="generate-software" class="btn-generate">
+                            <i class="fas fa-magic"></i>
+                            Generar Código de Software
+                        </button>
+                    </div>
+                    
+                    <div class="preview-section" id="software-preview" style="display: none;">
+                        <h3>Vista Previa</h3>
+                        <div class="preview-container" id="software-preview-container"></div>
+                    </div>
+                    
+                    <div class="code-section" id="software-code" style="display: none;">
+                        <div class="code-header">
+                            <h3>Código Generado</h3>
+                            <button class="btn-copy" data-target="software-code-content">
+                                <i class="fas fa-copy"></i>
+                                Copiar Código
+                            </button>
+                        </div>
+                        <pre><code id="software-code-content" class="language-html"></code></pre>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Member Generator -->
+            <div id="miembro" class="tab-content">
+                <div class="generator-card">
+                    <div class="card-header">
+                        <h2><i class="fas fa-user-plus"></i> Generador de Miembro</h2>
+                        <p>Genera código para agregar nuevos miembros</p>
+                    </div>
+                    
+                    <div class="form-section">
+                        <div class="form-row">
+                            <div class="input-group">
+                                <label for="miembro-nombre">Nombre del Artista</label>
+                                <input type="text" id="miembro-nombre" placeholder="Nombre completo del artista">
+                                <small>Este nombre se usará para la imagen: img/pfp/members/[nombre]</small>
+                            </div>
+                            
+                            <div class="input-group">
+                                <label for="miembro-especialidad">Especialidad</label>
+                                <select id="miembro-especialidad">
+                                    <option value="Ilustración Digital">Ilustración Digital</option>
+                                    <option value="Arte Tradicional">Arte Tradicional</option>
+                                    <option value="Concept Art">Concept Art</option>
+                                    <option value="Character Design">Character Design</option>
+                                    <option value="Animación">Animación</option>
+                                    <option value="3D Modeling">3D Modeling</option>
+                                    <option value="Fotografía">Fotografía</option>
+                                    <option value="Diseño Gráfico">Diseño Gráfico</option>
+                                    <option value="Arte Mixto">Arte Mixto</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="input-group">
+                                <label for="miembro-nivel">Nivel</label>
+                                <select id="miembro-nivel">
+                                    <option value="Principiante">Principiante</option>
+                                    <option value="Intermedio">Intermedio</option>
+                                    <option value="Avanzado">Avanzado</option>
+                                    <option value="Profesional">Profesional</option>
+                                </select>
+                            </div>
+                            
+                            <div class="input-group">
+                                <label for="miembro-fecha">Fecha de Ingreso</label>
+                                <input type="date" id="miembro-fecha">
+                            </div>
+                        </div>
+                        
+                        <div class="input-group">
+                            <label for="miembro-descripcion">Descripción</label>
+                            <textarea id="miembro-descripcion" placeholder="Breve descripción del artista y su trabajo" rows="3"></textarea>
+                            <small>Describe el estilo, experiencia o características del artista</small>
+                        </div>
+                        
+                        <!-- Redes Sociales -->
+                        <div class="social-networks-section">
+                            <h4><i class="fas fa-share-alt"></i> Redes Sociales</h4>
+                            <div id="social-networks-container">
+                                <!-- Los campos de redes sociales se añadirán dinámicamente aquí -->
+                            </div>
+                            <button type="button" id="add-social-network" class="btn-add-social">
+                                <i class="fas fa-plus"></i>
+                                Añadir Red Social
+                            </button>
+                        </div>
+                        
+                        <div class="input-group">
+                            <label for="miembro-tags">Tags/Habilidades (separados por comas)</label>
+                            <input type="text" id="miembro-tags" placeholder="Digital Art, Photoshop, Character Design">
+                            <small>Escribe las habilidades o tags separados por comas</small>
+                        </div>
+                        
+                        <button id="generate-miembro" class="btn-generate">
+                            <i class="fas fa-magic"></i>
+                            Generar Código de Miembro
+                        </button>
+                    </div>
+                    
+                    <div class="preview-section" id="miembro-preview" style="display: none;">
+                        <h3>Vista Previa</h3>
+                        <div class="preview-container" id="miembro-preview-container"></div>
+                    </div>
+                    
+                    <div class="code-section" id="miembro-code" style="display: none;">
+                        <div class="code-header">
+                            <h3>Código Generado</h3>
+                            <button class="btn-copy" data-target="miembro-code-content">
+                                <i class="fas fa-copy"></i>
+                                Copiar Código
+                            </button>
+                        </div>
+                        <pre><code id="miembro-code-content" class="language-html"></code></pre>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Gallery Artwork Generator -->
+            <div id="galeria" class="tab-content">
+                <div class="generator-card">
+                    <div class="card-header">
+                        <h2><i class="fas fa-images"></i> Generador de Obra de Arte</h2>
+                        <p>Genera código para agregar obras a la galería</p>
+                    </div>
+                    
+                    <div class="form-section">
+                        <div class="form-row">
+                            <div class="input-group">
+                                <label for="artwork-title">Título de la Obra</label>
+                                <input type="text" id="artwork-title" placeholder="Nombre de la obra de arte">
+                            </div>
+                            
+                            <div class="input-group">
+                                <label for="artwork-artist">Artista</label>
+                                <input type="text" id="artwork-artist" placeholder="Nombre del artista">
+                            </div>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="input-group">
+                                <label for="artwork-category">Categoría</label>
+                                <select id="artwork-category">
+                                    <option value="anime">Anime/Manga</option>
+                                    <option value="retrato">Retratos</option>
+                                    <option value="fantasia">Fantasía</option>
+                                    <option value="abstracto">Arte Abstracto</option>
+                                    <option value="paisaje">Paisajes</option>
+                                    <option value="digital">Arte Digital</option>
+                                </select>
+                            </div>
+                            
+                            <div class="input-group">
+                                <label for="artwork-style">Estilo Artístico</label>
+                                <select id="artwork-style">
+                                    <option value="tinta">Tinta</option>
+                                    <option value="detallismo">Detallismo a líneas</option>
+                                    <option value="acuarela">Acuarela</option>
+                                    <option value="oleo">Óleo</option>
+                                    <option value="digital">Digital</option>
+                                    <option value="lapiz">Lápiz</option>
+                                    <option value="mixta">Técnica Mixta</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="input-group">
+                                <label for="artwork-year">Año</label>
+                                <input type="number" id="artwork-year" placeholder="2024" min="2020" max="2030">
+                            </div>
+                            
+                            <div class="input-group">
+                                <label for="artwork-image">URL de la Imagen</label>
+                                <input type="url" id="artwork-image" placeholder="https://imagen.jpg">
+                            </div>
+                        </div>
+                        
+                        <div class="input-group">
+                            <label for="artwork-description">Descripción (opcional)</label>
+                            <textarea id="artwork-description" placeholder="Descripción de la obra de arte" rows="3"></textarea>
+                            <small>Si se deja vacío, se generará automáticamente</small>
+                        </div>
+                        
+                        <button id="generate-artwork" class="btn-generate">
+                            <i class="fas fa-magic"></i>
+                            Generar Código de Obra
+                        </button>
+                    </div>
+                    
+                    <div class="preview-section" id="artwork-preview" style="display: none;">
+                        <h3>Vista Previa</h3>
+                        <div class="preview-container" id="artwork-preview-container"></div>
+                    </div>
+                    
+                    <div class="code-section" id="artwork-code" style="display: none;">
+                        <div class="code-header">
+                            <h3>Código Generado</h3>
+                            <button class="btn-copy" data-target="artwork-code-content">
+                                <i class="fas fa-copy"></i>
+                                Copiar Código
+                            </button>
+                        </div>
+                        <pre><code id="artwork-code-content" class="language-html"></code></pre>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Support Method Generator -->
+            <div id="apoyo" class="tab-content">
+                <div class="generator-card">
+                    <div class="card-header">
+                        <h2><i class="fas fa-heart"></i> Generador de Método de Apoyo</h2>
+                        <p>Genera código para nuevas formas de apoyar la comunidad</p>
+                    </div>
+                    
+                    <div class="form-section">
+                        <div class="form-row">
+                            <div class="input-group">
+                                <label for="support-name">Nombre del Método</label>
+                                <input type="text" id="support-name" placeholder="Nombre del método de apoyo">
+                            </div>
+                            
+                            <div class="input-group">
+                                <label for="support-icon">Icono (Font Awesome)</label>
+                                <input type="text" id="support-icon" placeholder="fas fa-heart" value="fas fa-heart">
+                                <small>Clase de icono de Font Awesome (ej: fas fa-wifi, fas fa-running)</small>
+                            </div>
+                        </div>
+                        
+                        <div class="input-group">
+                            <label for="support-description">Descripción</label>
+                            <textarea id="support-description" placeholder="Descripción del método de apoyo" rows="3"></textarea>
+                        </div>
+                        
+                        <div class="input-group">
+                            <label for="support-benefits">Beneficios (uno por línea)</label>
+                            <textarea id="support-benefits" placeholder="Beneficio 1&#10;Beneficio 2&#10;Beneficio 3" rows="4"></textarea>
+                            <small>Escribe cada beneficio en una línea separada</small>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="input-group">
+                                <label for="support-url">URL del Enlace</label>
+                                <input type="url" id="support-url" placeholder="https://enlace-apoyo.com">
+                            </div>
+                            
+                            <div class="input-group">
+                                <label for="support-button-text">Texto del Botón</label>
+                                <input type="text" id="support-button-text" placeholder="Registrarse Ahora">
+                            </div>
+                        </div>
+                        
+                        <div class="input-group">
+                            <label for="support-qr">URL del QR (opcional)</label>
+                            <input type="url" id="support-qr" placeholder="https://qr-code.jpg">
+                            <small>URL de la imagen del código QR (opcional)</small>
+                        </div>
+                        
+                        <button id="generate-support" class="btn-generate">
+                            <i class="fas fa-magic"></i>
+                            Generar Código de Apoyo
+                        </button>
+                    </div>
+                    
+                    <div class="preview-section" id="support-preview" style="display: none;">
+                        <h3>Vista Previa</h3>
+                        <div class="preview-container" id="support-preview-container"></div>
+                    </div>
+                    
+                    <div class="code-section" id="support-code" style="display: none;">
+                        <div class="code-header">
+                            <h3>Código Generado</h3>
+                            <button class="btn-copy" data-target="support-code-content">
+                                <i class="fas fa-copy"></i>
+                                Copiar Código
+                            </button>
+                        </div>
+                        <pre><code id="support-code-content" class="language-html"></code></pre>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Featured Work Generator -->
+            <div id="destacada" class="tab-content">
+                <div class="generator-card">
+                    <div class="card-header">
+                        <h2><i class="fas fa-star"></i> Generador de Obra Destacada</h2>
+                        <p>Genera código para obras destacadas de la semana</p>
+                    </div>
+                    
+                    <div class="form-section">
+                        <div class="form-row">
+                            <div class="input-group">
+                                <label for="featured-title">Título de la Obra</label>
+                                <input type="text" id="featured-title" placeholder="Nombre de la obra destacada">
+                            </div>
+                            
+                            <div class="input-group">
+                                <label for="featured-author">Artista</label>
+                                <input type="text" id="featured-author" placeholder="Nombre del artista">
+                            </div>
+                        </div>
+                        
+                        <div class="input-group">
+                            <label for="featured-image">URL de la Imagen</label>
+                            <input type="url" id="featured-image" placeholder="https://obra-destacada.jpg">
+                        </div>
+                        
+                        <div class="input-group">
+                            <label for="featured-description">Descripción</label>
+                            <textarea id="featured-description" placeholder="Descripción de la obra destacada" rows="3"></textarea>
+                        </div>
+                        
+                        <div class="input-group">
+                            <label for="featured-tags">Tags (separados por comas)</label>
+                            <input type="text" id="featured-tags" placeholder="Tradicional, Manga, Color">
+                            <small>Escribe las etiquetas separadas por comas</small>
+                        </div>
+                        
+                        <button id="generate-featured" class="btn-generate">
+                            <i class="fas fa-magic"></i>
+                            Generar Código de Obra Destacada
+                        </button>
+                    </div>
+                    
+                    <div class="preview-section" id="featured-preview" style="display: none;">
+                        <h3>Vista Previa</h3>
+                        <div class="preview-container" id="featured-preview-container"></div>
+                    </div>
+                    
+                    <div class="code-section" id="featured-code" style="display: none;">
+                        <div class="code-header">
+                            <h3>Código Generado</h3>
+                            <button class="btn-copy" data-target="featured-code-content">
+                                <i class="fas fa-copy"></i>
+                                Copiar Código
+                            </button>
+                        </div>
+                        <pre><code id="featured-code-content" class="language-html"></code></pre>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Enhanced Library Resource Generator -->
+            <div id="recurso" class="tab-content">
+                <div class="generator-card">
+                    <div class="card-header">
+                        <h2><i class="fas fa-file-alt"></i> Generador de Recurso Digital</h2>
+                        <p>Genera código para recursos digitales (pinceles, texturas, plantillas, etc.)</p>
+                    </div>
+                    
+                    <div class="form-section">
+                        <div class="form-row">
+                            <div class="input-group">
+                                <label for="resource-title">Título del Recurso</label>
+                                <input type="text" id="resource-title" placeholder="Ej: Pinceles de Acuarela, Pack de Texturas">
+                            </div>
+                            
+                            <div class="input-group">
+                                <label for="resource-type">Tipo de Recurso</label>
+                                <select id="resource-type">
+                                    <option value="brushes">Pinceles</option>
+                                    <option value="textures">Texturas</option>
+                                    <option value="palettes">Paletas de Color</option>
+                                    <option value="templates">Plantillas</option>
+                                    <option value="fonts">Fuentes</option>
+                                    <option value="patterns">Patrones</option>
+                                    <option value="references">Referencias</option>
+                                    <option value="presets">Presets</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="input-group">
+                                <label for="resource-software">Software Compatible</label>
+                                <select id="resource-software">
+                                    <option value="Photoshop">Adobe Photoshop</option>
+                                    <option value="Krita">Krita</option>
+                                    <option value="Procreate">Procreate</option>
+                                    <option value="Clip Studio Paint">Clip Studio Paint</option>
+                                    <option value="GIMP">GIMP</option>
+                                    <option value="Illustrator">Adobe Illustrator</option>
+                                    <option value="Universal">Universal</option>
+                                </select>
+                            </div>
+                            
+                            <div class="input-group">
+                                <label for="resource-count">Cantidad de Items</label>
+                                <input type="number" id="resource-count" placeholder="Ej: 50" min="1">
+                                <small>Número de pinceles, texturas, etc. incluidos</small>
+                            </div>
+                        </div>
+                        
+                        <div class="input-group">
+                            <label for="resource-description">Descripción</label>
+                            <textarea id="resource-description" placeholder="Descripción del recurso y su uso" rows="3"></textarea>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="input-group">
+                                <label for="resource-url">URL de Descarga</label>
+                                <input type="url" id="resource-url" placeholder="https://enlace-descarga.com">
+                            </div>
+                            
+                            <div class="input-group">
+                                <label for="resource-image">URL de la Imagen</label>
+                                <input type="url" id="resource-image" placeholder="https://imagen-recurso.jpg">
+                            </div>
+                        </div>
+                        
+                        <div class="input-group">
+                            <label for="resource-tags">Tags (separados por comas)</label>
+                            <input type="text" id="resource-tags" placeholder="Digital, Pinceles, Acuarela">
+                            <small>Escribe las etiquetas separadas por comas</small>
+                        </div>
+                        
+                        <button id="generate-resource" class="btn-generate">
+                            <i class="fas fa-magic"></i>
+                            Generar Código de Recurso
+                        </button>
+                    </div>
+                    
+                    <div class="preview-section" id="resource-preview" style="display: none;">
+                        <h3>Vista Previa</h3>
+                        <div class="preview-container" id="resource-preview-container"></div>
+                    </div>
+                    
+                    <div class="code-section" id="resource-code" style="display: none;">
+                        <div class="code-header">
+                            <h3>Código Generado</h3>
+                            <button class="btn-copy" data-target="resource-code-content">
+                                <i class="fas fa-copy"></i>
+                                Copiar Código
+                            </button>
+                        </div>
+                        <pre><code id="resource-code-content" class="language-html"></code></pre>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Mejorar loading modal para evitar que se quede activo -->
+    <div id="loading-modal" class="loading-modal">
+        <div class="loading-content">
+            <div class="loading-spinner"></div>
+            <h3>Procesando...</h3>
+            <p>Obteniendo información...</p>
+        </div>
+    </div>
+
+    <!-- Mejorar toasts con funcionalidad de cierre manual -->
+    <div id="success-toast" class="toast success">
+        <i class="fas fa-check-circle"></i>
+        <span>Código copiado al portapapeles</span>
+    </div>
+
+    <div id="error-toast" class="toast error">
+        <i class="fas fa-exclamation-circle"></i>
+        <span>Error al procesar la URL</span>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <i class="fas fa-palette"></i>
+                    <span>Nexo Artistico</span>
+                </div>
+                <div class="social-icons">
+                    <a href="https://www.tiktok.com/@nexo.artistico4" class="social-icon tiktok">
+                        <i class="fab fa-tiktok"></i>
+                    </a>
+                    <a href="#" class="social-icon instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="#" class="social-icon youtube">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; <span id="current-year"></span> Nexo Artistico. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-core.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/autoloader/prism-autoloader.min.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/dark-mode.js"></script>
+    <!-- Eliminando completamente el modal de loading y todas las notificaciones -->
+    
+    <script src="js/generador.js"></script>
+</body>
+</html>
