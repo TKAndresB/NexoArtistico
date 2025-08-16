@@ -1,0 +1,835 @@
+/* ===================================
+   GENERADOR DE CÓDIGO - ESTILOS MINIMALISTAS
+   =================================== */
+
+/* Updated color palette to use the project's color system */
+:root {
+  --generator-primary: var(--primary-color);
+  --generator-primary-hover: var(--primary-hover);
+  --generator-text: var(--text-primary);
+  --generator-text-light: var(--text-secondary);
+  --generator-bg: var(--bg-primary);
+  --generator-card-bg: var(--card-background);
+  --generator-border: var(--border-color);
+  --generator-shadow: var(--shadow);
+  --generator-shadow-hover: var(--shadow-hover);
+  --generator-radius: 12px;
+  --success-color: var(--success-color);
+  --error-color: var(--danger-color);
+  --warning-color: var(--secondary-color);
+}
+
+/* Enhanced dark mode variables for better consistency */
+[data-theme="dark"] {
+  --generator-bg: var(--bg-primary);
+  --generator-card-bg: var(--bg-card);
+  --generator-border: var(--border-color);
+  --generator-text: var(--text-primary);
+  --generator-text-light: var(--text-secondary);
+  --generator-primary: var(--primary-color);
+  --generator-primary-hover: var(--primary-light);
+  --generator-shadow: var(--shadow-md);
+  --generator-shadow-hover: var(--shadow-lg);
+}
+
+/* Simplified header with consistent styling */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background: var(--generator-card-bg);
+  border-bottom: 1px solid var(--generator-border);
+  padding: 1rem 0;
+  box-shadow: var(--generator-shadow);
+}
+
+/* Enhanced dark mode support for header */
+[data-theme="dark"] header {
+  background: var(--bg-card);
+  border-bottom-color: var(--border-color);
+}
+
+/* Minimalist page header without gradients */
+.page-header-compact {
+  padding: 120px 0 80px 0;
+  background: var(--generator-bg);
+  color: var(--generator-text);
+  text-align: center;
+}
+
+.page-header-compact h1 {
+  font-size: clamp(2rem, 4vw, 2.5rem);
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: var(--generator-text);
+}
+
+.page-header-compact .gradient-text {
+  color: var(--generator-primary);
+}
+
+.page-header-compact p {
+  font-size: 1.1rem;
+  color: var(--generator-text-light);
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* ===================================
+   TABS MINIMALISTAS Y FIJAS
+   =================================== */
+.generator-tabs {
+  background: var(--generator-card-bg);
+  border-bottom: 1px solid var(--generator-border);
+  position: fixed !important;
+  top: 80px !important;
+  left: 0 !important;
+  right: 0 !important;
+  width: 100% !important;
+  z-index: 999 !important;
+  padding: 24px 0;
+  margin: 0;
+  box-shadow: var(--generator-shadow);
+}
+
+/* Dark mode support for tabs */
+[data-theme="dark"] .generator-tabs {
+  background: var(--bg-card);
+  border-bottom-color: var(--border-color);
+}
+
+.tabs-wrapper {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  max-width: 1000px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+  padding: 0 1rem;
+}
+
+/* Redesigned tab buttons with minimalist aesthetic */
+.tab-btn {
+  background: var(--generator-bg);
+  border: 1px solid var(--generator-border);
+  color: var(--generator-text);
+  padding: 12px 20px;
+  border-radius: var(--generator-radius);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-weight: 500;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-width: 100px;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Enhanced dark mode tab button styling */
+[data-theme="dark"] .tab-btn {
+  background: var(--bg-secondary);
+  border-color: var(--border-color);
+  color: var(--text-secondary);
+}
+
+[data-theme="dark"] .tab-btn:hover {
+  border-color: var(--primary-color);
+  color: var(--primary-color);
+  background: var(--bg-accent);
+}
+
+[data-theme="dark"] .tab-btn.active {
+  background: var(--primary-color);
+  border-color: var(--primary-color);
+  color: white;
+}
+
+.tab-btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.5s;
+}
+
+.tab-btn:hover::before {
+  left: 100%;
+}
+
+.tab-btn:hover {
+  border-color: var(--generator-primary);
+  color: var(--generator-primary);
+  transform: translateY(-1px);
+  box-shadow: var(--generator-shadow-hover);
+}
+
+.tab-btn.active {
+  background: var(--generator-primary);
+  border-color: var(--generator-primary);
+  color: white;
+  box-shadow: var(--generator-shadow-hover);
+}
+
+.tab-btn i {
+  font-size: 0.9rem;
+}
+
+/* ===================================
+   CONTENIDO DEL GENERADOR
+   =================================== */
+.generator-content {
+  padding-top: 180px !important;
+  padding-bottom: 4rem;
+  background: var(--generator-bg);
+  min-height: calc(100vh - 200px);
+}
+
+.tab-content {
+  display: none;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.tab-content.active {
+  display: block;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ===================================
+   TARJETAS MINIMALISTAS
+   =================================== */
+.generator-card {
+  background: var(--generator-card-bg);
+  border-radius: var(--generator-radius);
+  box-shadow: var(--generator-shadow);
+  border: 1px solid var(--generator-border);
+  max-width: 900px;
+  margin: 0 auto 2rem;
+  overflow: hidden;
+}
+
+/* Dark mode support for generator cards */
+[data-theme="dark"] .generator-card {
+  background: var(--bg-card);
+  border-color: var(--border-color);
+  box-shadow: var(--shadow-md);
+}
+
+.card-header {
+  background: var(--generator-bg);
+  color: var(--generator-text);
+  padding: 2.5rem 2rem;
+  text-align: center;
+  border-bottom: 1px solid var(--generator-border);
+}
+
+/* Dark mode support for card headers */
+[data-theme="dark"] .card-header {
+  background: var(--bg-secondary);
+  color: var(--text-primary);
+  border-bottom-color: var(--border-color);
+}
+
+.card-header h2 {
+  margin: 0 0 0.75rem 0;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--generator-text);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+
+.card-header h2 i {
+  color: var(--generator-primary);
+}
+
+.card-header p {
+  margin: 0;
+  color: var(--generator-text-light);
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* ===================================
+   FORMULARIOS MINIMALISTAS
+   =================================== */
+.form-section {
+  padding: 2.5rem;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.input-group {
+  margin-bottom: 1.5rem;
+}
+
+.input-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 500;
+  color: var(--generator-text);
+  font-size: 0.9rem;
+}
+
+/* Enhanced input styling with better focus states */
+.input-group input,
+.input-group select,
+.input-group textarea {
+  width: 100%;
+  padding: 12px 16px;
+  border: 1px solid var(--generator-border);
+  border-radius: var(--generator-radius);
+  font-size: 1rem;
+  background: var(--generator-card-bg);
+  color: var(--generator-text);
+  transition: all 0.2s ease;
+  font-family: inherit;
+}
+
+/* Enhanced dark mode support for form inputs */
+[data-theme="dark"] .input-group input,
+[data-theme="dark"] .input-group select,
+[data-theme="dark"] .input-group textarea {
+  background: var(--bg-input);
+  border-color: var(--border-color);
+  color: var(--text-primary);
+}
+
+[data-theme="dark"] .input-group input::placeholder,
+[data-theme="dark"] .input-group textarea::placeholder {
+  color: var(--text-light);
+}
+
+[data-theme="dark"] .input-group input:focus,
+[data-theme="dark"] .input-group select:focus,
+[data-theme="dark"] .input-group textarea:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px rgba(167, 139, 250, 0.2);
+  background: var(--bg-card);
+}
+
+.input-group input:focus,
+.input-group select:focus,
+.input-group textarea:focus {
+  outline: none;
+  border-color: var(--generator-primary);
+  box-shadow: 0 0 0 3px rgba(var(--primary-rgb), 0.1);
+}
+
+.input-group textarea {
+  resize: vertical;
+  min-height: 120px;
+  line-height: 1.5;
+}
+
+.input-group small {
+  display: block;
+  margin-top: 4px;
+  color: var(--generator-text-light);
+  font-size: 0.8rem;
+}
+
+/* Redesigned buttons with consistent styling */
+.btn-generate {
+  background: var(--gradient-primary);
+  color: white;
+  border: none;
+  padding: 16px 32px;
+  border-radius: var(--generator-radius);
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin: 2rem auto 0;
+  min-width: 200px;
+  box-shadow: var(--generator-shadow-hover);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Dark mode support for generate button */
+[data-theme="dark"] .btn-generate {
+  background: var(--gradient-primary);
+  color: white;
+}
+
+[data-theme="dark"] .btn-generate:hover {
+  box-shadow: 0 8px 25px rgba(167, 139, 250, 0.3);
+}
+
+.btn-generate::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.5s;
+}
+
+.btn-generate:hover::before {
+  left: 100%;
+}
+
+.btn-generate:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(var(--primary-rgb), 0.3);
+}
+
+.btn-generate:disabled {
+  background: var(--generator-text-light);
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+/* ===================================
+   SECCIONES ESPECÍFICAS MEJORADAS
+   =================================== */
+.videos-management-section {
+  margin-top: 2rem;
+  padding: 2rem;
+  background: var(--generator-bg);
+  border: 1px solid var(--generator-border);
+  border-radius: var(--generator-radius);
+}
+
+/* Dark mode support for video management section */
+[data-theme="dark"] .videos-management-section {
+  background: var(--bg-secondary);
+  border-color: var(--border-color);
+}
+
+.videos-management-section h4 {
+  margin: 0 0 1.5rem 0;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--generator-text);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.videos-management-section h4 i {
+  color: var(--generator-primary);
+}
+
+.add-video-form {
+  background: var(--generator-card-bg);
+  padding: 1.5rem;
+  border-radius: var(--generator-radius);
+  border: 1px solid var(--generator-border);
+  margin-bottom: 1.5rem;
+}
+
+/* Dark mode support for add video form */
+[data-theme="dark"] .add-video-form {
+  background: var(--bg-card);
+  border-color: var(--border-color);
+}
+
+.video-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  background: var(--generator-card-bg);
+  border: 1px solid var(--generator-border);
+  border-radius: var(--generator-radius);
+  margin-bottom: 1rem;
+  transition: all 0.2s ease;
+}
+
+/* Dark mode support for video items */
+[data-theme="dark"] .video-item {
+  background: var(--bg-card);
+  border-color: var(--border-color);
+}
+
+[data-theme="dark"] .video-item:hover {
+  box-shadow: var(--shadow-md);
+}
+
+.video-item:hover {
+  box-shadow: var(--generator-shadow);
+}
+
+.btn-remove-video {
+  background: var(--error-color);
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: var(--generator-radius);
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.btn-remove-video:hover {
+  background: var(--danger-hover);
+  transform: translateY(-1px);
+}
+
+.btn-add-video {
+  background: var(--success-color);
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: var(--generator-radius);
+  cursor: pointer;
+  font-size: 0.95rem;
+  font-weight: 600;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 1rem;
+}
+
+.btn-add-video:hover {
+  transform: translateY(-1px);
+  box-shadow: var(--generator-shadow-hover);
+}
+
+/* ===================================
+   VISTA PREVIA Y CÓDIGO
+   =================================== */
+.preview-section {
+  padding: 0 2.5rem 2.5rem;
+  background: var(--generator-bg);
+  border-top: 1px solid var(--generator-border);
+}
+
+/* Dark mode support for preview section */
+[data-theme="dark"] .preview-section {
+  background: var(--bg-secondary);
+  border-top-color: var(--border-color);
+}
+
+.preview-section h3 {
+  margin: 0 0 1.5rem 0;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--generator-text);
+}
+
+.code-section {
+  background: var(--generator-card-bg);
+  border: 1px solid var(--generator-border);
+  border-radius: var(--generator-radius);
+  overflow: hidden;
+  margin: 2rem 2.5rem;
+}
+
+/* Dark mode support for code section */
+[data-theme="dark"] .code-section {
+  background: var(--bg-card);
+  border-color: var(--border-color);
+}
+
+.code-header {
+  background: var(--generator-bg);
+  padding: 1.5rem;
+  border-bottom: 1px solid var(--generator-border);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Dark mode support for code header */
+[data-theme="dark"] .code-header {
+  background: var(--bg-secondary);
+  border-bottom-color: var(--border-color);
+}
+
+.code-header h3 {
+  margin: 0;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--generator-text);
+}
+
+.btn-copy {
+  background: var(--generator-primary);
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: var(--generator-radius);
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.btn-copy:hover {
+  background: var(--generator-primary-hover);
+  transform: translateY(-1px);
+}
+
+.code-section pre {
+  margin: 0;
+  padding: 2rem;
+  background: var(--generator-bg);
+  color: var(--generator-text);
+  font-family: "Courier New", monospace;
+  font-size: 0.85rem;
+  line-height: 1.6;
+  overflow-x: auto;
+}
+
+/* Dark mode support for code pre */
+[data-theme="dark"] .code-section pre {
+  background: var(--bg-primary);
+  color: var(--text-primary);
+}
+
+/* ===================================
+   NOTIFICACIONES MEJORADAS
+   =================================== */
+.loading-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+/* Dark mode support for loading modal */
+[data-theme="dark"] .loading-modal {
+  background: rgba(15, 23, 42, 0.8);
+}
+
+.loading-modal.active {
+  display: flex;
+  opacity: 1;
+}
+
+.loading-content {
+  background: var(--generator-card-bg);
+  padding: 2rem;
+  border-radius: var(--generator-radius);
+  text-align: center;
+  box-shadow: var(--generator-shadow-hover);
+  border: 1px solid var(--generator-border);
+}
+
+/* Dark mode support for loading content */
+[data-theme="dark"] .loading-content {
+  background: var(--bg-card);
+  border-color: var(--border-color);
+  color: var(--text-primary);
+}
+
+.loading-spinner {
+  border: 3px solid var(--generator-border);
+  border-top: 3px solid var(--generator-primary);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+  margin: 0 auto 1rem;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.toast {
+  position: fixed;
+  top: 120px;
+  right: 1rem;
+  background: var(--generator-card-bg);
+  border: 1px solid var(--generator-border);
+  border-radius: var(--generator-radius);
+  padding: 1rem 1.5rem;
+  box-shadow: var(--generator-shadow-hover);
+  z-index: 1001;
+  max-width: 350px;
+  transform: translateX(100%);
+  opacity: 0;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+}
+
+/* Dark mode support for toast notifications */
+[data-theme="dark"] .toast {
+  background: var(--bg-card);
+  border-color: var(--border-color);
+  color: var(--text-primary);
+}
+
+.toast.active {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+.toast.success {
+  border-left: 4px solid var(--success-color);
+}
+
+.toast.error {
+  border-left: 4px solid var(--error-color);
+}
+
+.toast i {
+  font-size: 1.1rem;
+}
+
+.toast.success i {
+  color: var(--success-color);
+}
+
+.toast.error i {
+  color: var(--error-color);
+}
+
+/* Added checkbox styling for dark mode */
+.checkbox-group {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.checkbox-label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  color: var(--generator-text);
+  font-weight: 500;
+}
+
+[data-theme="dark"] .checkbox-label {
+  color: var(--text-secondary);
+}
+
+.checkbox-label input[type="checkbox"] {
+  width: auto;
+  margin: 0;
+}
+
+/* ===================================
+   RESPONSIVE MEJORADO
+   =================================== */
+@media (max-width: 768px) {
+  .page-header-compact {
+    padding: 100px 0 60px 0;
+  }
+
+  .generator-tabs {
+    position: fixed !important;
+    top: 70px !important;
+    padding: 16px 0;
+  }
+
+  .generator-content {
+    padding-top: 160px !important;
+  }
+
+  .tabs-wrapper {
+    gap: 4px;
+  }
+
+  .tab-btn {
+    padding: 10px 16px;
+    font-size: 0.8rem;
+    min-width: 90px;
+  }
+
+  .form-section {
+    padding: 2rem;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .code-section {
+    margin: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .generator-tabs {
+    position: fixed !important;
+    top: 65px !important;
+    padding: 12px 0;
+  }
+
+  .generator-content {
+    padding-top: 150px !important;
+  }
+
+  .card-header {
+    padding: 2rem 1.5rem;
+  }
+
+  .form-section {
+    padding: 1.5rem;
+  }
+
+  .tab-btn {
+    padding: 8px 12px;
+    font-size: 0.75rem;
+    min-width: 80px;
+  }
+
+  .tab-btn span {
+    display: none;
+  }
+
+  .toast {
+    right: 0.5rem;
+    max-width: calc(100vw - 1rem);
+  }
+}
