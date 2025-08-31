@@ -1,0 +1,879 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biblioteca Digital - Nexo Artistico</title>
+    <link rel="stylesheet" href="css/color-palette.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/dark-mode.css">
+    <link rel="stylesheet" href="css/biblioteca.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+       <div class="container">
+           <div class="logo">
+               <i class="fas fa-palette"></i>
+               <span>Nexo Artistico</span>
+           </div>
+           <nav>
+               <ul>
+                   <li><a href="index.html">Inicio</a></li>
+                   <li><a href="about.html">Sobre el Nexo</a></li>
+                   <li><a href="apoyanos.html">Apóyanos</a></li>
+                   <li><a href="biblioteca.html"  class="active">Biblioteca</a></li>
+                   <li><a href="centro-mejora.html">Centro de Mejora</a></li>
+                   <li><a href="proyectos.html">Proyectos</a></li>
+                   <li><a href="https://chat.whatsapp.com/Lwj85QzALMFBjCnYirEJ9K" target="_blank">Comunidad</a></li>
+               </ul>
+           </nav>
+           <div class="header-actions">
+               <button id="theme-toggle" class="theme-toggle" aria-label="Toggle Dark Mode">
+                   <i class="fas fa-moon"></i>
+               </button>
+               <div class="header-btn">
+                   <a href="https://chat.whatsapp.com/Lwj85QzALMFBjCnYirEJ9K" target="_blank">
+                       <i class="fab fa-whatsapp"></i>
+                       Únete por WhatsApp
+                   </a>
+               </div>
+           </div>
+           <div class="menu-toggle">
+               <i class="fas fa-bars"></i>
+           </div>
+           <!-- Adding mini ads button that's always visible -->
+           <a href="apoyanos.html#gracias" class="mini-ads-btn" title="Ver anuncios para apoyarnos">
+               <i class="fas fa-ad"></i>
+           </a>
+       </div>
+   </header>
+
+   <!-- Mobile Menu -->
+    <div class="mobile-menu">
+        <div class="mobile-menu-close">
+            <i class="fas fa-times"></i>
+        </div>
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="about.html">Sobre el Nexo</a></li>
+            <li><a href="apoyanos.html">Apóyanos</a></li>
+            <li><a href="biblioteca.html">Biblioteca</a></li>
+            <li><a href="centro-mejora.html">Centro de Mejora</a></li>
+            <li><a href="proyectos.html">Proyectos</a></li>
+            <li><a href="https://chat.whatsapp.com/Lwj85QzALMFBjCnYirEJ9K" target="_blank">Comunidad</a></li>
+        </ul>
+        <div class="mobile-menu-actions">
+            <button id="mobile-theme-toggle" class="theme-toggle" aria-label="Toggle Dark Mode">
+                <i class="fas fa-moon"></i>
+            </button>
+            <div class="mobile-menu-btn">
+                <a href="https://chat.whatsapp.com/Lwj85QzALMFBjCnYirEJ9K" target="_blank">
+                    <i class="fab fa-whatsapp"></i>
+                    Únete por WhatsApp
+                </a>
+            </div>
+        </div>
+    </div>
+
+   <!-- Mobile Menu Overlay -->
+   <div class="mobile-menu-overlay"></div>
+
+   <!-- Page Header - Compact -->
+   <section class="page-header-compact">
+       <div class="container">
+           <h1>Nuestra <span class="gradient-text">Biblioteca</span> Digital</h1>
+           <p>Descubre recursos artísticos y encuentra inspiración en nuestras colecciones curadas.</p>
+       </div>
+   </section>
+
+    <!-- Navigation Tabs - Compact -->
+    <section class="library-tabs-compact">
+        <div class="container">
+            <div class="tabs-wrapper">
+                <button class="tab-btn active" data-tab="libros">
+                    <i class="fas fa-book"></i>
+                    <span>Libros</span>
+                </button>
+                <button class="tab-btn " data-tab="recursos">
+                    <i class="fas fa-paint-brush"></i>
+                    <span>Recursos</span>
+                </button>
+                <button class="tab-btn " data-tab="videos">
+                    <i class="fas fa-video"></i>
+                    <span>Videos</span>
+                </button>
+                <button class="tab-btn " data-tab="software">
+                    <i class="fas fa-desktop"></i>
+                    <span>Software</span>
+                </button>
+                <button class="tab-btn " data-tab="pinterest">
+                    <i class="fab fa-pinterest"></i>
+                    <span>Pinterest</span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Library Content -->
+    <section class="library-content">
+        <div class="container">
+            <!-- Libros Tab -->
+            <div id="libros" class="tab-content active">
+                <div class="search-section">
+                    <div class="search-container">
+                        <div class="search-box">
+                            <input type="text" id="libros-search" placeholder="Buscar libros por título, autor o categoría...">
+                            <button type="button">
+                                <i class="fas fa-search"></i>
+                            </button>
+                        </div>
+                        <div class="filter-options">
+                            <select id="libros-filter">
+                                <option value="all">Todas las categorías</option>
+                                <option value="Diseño">Diseño</option>
+                                <option value="Artes Plásticas">Artes Plásticas</option>
+                                <option value="Anatomía">Anatomía</option>
+                                <option value="Perspectiva">Perspectiva</option>
+                                <option value="Color">Teoría del Color</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="books-grid" id="libros-grid">
+                    <!-- Book 1 -->
+                    <div class="book-card" data-category="Diseño">
+                        <div class="book-cover">
+                            <img src="img/portadas/Libros/01 Dibujar para diseñar.png" alt="Dibujar para diseñar">
+                            <div class="book-overlay">
+                                <div class="book-actions">
+                                    <a href="https://ouo.io/rDNxvM" target="_blank" class="download-btn">
+                                        <i class="fas fa-download"></i>
+                                        Descargar
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="book-info">
+                            <h3>Dibujar para diseñar</h3>
+                            <p class="book-author">Carlos Ruiz Brussain</p>
+                            <div class="book-tags">
+                                <span class="tag">Diseño</span>
+                                <span class="tag">Creatividad</span>
+                                <span class="tag">Ilustración</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Book 2 -->
+                    <div class="book-card" data-category="Artes Plásticas">
+                        <div class="book-cover">
+                            <img src="img/portadas/Libros/ver y comprender las artes plasticas.png" alt="Ver y comprender las artes plásticas">
+                            <div class="book-overlay">
+                                <div class="book-actions">
+                                    <a href="https://ouo.io/KaEsZ9" target="_blank" class="download-btn">
+                                        <i class="fas fa-download"></i>
+                                        Descargar
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="book-info">
+                            <h3>Ver y Comprender las Artes Plásticas</h3>
+                            <p class="book-author">Oscar Morriña y Maria Elena Jubrias</p>
+                            <div class="book-tags">
+                                <span class="tag">Apreciación artística</span>
+                                <span class="tag">Artes plásticas</span>
+                                <span class="tag">Comprensión</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Book 3 -->
+                    <div class="book-card" data-category="Artes Plásticas">
+                        <div class="book-cover">
+                            <img src="img/portadas/Libros/Artes plasticas.png" alt="Artes plásticas básico">
+                            <div class="book-overlay">
+                                <div class="book-actions">
+                                    <a href="https://ouo.io/2depDSu" target="_blank" class="download-btn">
+                                        <i class="fas fa-download"></i>
+                                        Descargar
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="book-info">
+                            <h3>Artes Plásticas. Primero Básico</h3>
+                            <p class="book-author">Guao.org</p>
+                            <div class="book-tags">
+                                <span class="tag">Educación artística</span>
+                                <span class="tag">Nivel básico</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    
+                </div>
+            </div>
+
+            <!-- Recursos Tab -->
+            <div id="recursos" class="tab-content">
+                <div class="search-section">
+                    <div class="search-container">
+                        <div class="search-box">
+                            <input type="text" id="recursos-search" placeholder="Buscar recursos por nombre o categoría...">
+                            <button type="button">
+                                <i class="fas fa-search"></i>
+                            </button>
+                        </div>
+                        <div class="filter-options">
+                            <select id="recursos-filter">
+                                <option value="all">Todos los recursos</option>
+                                <option value="brushes">Pinceles</option>
+                                <option value="textures">Texturas</option>
+                                <option value="palettes">Paletas de color</option>
+                                <option value="templates">Plantillas</option>
+                                <option value="fonts">Fuentes</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="resources-grid" id="recursos-grid">
+
+                    <!-- Resource 1 -->
+                    <div class="resource-card" data-category="brushes">
+                        <div class="resource-preview">
+                            <img src="img/portadas/recursos/pinceles krita.png" alt="Pinceles de Acuarela">
+                            <div class="resource-overlay">
+                                <div class="resource-actions">
+                                    <a href="https://imagy-app.translate.goog/free-brush-packs-for-krita/?_x_tr_sl=en&_x_tr_tl=es&_x_tr_hl=es&_x_tr_pto=tc" class="download-btn">
+                                        <i class="fas fa-download"></i>
+                                        Descargar
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="resource-info">
+                            <h3>Pinceles de Krita </h3>
+                            <p class="resource-description">10+ pinceles para Krita</p>
+                            <div class="resource-meta">
+                                <span class="resource-type"><i class="fas fa-paint-brush"></i> Pinceles</span>
+                                <span class="resource-app">Krita</span>
+                            </div>
+                            <div class="resource-tags">
+                                <span class="tag">Pinceles</span>
+                                <span class="tag">Digital</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Videos Tab -->
+            <div id="videos" class="tab-content">
+                <div class="search-section">
+                    <div class="search-container">
+                        <div class="search-box">
+                            <input type="text" id="videos-search" placeholder="Buscar videos por título o categoría...">
+                            <button type="button">
+                                <i class="fas fa-search"></i>
+                            </button>
+                        </div>
+                        <div class="filter-options">
+                            <select id="videos-filter">
+                                <option value="all">Todas las categorías</option>
+                                <option value="speedpaint">Speedpaints</option>
+                                <option value="tutorial">Tutoriales</option>
+                                <option value="review">Reviews</option>
+                                <option value="process">Procesos</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            <!-- Videos Grid -->
+                <div class="videos-grid" id="videos-grid">
+
+                    <!-- Video 1 -  -->
+                    <div class="video-card" data-category="review" data-youtube="https://www.youtube.com/watch?v=GOsIYnphe-w&pp=ygUkeHAgcGVuIGFydGlzdCAxMiBwcm8gcmV2aWV3IGVzcGHDsW9s0gcJCd4JAYcqIYzv">
+                        <div class="video-thumbnail">
+                            <img src="https://img.youtube.com/vi/GOsIYnphe-w/maxresdefault.jpg" alt="XP Pen - Artist 12 Pro Unboxing y Review" loading="lazy">
+                            <div class="video-duration">10:25</div>
+                            <div class="video-overlay">
+                                <button class="play-btn" onclick="openVideoModal('GOsIYnphe-w')">
+                                    <i class="fas fa-play"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="video-info">
+                            <h3>🎨 XP Pen - Artist 12 Pro Unboxing y Review</h3>
+                            <p class="video-description">Un review de la tableta grafiva <span>XP Pen - Artist 12 Pro</span> recomendada por Mikaro</p>
+                            <div class="video-meta">
+                                <span class="video-author">TkAndresB</span>
+                                <span class="video-type">Review</span>
+                            </div>
+                            <div class="video-tags">
+                                <span class="tag">Tableta Grafica</span>
+                                <span class="tag">Reviews</span>
+                                <span class="tag">Unboxing</span>
+                            </div>
+                        </div>
+                    </div>
+
+      <!-- Video: 1 Hora de Consejos de Dibujo Para poner de fondo en lo que Procrastinas -->
+<div class="video-card" data-category="tips" data-youtube="https://www.youtube.com/watch?v=dGSBgvLCayk&t=13s">
+    <div class="video-thumbnail">
+        <img src="https://img.youtube.com/vi/dGSBgvLCayk/maxresdefault.jpg" alt="1 Hora de Consejos de Dibujo Para poner de fondo en lo que Procrastinas, aporte de TkAndresB " loading="lazy">
+        <div class="video-duration">9:00</div>
+        <div class="video-overlay">
+            <button class="play-btn" onclick="openVideoModal('dGSBgvLCayk')">
+                <i class="fas fa-play"></i>
+            </button>
+        </div>
+    </div>
+    <div class="video-info">
+        <h3>1 Hora de Consejos de Dibujo Para poner de fondo en lo que Procrastinas</h3>
+        <p class="video-description">Video de Tips y Consejos por Not Perera</p>
+        <div class="video-meta">
+            <span class="video-author">Not Perera</span>
+            <span class="video-type">Tips y Consejos</span>
+        </div>
+        <div class="video-tags">
+            <span class="tag">tips</span>
+                <span class="tag">consejos</span>
+                <span class="tag">trucos</span>
+        </div>
+    </div>
+</div>
+
+                </div>
+
+            </div>
+
+            <!-- Software Tab -->
+            <div id="software" class="tab-content">
+                <div class="search-section">
+                    <div class="search-container">
+                        <div class="search-box">
+                            <input type="text" id="software-search" placeholder="Buscar software o guías...">
+                            <button type="button">
+                                <i class="fas fa-search"></i>
+                            </button>
+                        </div>
+                        <div class="filter-options">
+                            <select id="software-filter">
+                                <option value="all">Todas las categorías</option>
+                                <option value="drawing">Dibujo</option>
+                                <option value="3d">3D</option>
+                                <option value="animation">Animación</option>
+                                <option value="photo">Fotografía</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="software-grid" id="software-grid">
+                    <!-- Software 1 -->
+                    <div class="software-card" data-category="drawing">
+                        <div class="software-header">
+                            <img src="img/icons/krita.png" alt="Krita" class="software-logo">
+                            <div class="software-badges">
+                                <span class="badge free">Gratis</span>
+                                <span class="badge open-source">Open Source</span>
+                            </div>
+                        </div>
+                        <div class="software-info">
+                            <h3>Krita</h3>
+                            <p class="software-description">Software de pintura digital profesional, gratuito y de código abierto</p>
+                            <div class="software-meta">
+                                <span class="software-platforms">
+                                    <i class="fab fa-windows"></i>
+                                    <i class="fab fa-apple"></i>
+                                    <i class="fab fa-linux"></i>
+                                </span>
+                                <span class="software-version">Versión: 5.0.0</span>
+                            </div>
+                            <div class="software-actions">
+                                <a href="https://krita.org/download/" target="_blank" class="download-btn">
+                                    <i class="fas fa-download"></i>
+                                    Descargar
+                                </a>
+                                <button class="guide-btn">
+                                    <i class="fas fa-book"></i>
+                                    Guía
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Software 2 -->
+                    <div class="software-card" data-category="3d">
+                        <div class="software-header">
+                            <img src="img/icons/blender.png" alt="Blender" class="software-logo">
+                            <div class="software-badges">
+                                <span class="badge free">Gratis</span>
+                                <span class="badge open-source">Open Source</span>
+                            </div>
+                        </div>
+                        <div class="software-info">
+                            <h3>Blender</h3>
+                            <p class="software-description">Suite completa para modelado 3D, animación, renderizado y más</p>
+                            <div class="software-meta">
+                                <span class="software-platforms">
+                                    <i class="fab fa-windows"></i>
+                                    <i class="fab fa-apple"></i>
+                                    <i class="fab fa-linux"></i>
+                                </span>
+                                <span class="software-version">Versión: 3.6</span>
+                            </div>
+                            <div class="software-actions">
+                                <a href="https://www.blender.org/download/" target="_blank" class="download-btn">
+                                    <i class="fas fa-download"></i>
+                                    Descargar
+                                </a>
+                                <button class="guide-btn">
+                                    <i class="fas fa-book"></i>
+                                    Guía
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Software 3 -->
+                    <div class="software-card" data-category="photo">
+                        <div class="software-header">
+                            <img src="img/icons/gimp.png" alt="GIMP" class="software-logo">
+                            <div class="software-badges">
+                                <span class="badge free">Gratis</span>
+                                <span class="badge open-source">Open Source</span>
+                            </div>
+                        </div>
+                        <div class="software-info">
+                            <h3>GIMP</h3>
+                            <p class="software-description">Editor de imágenes potente y gratuito, alternativa a Photoshop</p>
+                            <div class="software-meta">
+                                <span class="software-platforms">
+                                    <i class="fab fa-windows"></i>
+                                    <i class="fab fa-apple"></i>
+                                    <i class="fab fa-linux"></i>
+                                </span>
+                                <span class="software-version">Versión: 2.10.34</span>
+                            </div>
+                            <div class="software-actions">
+                                <a href="https://www.gimp.org/downloads/" target="_blank" class="download-btn">
+                                    <i class="fas fa-download"></i>
+                                    Descargar
+                                </a>
+                                <button class="guide-btn">
+                                    <i class="fas fa-book"></i>
+                                    Guía
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Software 4 -->
+                    <div class="software-card" data-category="animation">
+                        <div class="software-header">
+                            <img src="img/icons/opentoonz.svg" alt="OpenToonz" class="software-logo">
+                            <div class="software-badges">
+                                <span class="badge free">Gratis</span>
+                                <span class="badge open-source">Open Source</span>
+                            </div>
+                        </div>
+                        <div class="software-info">
+                            <h3>OpenToonz</h3>
+                            <p class="software-description">Software de animación 2D profesional usado por Studio Ghibli</p>
+                            <div class="software-meta">
+                                <span class="software-platforms">
+                                    <i class="fab fa-windows"></i>
+                                    <i class="fab fa-apple"></i>
+                                    <i class="fab fa-linux"></i>
+                                </span>
+                                <span class="software-version">Versión: 1.7</span>
+                            </div>
+                            <div class="software-actions">
+                                <a href="https://opentoonz.github.io/e/" target="_blank" class="download-btn">
+                                    <i class="fas fa-download"></i>
+                                    Descargar
+                                </a>
+                                <button class="guide-btn">
+                                    <i class="fas fa-book"></i>
+                                    Guía
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Software 5 -->
+                    <div class="software-card" data-category="drawing">
+                        <div class="software-header">
+                            <img src="img/icons/inkscape.svg" alt="Inkscape" class="software-logo">
+                            <div class="software-badges">
+                                <span class="badge free">Gratis</span>
+                                <span class="badge open-source">Open Source</span>
+                            </div>
+                        </div>
+                        <div class="software-info">
+                            <h3>Inkscape</h3>
+                            <p class="software-description">Editor de gráficos vectoriales profesional y gratuito</p>
+                            <div class="software-meta">
+                                <span class="software-platforms">
+                                    <i class="fab fa-windows"></i>
+                                    <i class="fab fa-apple"></i>
+                                    <i class="fab fa-linux"></i>
+                                </span>
+                                <span class="software-version">Versión: 1.3</span>
+                            </div>
+                            <div class="software-actions">
+                                <a href="https://inkscape.org/release/" target="_blank" class="download-btn">
+                                    <i class="fas fa-download"></i>
+                                    Descargar
+                                </a>
+                                <button class="guide-btn">
+                                    <i class="fas fa-book"></i>
+                                    Guía
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Software 6 -->
+                    <div class="software-card" data-category="photo">
+                        <div class="software-header">
+                            <img src="img/icons/paint.net.png" alt="Paint.NET" class="software-logo">
+                            <div class="software-badges">
+                                <span class="badge free">Gratis</span>
+                            </div>
+                        </div>
+                        <div class="software-info">
+                            <h3>Paint.NET</h3>
+                            <p class="software-description">Editor de imágenes simple pero potente para Windows</p>
+                            <div class="software-meta">
+                                <span class="software-platforms">
+                                    <i class="fab fa-windows"></i>
+                                </span>
+                                <span class="software-version">Versión: 5.0</span>
+                            </div>
+                            <div class="software-actions">
+                                <a href="https://www.getpaint.net/download.html" target="_blank" class="download-btn">
+                                    <i class="fas fa-download"></i>
+                                    Descargar
+                                </a>
+                                <button class="guide-btn">
+                                    <i class="fas fa-book"></i>
+                                    Guía
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pinterest Tab -->
+            <div id="pinterest" class="tab-content">
+                <div class="pinterest-boards">
+
+                    
+<!-- Pinterest Board -->
+<div class="pinterest-board">
+    <div class="board-preview">
+        <div class="board-images">
+            <img src="https://i.pinimg.com/1200x/78/1a/1b/781a1b837ce59fdae65629c7bd94e402.jpg" alt="Galeria de Pines" class="main-image" loading="lazy">
+            <img src="https://i.pinimg.com/736x/34/6a/ea/346aeab0ef9a8bc62e7f472f84a0f6ad.jpg" alt="Galeria de Pines mini 1" class="overlay-image overlay-1" loading="lazy">
+            <img src="https://i.pinimg.com/736x/d2/a2/bd/d2a2bd6daf4a36089673ad0ab5447c9e.jpg" alt="Galeria de Pines mini 2" class="overlay-image overlay-2" loading="lazy">
+        </div>
+        <div class="board-overlay">
+            <a href="https://pin.it/4EtfcWQ2Y" target="_blank" rel="noopener noreferrer" class="view-board-btn">
+                <i class="fab fa-pinterest"></i>
+                Ver Tablero
+            </a>
+        </div>
+    </div>
+    <div class="board-info">
+        <h3>Galeria de Pines</h3>
+        <p>Todos los subtableros que tenemos para que los guardes y siempre tengas referencias nuevas al entrar a tu pinterest</p>
+        <div class="board-stats">
+            <span><i class="fas fa-thumbtack"></i> 300+ pins</span>
+        </div>
+    </div>
+</div>
+                    <!-- Board 1 -->
+                    <div class="pinterest-board">
+                        <div class="board-preview">
+                            <div class="board-images">
+                                <img src="img/portadas/Tableros/anatomia/main.jpg" alt="Anatomía" class="main-image">
+                                <img src="img/portadas/Tableros/anatomia/mini.jpg" alt="Anatomía mini 1" class="overlay-image overlay-1">
+                                <img src="img/portadas/Tableros/anatomia/mini2.jpg" alt="Anatomía mini 2" class="overlay-image overlay-2">
+                            </div>
+                            <div class="board-overlay">
+                                <a href="https://co.pinterest.com/Tk_Andres_B/cosas-de-dibujo/anatomia/" target="_blank" class="view-board-btn">
+                                    <i class="fab fa-pinterest"></i>
+                                    Ver Tablero
+                                </a>
+                            </div>
+                        </div>
+                        <div class="board-info">
+                            <h3>Anatomía</h3>
+                            <p>Referencias de anatomía humana para artistas</p>
+                            <div class="board-stats">
+                                <span><i class="fas fa-thumbtack"></i> 60+ pins</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Board 2 -->
+                    <div class="pinterest-board">
+                        <div class="board-preview">
+                            <div class="board-images">
+                                <img src="img/portadas/Tableros/perspectiva/main.jpg" alt="Perspectiva" class="main-image">
+                                <img src="img/portadas/Tableros/perspectiva/mini1.jpg" alt="Perspectiva mini 1" class="overlay-image overlay-1">
+                                <img src="img/portadas/Tableros/perspectiva/mini2.jpg" alt="Perspectiva mini 2" class="overlay-image overlay-2">
+                            </div>
+                            <div class="board-overlay">
+                                <a href="https://co.pinterest.com/Tk_Andres_B/cosas-de-dibujo/perspective-drawing/" target="_blank" class="view-board-btn">
+                                    <i class="fab fa-pinterest"></i>
+                                    Ver Tablero
+                                </a>
+                            </div>
+                        </div>
+                        <div class="board-info">
+                            <h3>Perspectiva</h3>
+                            <p>Inspiración y referencias en perspectiva</p>
+                            <div class="board-stats">
+                                <span><i class="fas fa-thumbtack"></i> 20+ pins</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Board 3 -->
+                    <div class="pinterest-board">
+                        <div class="board-preview">
+                            <div class="board-images">
+                                <img src="img/portadas/Tableros/Animals/main.jpg" alt="Animales" class="main-image">
+                                <img src="img/portadas/Tableros/Animals/mini1.jpg" alt="Animales mini 1" class="overlay-image overlay-1">
+                                <img src="img/portadas/Tableros/Animals/mini2.jpg" alt="Animales mini 2" class="overlay-image overlay-2">
+                            </div>
+                            <div class="board-overlay">
+                                <a href="https://co.pinterest.com/Tk_Andres_B/cosas-de-dibujo/animales/" target="_blank" class="view-board-btn">
+                                    <i class="fab fa-pinterest"></i>
+                                    Ver Tablero
+                                </a>
+                            </div>
+                        </div>
+                        <div class="board-info">
+                            <h3>Animales</h3>
+                            <p>Referencias de dibujo de animales</p>
+                            <div class="board-stats">
+                                <span><i class="fas fa-thumbtack"></i> 20+ pins</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    
+
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Video Modal Ultra Mejorado -->
+    <div id="videoModal" class="video-modal">
+        <div class="video-modal-header">
+            <div class="video-modal-hint">
+                <i class="fas fa-info-circle"></i>
+                Presiona ESC o haz clic fuera del video para cerrar
+            </div>
+            <div class="video-modal-actions">
+                <button class="video-modal-fullscreen" onclick="toggleFullscreen()" title="Pantalla completa">
+                    <i class="fas fa-expand"></i>
+                </button>
+                <button class="video-modal-close" onclick="closeVideoModal()" title="Cerrar video">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+        </div>
+        <div class="video-modal-content">
+            <iframe id="videoFrame" src="/placeholder.svg" frameborder="0" allowfullscreen allow="autoplay; encrypted-media"></iframe>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <i class="fas fa-palette"></i>
+                    <span>Nexo Artistico</span>
+                </div>
+                <div class="social-icons">
+                    <a href="https://www.tiktok.com/@nexo.artistico4" class="social-icon tiktok">
+                        <i class="fab fa-tiktok"></i>
+                    </a>
+                    <a href="#" class="social-icon instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="#" class="social-icon youtube">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; <span id="current-year"></span> Nexo Artistico. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script src="js/dark-mode.js"></script>
+    <script src="js/biblioteca-tabs.js"></script>
+    <script src="js/scroll-animations.js"></script>
+    <script src="js/favorites.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const menuToggle = document.querySelector('.menu-toggle');
+            const mobileMenu = document.querySelector('.mobile-menu');
+            const closeBtn = document.querySelector('.mobile-menu-close i');
+
+            if (menuToggle && mobileMenu && closeBtn) {
+                menuToggle.addEventListener('click', () => {
+                    mobileMenu.classList.add('active');
+                });
+
+                closeBtn.addEventListener('click', () => {
+                    mobileMenu.classList.remove('active');
+                });
+            }
+        });
+
+        // Video Modal Functions Ultra Mejoradas
+        function openVideoModal(videoId) {
+            const modal = document.getElementById('videoModal');
+            const iframe = document.getElementById('videoFrame');
+            
+            iframe.src = `https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0&modestbranding=1&fs=1`;
+            modal.classList.add('active');
+            
+            // Prevent body scroll
+            document.body.style.overflow = 'hidden';
+            
+            // Add escape key listener
+            document.addEventListener('keydown', handleEscapeKey);
+        }
+
+        function closeVideoModal() {
+            const modal = document.getElementById('videoModal');
+            const iframe = document.getElementById('videoFrame');
+            
+            iframe.src = '';
+            modal.classList.remove('active');
+            
+            // Restore body scroll
+            document.body.style.overflow = '';
+            
+            // Remove escape key listener
+            document.removeEventListener('keydown', handleEscapeKey);
+        }
+
+        function toggleFullscreen() {
+            const modal = document.getElementById('videoModal');
+            const content = modal.querySelector('.video-modal-content');
+            
+            if (!document.fullscreenElement) {
+                content.requestFullscreen().catch(err => {
+                    console.log(`Error attempting to enable fullscreen: ${err.message}`);
+                });
+            } else {
+                document.exitFullscreen();
+            }
+        }
+
+        function handleEscapeKey(e) {
+            if (e.key === 'Escape') {
+                closeVideoModal();
+            }
+        }
+
+        // Close modal when clicking outside
+        document.addEventListener('click', function(e) {
+            const modal = document.getElementById('videoModal');
+            if (e.target === modal) {
+                closeVideoModal();
+            }
+        });
+
+        // Handle fullscreen changes
+        document.addEventListener('fullscreenchange', function() {
+            const fullscreenBtn = document.querySelector('.video-modal-fullscreen i');
+            if (document.fullscreenElement) {
+                fullscreenBtn.className = 'fas fa-compress';
+            } else {
+                fullscreenBtn.className = 'fas fa-expand';
+            }
+        });
+
+        // Tab functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const tabButtons = document.querySelectorAll('.tab-btn');
+            const tabContents = document.querySelectorAll('.tab-content');
+
+            tabButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    const targetTab = button.getAttribute('data-tab');
+                    
+                    // Remove active class from all buttons and contents
+                    tabButtons.forEach(btn => btn.classList.remove('active'));
+                    tabContents.forEach(content => content.classList.remove('active'));
+                    
+                    // Add active class to clicked button and corresponding content
+                    button.classList.add('active');
+                    document.getElementById(targetTab).classList.add('active');
+                });
+            });
+
+            // Search functionality for each tab
+            setupSearch('libros', 'libros-search', 'libros-filter', '.book-card');
+            setupSearch('recursos', 'recursos-search', 'recursos-filter', '.resource-card');
+            setupSearch('videos', 'videos-search', 'videos-filter', '.video-card');
+            setupSearch('software', 'software-search', 'software-filter', '.software-card');
+        });
+
+        function setupSearch(tabId, searchId, filterId, cardSelector) {
+            const searchInput = document.getElementById(searchId);
+            const filterSelect = document.getElementById(filterId);
+            const cards = document.querySelectorAll(`#${tabId} ${cardSelector}`);
+
+            if (searchInput) {
+                searchInput.addEventListener('input', () => filterCards());
+            }
+            if (filterSelect) {
+                filterSelect.addEventListener('change', () => filterCards());
+            }
+
+            function filterCards() {
+                const searchTerm = searchInput ? searchInput.value.toLowerCase() : '';
+                const filterValue = filterSelect ? filterSelect.value : 'all';
+
+                cards.forEach(card => {
+                    const title = card.querySelector('h3')?.textContent.toLowerCase() || '';
+                    const description = card.querySelector('p')?.textContent.toLowerCase() || '';
+                    const category = card.getAttribute('data-category') || '';
+                    
+                    const matchesSearch = title.includes(searchTerm) || description.includes(searchTerm);
+                    const matchesFilter = filterValue === 'all' || category === filterValue;
+                    
+                    if (matchesSearch && matchesFilter) {
+                        card.style.display = 'block';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            }
+        }
+    </script>
+</body>
+</html>

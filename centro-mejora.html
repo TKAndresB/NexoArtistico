@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Centro de Mejora - Nexo Artistico</title>
+    <link rel="stylesheet" href="css/color-palette.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/dark-mode.css">
+    <link rel="stylesheet" href="css/centro-mejora.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <i class="fas fa-palette"></i>
+                <span>Nexo Artistico</span>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="about.html">Sobre el Nexo</a></li>
+                    <li><a href="apoyanos.html">Apóyanos</a></li>
+                    <li><a href="biblioteca.html">Biblioteca</a></li>
+                    <li><a href="centro-mejora.html" class="active">Centro de Mejora</a></li>
+                    <li><a href="proyectos.html">Proyectos</a></li>
+                    <li><a href="https://chat.whatsapp.com/Lwj85QzALMFBjCnYirEJ9K" target="_blank">Comunidad</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <button id="theme-toggle" class="theme-toggle" aria-label="Toggle Dark Mode">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <div class="header-btn">
+                    <a href="https://chat.whatsapp.com/Lwj85QzALMFBjCnYirEJ9K" target="_blank">
+                        <i class="fab fa-whatsapp"></i>
+                        Únete por WhatsApp
+                    </a>
+                </div>
+            </div>
+            <div class="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu">
+        <div class="mobile-menu-close">
+            <i class="fas fa-times"></i>
+        </div>
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="about.html">Sobre el Nexo</a></li>
+            <li><a href="apoyanos.html">Apóyanos</a></li>
+            <li><a href="biblioteca.html">Biblioteca</a></li>
+            <li><a href="centro-mejora.html">Centro de Mejora</a></li>
+            <li><a href="proyectos.html">Proyectos</a></li>
+            <li><a href="https://chat.whatsapp.com/Lwj85QzALMFBjCnYirEJ9K" target="_blank">Comunidad</a></li>
+        </ul>
+        <div class="mobile-menu-actions">
+            <button id="mobile-theme-toggle" class="theme-toggle" aria-label="Toggle Dark Mode">
+                <i class="fas fa-moon"></i>
+            </button>
+            <div class="mobile-menu-btn">
+                <a href="https://chat.whatsapp.com/Lwj85QzALMFBjCnYirEJ9K" target="_blank">
+                    <i class="fab fa-whatsapp"></i>
+                    Únete por WhatsApp
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu-overlay"></div>
+
+    <!-- Page Header - Compact -->
+    <section class="page-header-compact">
+        <div class="container">
+            <h1>Centro de <span class="gradient-text">Mejora</span></h1>
+            <p>Aprende y mejora tus habilidades artísticas con nuestros cursos organizados por categorías.</p>
+        </div>
+    </section>
+
+    <!-- Learning Center -->
+    <section class="learning-center">
+        <div class="container">
+            <!-- Filters and Search -->
+            <div class="learning-controls">
+                <div class="search-box">
+                    <input type="text" id="search-input" placeholder="Buscar cursos o videos...">
+                    <button id="search-btn">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+                
+                <div class="filter-options">
+                    <select id="category-filter">
+                        <option value="all">Todas las categorías</option>
+                        <option value="anatomia">Anatomía</option>
+                        <option value="arte-digital">Arte Digital</option>
+                        <option value="perspectiva">Perspectiva</option>
+                        <option value="color">Teoría del Color</option>
+                        <option value="animacion">Animación</option>
+                        <option value="tradicional">Arte Tradicional</option>
+                        <option value="composicion">Composición</option>
+                        <option value="fundamentos">Fundamentos</option>
+                    </select>
+                    
+                    <select id="level-filter">
+                        <option value="all">Todos los niveles</option>
+                        <option value="principiante">Principiante</option>
+                        <option value="intermedio">Intermedio</option>
+                        <option value="avanzado">Avanzado</option>
+                    </select>
+                    
+                    <select id="view-mode">
+                        <option value="playlists">Ver Cursos</option>
+                        <option value="videos">Ver Videos</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Progress Section -->
+            <div class="progress-section">
+                <h2>Tu Progreso General</h2>
+                <div class="progress-stats">
+                    <div class="stat">
+                        <span class="stat-number" id="completed-videos">0</span>
+                        <span class="stat-label">Videos Completados</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number" id="total-videos">0</span>
+                        <span class="stat-label">Videos Totales</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number" id="completion-percentage">0%</span>
+                        <span class="stat-label">Progreso Total</span>
+                    </div>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress-fill" id="overall-progress"></div>
+                </div>
+            </div>
+
+            <!-- Content Area -->
+            <div class="content-area">
+                <!-- Playlists View -->
+                <div id="playlists-view" class="view-container active">
+                    <div class="playlists-grid">
+    
+    <!-- CURSO 1: FUNDAMENTOS DEL DIBUJO (YA COMPLETO) -->
+    <div class="playlist-card" data-category="fundamentos" data-level="principiante">
+        <div class="playlist-thumbnail">
+            <img src="https://i.ytimg.com/vi/ubUoEuWdyuE/maxresdefault.jpg" alt="Fundamentos del Dibujo">
+            <div class="video-count">10 videos</div>
+            <div class="playlist-overlay">
+                <button class="play-button">
+                    <i class="fas fa-play"></i>
+                </button>
+            </div>
+        </div>
+        <div class="playlist-info">
+            <h3>Aprende a Dibujar de una Maldita Vez (JS Linares)</h3>
+            <div class="playlist-author">TkAndresB</div>
+            <p class="playlist-description">Aprende las bases desde cero con ejercicios prácticos.</p>
+            <div class="playlist-tags">
+                <span class="tag">Principiante</span>
+                <span class="tag">Fundamentos</span>
+            </div>
+            <div class="playlist-progress">
+                <div class="progress-bar">
+                    <div class="progress-fill" style="width: 0%"></div>
+                </div>
+                <span class="progress-text">0/10 completados</span>
+            </div>
+        </div>
+        <div class="playlist-actions">
+            <button class="btn btn-primary complete-playlist-btn" id="complete-playlist-btn">
+                <i class="fas fa-check-double"></i>
+                Marcar Playlist Completa
+            </button>
+        </div>
+        <!-- Videos de esta playlist -->
+        <div class="playlist-videos" style="display: none;">
+            <!-- Video 1 -->
+            <div class="video-item" data-youtube-url="https://youtu.be/ubUoEuWdyuE">
+                <h4>Aprende a dibujar de una maldita ves #1</h4>
+                <p>Conceptos básicos </p>
+            </div>
+            <!-- Video 2 -->
+            <div class="video-item" data-youtube-url="https://youtu.be/EKRUcVqP7X8">
+                <h4>Aprende a dibujar de una maldita ves #2</h4>
+                <p>Ejercicios de líneas rectas y curvas</p>
+            </div>
+            <!-- Video 3 -->
+            <div class="video-item" data-youtube-url="https://youtu.be/8Nlc2sCseH8?list=PL6aKLFnzsFwo5awWauzWgcy5V53jy1eXg">
+                <h4>Aprende a dibujar de una maldita vez #3</h4>
+                <p>Rutina Perfecta para mejorar en el dibujo</p>
+            </div>
+            <!-- Video 4 -->
+            <div class="video-item" data-youtube-url="https://youtu.be/5RRK5LFT7PI?list=PL6aKLFnzsFwo5awWauzWgcy5V53jy1eXg">
+                <h4>Aprende a dibujar de una maldita vez #4</h4>
+                <p>Del boceto al acabado</p>
+            </div>
+            <!-- Video 5 -->
+            <div class="video-item" data-youtube-url="https://www.youtube.com/watch?v=ZEBziIca7_U&pp=0gcJCbIJAYcqIYzv">
+                <h4>Aprende a dibujar de una maldita vez #5</h4>
+                <p>el rostro humano</p>  
+            </div>
+            <!-- Video 6 -->
+            <div class="video-item" data-youtube-url="https://www.youtube.com/watch?v=G_9pYTjnXCE">
+                <h4>Aprende a dibujar de una maldita vez #6</h4>
+                <p>Dibujar Pies</p>     
+            </div>
+            <!-- Video 7  -->
+            <div class="video-item" data-youtube-url="https://www.youtube.com/watch?v=Xxma3EkBang">
+                <h4>Aprende a dibujar de una maldita vez #7</h4>
+                <p>Dibujar Manos</p>     
+            </div>
+            <!-- Video 8-->
+            <div class="video-item" data-youtube-url="https://www.youtube.com/watch?v=n4E35sQ1whQ">
+                <h4>Aprende a dibujar de una maldita vez #8</h4>
+                <p>Sistema con modulos</p>     
+            </div>
+            <!-- Video 9 -->
+            <div class="video-item" data-youtube-url="https://www.youtube.com/watch?v=5ynHOtFWsKU">
+                <h4>Aprende a dibujar de una maldita vez #9</h4>
+                <p>Dibujo Anatomico</p>     
+            </div>
+            <!-- Video 10 -->
+            <div class="video-item" data-youtube-url="https://www.youtube.com/watch?v=DhcmgN3ITnw&pp=0gcJCbIJAYcqIYzv">
+                <h4>Aprende a dibujar de una maldita vez #10</h4>
+                <p>Dibujar Cabello</p>     
+            </div>
+        </div>
+    </div>
+
+    <!-- Playlist: Curso Manga - CORREGIDO -->
+<div class="playlist-card" data-category="general" data-level="principiante">
+    <div class="playlist-thumbnail">
+        <img src="https://i.ytimg.com/vi/qGjddgmiccU/hqdefault.jpg?sqp=-oaymwEXCOADEI4CSFryq4qpAwkIARUAAIhCGAE=&amp;rs=AOn4CLC0PMGmOlDEjbd8YShufbEITo5ucQ" alt="Curso Manga">
+        <div class="video-count">11 videos</div>
+        <div class="playlist-overlay">
+            <button class="play-button">
+                <i class="fas fa-play"></i>
+            </button>
+        </div>
+    </div>
+    <div class="playlist-info">
+        <h3>Curso Manga</h3>
+        <div class="playlist-author">TkAndresB</div>
+        <p class="playlist-description">Curso de manga hecho por el canal Manga sin secretos</p>
+        <div class="playlist-tags">
+            <span class="tag">Principiante</span>
+            <span class="tag">Manga</span>
+        </div>
+        <div class="playlist-progress">
+            <div class="progress-bar">
+                <div class="progress-fill" style="width: 0%"></div>
+            </div>
+            <span class="progress-text">0/11 completados</span>
+        </div>
+    </div>
+    <div class="playlist-actions">
+        <button class="btn btn-primary complete-playlist-btn" id="complete-playlist-btn">
+            <i class="fas fa-check-double"></i>
+            Marcar Playlist Completa
+        </button>
+    </div>
+    <!-- Videos de esta playlist -->
+    <div class="playlist-videos" style="display: none;">
+        <!-- Video 1 -->
+        <div class="video-item" data-youtube-url="https://www.youtube.com/watch?v=qGjddgmiccU&list=PLfYdFCch1xTYcDfo5zi6b_Em4N6dKC8Bl">
+            <h4>Método de Andrew Loomis aplicado al Manga Japonés</h4>
+            <p>Video 1 de la playlist</p>
+        </div>
+        <!-- Video 2 -->
+        <div class="video-item" data-youtube-url="https://www.youtube.com/watch?v=Eam-MX0Yje4&list=PLfYdFCch1xTYcDfo5zi6b_Em4N6dKC8Bl&index=2">
+            <h4>Método de Andrew Loomis aplicado al Rostro en el Manga Japonés</h4>
+            <p>Video 2 de la playlist</p>
+        </div>
+        <!-- Video 3 -->
+        <div class="video-item" data-youtube-url="https://www.youtube.com/watch?v=9COGHwr88Y8&list=PLfYdFCch1xTYcDfo5zi6b_Em4N6dKC8Bl&index=3&pp=gAQBiAQB">
+            <h4>Método de Andrew Loomis aplicado al cuerpo en el Manga Japonés</h4>
+            <p>Video 3 de la playlist</p>
+        </div>
+        <!-- Video 4 -->
+        <div class="video-item" data-youtube-url="https://www.youtube.com/watch?v=yU8K0chMKGc&list=PLfYdFCch1xTYcDfo5zi6b_Em4N6dKC8Bl&index=4&pp=gAQBiAQB">
+            <h4>Anatomia aplicada para dibujantes de manga japonés</h4>
+            <p>Video 4 de la playlist</p>
+        </div>
+        <!-- Video 5 -->
+        <div class="video-item" data-youtube-url="https://www.youtube.com/watch?v=9Vpk0VdLxX0&list=PLfYdFCch1xTYcDfo5zi6b_Em4N6dKC8Bl&index=5&pp=gAQBiAQB">
+            <h4>Como crear tu manga desde cero</h4>
+            <p>Video 5 de la playlist</p>
+        </div>
+        <!-- Video 6 -->
+        <div class="video-item" data-youtube-url="https://www.youtube.com/watch?v=C3WwOtfEPfo&list=PLfYdFCch1xTYcDfo5zi6b_Em4N6dKC8Bl&index=6&pp=gAQBiAQB">
+            <h4>Diseño de personajes | Protagonista Femenino |</h4>
+            <p>Video 6 de la playlist</p>
+        </div>
+        <!-- Video 7 -->
+        <div class="video-item" data-youtube-url="https://www.youtube.com/watch?v=v6t5TT6VSF4&list=PLfYdFCch1xTYcDfo5zi6b_Em4N6dKC8Bl&index=7&pp=gAQBiAQB">
+            <h4>Dibujar una pagina de Manga</h4>
+            <p>Video 7 de la playlist</p>
+        </div>
+        <!-- Video 8 -->
+        <div class="video-item" data-youtube-url="https://www.youtube.com/watch?v=XxGvvtr5GaM&list=PLfYdFCch1xTYcDfo5zi6b_Em4N6dKC8Bl&index=8&pp=gAQBiAQB0gcJCa0JAYcqIYzv">
+            <h4>Fisonomia de personajes humanos</h4>
+            <p>Video 8 de la playlist</p>
+        </div>
+        <!-- Video 9 -->
+        <div class="video-item" data-youtube-url="https://www.youtube.com/watch?v=0E3aZdB3ojY&list=PLfYdFCch1xTYcDfo5zi6b_Em4N6dKC8Bl&index=9&pp=gAQBiAQB">
+            <h4>Planos visuales en el Manga Japones</h4>
+            <p>Video 9 de la playlist</p>
+        </div>
+        <!-- Video 10 -->
+        <div class="video-item" data-youtube-url="https://www.youtube.com/watch?v=YNPE-PoJogA&list=PLfYdFCch1xTYcDfo5zi6b_Em4N6dKC8Bl&index=10&pp=gAQBiAQB">
+            <h4>Hojas de Diseño</h4>
+            <p>Video 10 de la playlist</p>
+        </div>
+        <!-- Video 11 -->
+        <div class="video-item" data-youtube-url="https://www.youtube.com/watch?v=mFr0gBT3JjM&list=PLfYdFCch1xTYcDfo5zi6b_Em4N6dKC8Bl&index=11&pp=gAQBiAQB0gcJCa0JAYcqIYzv">
+            <h4>Diseño de personajes masculinos 1 para manga japonés</h4>
+            <p>Video 11 de la playlist</p>
+        </div>
+    </div>
+</div>
+<!-- Fin Playlist: Curso Manga -->
+
+
+
+</div>
+                </div>
+
+                <!-- Videos View -->
+                <div id="videos-view" class="view-container">
+                    <div class="videos-grid">
+                        <!-- Los videos se generarán dinámicamente desde las playlists -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Video Modal -->
+    <div class="video-modal" id="video-modal">
+        <div class="modal-backdrop"></div>
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="modal-title">Título del Video</h2>
+                <button class="modal-close" id="modal-close">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="video-container">
+                    <iframe id="youtube-frame" src="/placeholder.svg" frameborder="0" allowfullscreen></iframe>
+                </div>
+                <div class="video-info">
+                    <p id="modal-description">Descripción del video</p>
+                    <div class="video-meta">
+                        <span id="modal-author">Por Autor</span>
+                        <span id="modal-playlist">Curso: Nombre del Curso</span>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-primary" id="mark-completed">
+                    <i class="fas fa-check"></i>
+                    Marcar como Completado
+                </button>
+                <button class="btn btn-outline" id="mark-incomplete">
+                    <i class="fas fa-undo"></i>
+                    Marcar como Pendiente
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <i class="fas fa-palette"></i>
+                    <span>Nexo Artistico</span>
+                </div>
+                <div class="social-icons">
+                    <a href="https://www.tiktok.com/@nexo.artistico4" class="social-icon tiktok">
+                        <i class="fab fa-tiktok"></i>
+                    </a>
+                    <a href="#" class="social-icon instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="#" class="social-icon youtube">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; <span id="current-year"></span> Nexo Artistico. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script src="js/dark-mode.js"></script>
+    <script src="js/centro-mejora.js"></script>
+    <script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const menuToggle = document.querySelector('.menu-toggle');
+    const mobileMenu = document.querySelector('.mobile-menu');
+    const closeBtn = document.querySelector('.mobile-menu-close i');
+
+    menuToggle.addEventListener('click', () => {
+      mobileMenu.classList.add('active');
+    });
+
+    closeBtn.addEventListener('click', () => {
+      mobileMenu.classList.remove('active');
+    });
+  });
+</script>
+
+<!-- Adding mini ads button that's always visible -->
+<a href="apoyanos.html#gracias" class="mini-ads-btn" title="Ver anuncios para apoyarnos">
+  <i class="fas fa-ad"></i>
+</a>
+
+</body>
+</html>
